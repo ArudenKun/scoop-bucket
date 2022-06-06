@@ -1,0 +1,44 @@
+{
+    "version": "102.0.5005.63",
+    "description": "Fast, secure, and free web browser, built for the modern web.",
+    "homepage": "https://www.google.com/chrome/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+    },
+    "notes": "There is an installer",
+    "url": "https://downloads.sourceforge.net/portableapps/GoogleChromePortable_102.0.5005.63_online.paf.exe#/GoogleChromePortable_online.paf.exe",
+    "installer": {
+        "script": [
+            "Start-Process \"$dir\\GoogleChromePortable_online.paf.exe\" @(\"$dir\") -Wait -PassThru -NoNewWindow",
+            "Move-Item \"$dir\\GoogleChromePortable\\**\" \"$dir\"",
+            "Remove-Item \"$dir\\GoogleChromePortable\"",
+            "Remove-Item \"$dir\\GoogleChromePortable_online.paf.exe\""
+        ]
+    },
+    "hash": "255a6f36cb1598e9705a3d96b09a74968bc46074bae9da9d33a612c00ed3b5ea",
+    "shortcuts": [
+        [
+            "GoogleChromePortable.exe",
+            "Google Chrome"
+        ]
+    ],
+    "post_install": [
+        "if (!(Test-Path \"$dir\\Data\\profile\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\Data\\profile\" -Recurse",
+        "}",
+        "Remove-Item \"$dir\\Data.original\""
+    ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\GoogleChromePortable.exe"
+    },
+    "persist": "Data",
+    "checkver": {
+        "url": "https://portableapps.com/apps/internet/google_chrome_portable",
+        "re": "Version ([0-9]+(\\.[0-9]+)+) for Windows"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/portableapps/GoogleChromePortable_$version_online.paf.exe"
+    }
+}

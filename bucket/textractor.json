@@ -1,0 +1,43 @@
+{
+    "version": "5.2.0",
+    "homepage": "https://github.com/Artikash/Textractor",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/Artikash/Textractor/blob/master/LICENSE"
+    },
+    "notes": "Install Required_Font.tff after installation",
+    "url": [
+        "https://github.com/Artikash/Textractor/releases/download/v5.2.0/Textractor-5.2.0-Zip-Version-English-Only.zip",
+        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/fonts/textractor/Required_Font.ttf"
+    ],
+    "hash": [
+        "3efdcf390261fcfb6a44220113c68b06eba22a3ef441ac618208238b52ee7974",
+        "32B64B69D4941E7A9636A6E261440002BE612796B9BD3EBB76CBE84C8EAB042A"
+    ],
+    "extract_dir": "Textractor\\x86",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\SavedExtensions.txt\")) { New-Item \"$dir\\SavedExtensions.txt\" -Value \"Copy to Clipboard>Remove Repeated Characters>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\SavedGames.txt\")) { New-Item \"$dir\\SavedGames.txt\" | Out-Null }"
+    ],
+    "persist": [
+        "SavedExtensions.txt",
+        "SavedGames.txt"
+    ],
+    "bin": "TextractorCLI.exe",
+    "shortcuts": [
+        [
+            "Textractor.exe",
+            "Textractor"
+        ]
+    ],
+    "post_install": "Remove-Item $dir\\Textractor\\ | Out-Null",
+    "checkver": {
+        "github": "https://github.com/Artikash/Textractor",
+        "re": "Textractor-(\\d(\\.\\d)+)-Zip-Version-English-Only\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Artikash/Textractor/releases/download/v$version/Textractor-$version-Zip-Version-English-Only.zip",
+        "extract_dir": "Textractor\\x86",
+        "post_install": "Remove-Item $dir\\Textractor\\ | Out-Null"
+    }
+}

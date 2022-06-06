@@ -1,0 +1,26 @@
+{
+    "version": "3.0.6",
+    "homepage": "https://github.com/ArmCord/ArmCord",
+    "description": "ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.",
+    "license": "OSL-3.0",
+    "url": "https://github.com/ArmCord/ArmCord/releases/download/v3.0.6/ArmCord.Setup.3.0.6.exe#/armcord-3.0.6.7z",
+    "hash": "sha512:16cef90ba29a0c91cd05366edcca6b92a36791c80f8b93bf3d7dfe49e7c5ffa2c75b6b10704208eeb5446a415572ccbca84c2705c204a83d4886e8bfd411bbd3",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "ArmCord.exe",
+            "ArmCord"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ArmCord/ArmCord/releases/download/v$version/ArmCord.Setup.$version.exe#/armcord-$version.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}

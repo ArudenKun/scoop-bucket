@@ -1,0 +1,22 @@
+{
+    "version": "7.0.2.9",
+    "description": "Android Emulator",
+    "homepage": "https://www.bignox.com",
+    "license": "Unknown",
+    "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
+    "hash": "49214ebb10bd1141a1864aa2dc49f95fb8fb6c633d72936a2e824731fce2c91c",
+    "persist": "bin\\BignoxVMS",
+    "shortcuts": [
+        [
+            "bin\\Nox.exe",
+            "NoxPlayer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.bignox.com/",
+        "regex": "Version (\\d(\\.\\d)+)"
+    },
+    "autoupdate": {
+        "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z"
+    }
+}

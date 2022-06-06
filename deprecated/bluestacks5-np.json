@@ -1,0 +1,32 @@
+{
+    "version": "nightly",
+    "description": "Android emulator.",
+    "homepage": "https://www.bluestacks.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.bluestacks.com/tw/terms-and-privacy.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn3.bluestacks.com/downloads/windows/nxt/5.7.100.1036/f1c737fa6f934a91ae14c20d9434d678/FullInstaller/x64/BlueStacksFullInstaller_5.7.100.1036_amd64_native.exe#/setup.7z",
+            "installer": {
+                "script": "Start-Process -Wait \"$dir\\BlueStacksFullInstaller_5.7.100.1036_amd64_native.exe\" \"-s\" -Verb RunAs"
+            }
+        },
+        "32bit": {
+            "url": "https://cdn3.bluestacks.com/downloads/windows/nxt/5.7.100.1036/f1c737fa6f934a91ae14c20d9434d678/FullInstaller/x86/BlueStacksFullInstaller_5.7.100.1036_x86_native.exe#/setup.7z",
+            "installer": {
+                "script": "Start-Process -Wait \"$dir\\BlueStacksFullInstaller_5.7.100.1036_x86_native.exe\" \"-s\" -Verb RunAs"
+            }
+        }
+    },
+    "uninstaller": {
+        "script": [
+            "$uninstaller = (Get-ItemProperty -ErrorAction Ignore \"HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\BlueStacks_nxt\" -Name UninstallString).UninstallString",
+            "if (-not $uninstaller) { $uninstaller = (Get-ItemProperty -ErrorAction Ignore \"HKLM:\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\BlueStacks_nxt\" -Name UninstallString).UninstallString }",
+            "# Remove -tmp at the end",
+            "$uninstaller = $uninstaller.Substring(0, $uninstaller.Length - 5)",
+            "Start-Process -Wait \"$uninstaller\" \"-s\" -Verb RunAs"
+        ]
+    }
+}

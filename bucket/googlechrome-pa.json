@@ -1,0 +1,66 @@
+{
+    "version": "102.0.5005.63",
+    "homepage": "https://portableapps.com/apps/internet/google_chrome_portable",
+    "description": "Browser",
+    "license": "",
+    "url": [
+        "https://portableapps.com/redirect/?a=GoogleChromePortable&s=s&d=pa&f=GoogleChromePortable_102.0.5005.63_online.paf.exe#/Portable.7z",
+        "https://dl.google.com/release2/chrome/ade5ivbjyqxhzr5n4rtzkimdjmpq_102.0.5005.63/102.0.5005.63_chrome_installer.exe#/ChromeBinary.7z"
+    ],
+    "hash": [
+        "255a6f36cb1598e9705a3d96b09a74968bc46074bae9da9d33a612c00ed3b5ea",
+        "bab92549e4a2b09897206d2b115195fe8594757406fb573f4ab1b2c2c1e0fd12"
+    ],
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\chrome.7z\" \"$dir\\App\\Chrome-bin\" -ExtractDir 'Chrome-bin' -Removal",
+            "Rename-Item \"$dir\\GoogleChromePortable.exe\" \"$dir\\chrome.exe\""
+        ]
+    },
+    "bin": [
+        [
+            "chrome.exe",
+            "chrome"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Google Chrome"
+        ]
+    ],
+    "persist": "Data",
+    "post_install": [
+        "if (!(Test-Path \"$persist_dir\\Data\")) { New-Item \"$dir\\Data\" -ItemType Directory | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\Data\\profile\")) { New-Item \"$dir\\Data\\profile\" -ItemType Directory | Out-Null }",
+        "if (!(Test-Path \"$dir\\Data\\profile\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\Data\\profile\" -Recurse",
+        "}",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+        "Remove-Item \"$dir\\7zTemp\" -Recurse"
+    ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
+    },
+    "checkver": {
+        "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
+        "regex": "(?sm)<stable32><version>(?<version>[\\d.]+)</version>.+release2/chrome/(?<32>[\\w-]+)_.+<stable64>.+release2/chrome/(?<64>[\\w-]+)_.+</stable64>"
+    },
+    "autoupdate": {
+        "url": [
+            "https://portableapps.com/redirect/?a=GoogleChromePortable&s=s&d=pa&f=GoogleChromePortable_$version_online.paf.exe#/Portable.7z",
+            "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer.exe#/ChromeBinary.7z"
+        ],
+        "hash": [
+            {
+                "url": "https://portableapps.com/apps/internet/google_chrome_portable",
+                "regex": ": $sha256"
+            },
+            {
+                "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
+                "xpath": "/chromechecker/stable64[version='$version']/sha256"
+            }
+        ]
+    }
+}

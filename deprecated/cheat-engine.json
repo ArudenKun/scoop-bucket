@@ -1,0 +1,46 @@
+{
+    "version": "7.4",
+    "description": "Tool for modifying/debugging single player games and applications.",
+    "homepage": "https://cheatengine.org/index.php",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
+    },
+    "url": "https://kemono.party/data/4a/82/4a82b61b748175780a28c17dbbd8efaef59b1ed2d95cf91df08b8c8572368b9c.bin?f=CheatEngine74P.exe",
+    "hash": "4A82B61B748175780A28C17DBBD8EFAEF59B1ED2D95CF91DF08B8C8572368B9C",
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "Cheat Engine.exe",
+                    "Cheat Engine"
+                ],
+                [
+                    "windowsrepair.exe",
+                    "Cheat Engine Windows Repair"
+                ],
+                [
+                    "Tutorial-x86_64.exe",
+                    "Cheat Engine Tutorial"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "Cheat Engine.exe",
+                    "Cheat Engine"
+                ],
+                [
+                    "windowsrepair.exe",
+                    "Cheat Engine Windows Repair"
+                ],
+                [
+                    "Tutorial-i386.exe",
+                    "Cheat Engine Tutorial"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "version": "nightly",
+    "homepage": "https://www.messenger.com/desktop",
+    "license": "Unlicense",
+    "url": "https://github.com/ArudenKun/scoop-bucket-assets/releases/download/Apps/Messenger-x64.7z",
+    "hash": "5CB5EBDDED6980AA195338266279182EFD91DE29157418615D40C148B3DC33B6",
+    "shortcuts": [
+        [
+            "Messenger.exe",
+            "Messenger"
+        ]
+    ]
+}
