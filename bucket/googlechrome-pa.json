@@ -1,15 +1,15 @@
 {
-    "version": "102.0.5005.63",
+    "version": "102.0.5005.115",
     "homepage": "https://portableapps.com/apps/internet/google_chrome_portable",
     "description": "Browser",
     "license": "",
     "url": [
-        "https://portableapps.com/redirect/?a=GoogleChromePortable&s=s&d=pa&f=GoogleChromePortable_102.0.5005.63_online.paf.exe#/Portable.7z",
-        "https://dl.google.com/release2/chrome/ade5ivbjyqxhzr5n4rtzkimdjmpq_102.0.5005.63/102.0.5005.63_chrome_installer.exe#/ChromeBinary.7z"
+        "https://portableapps.com/redirect/?a=GoogleChromePortable&s=s&d=pa&f=GoogleChromePortable_102.0.5005.115_online.paf.exe#/Portable.7z",
+        "https://dl.google.com/release2/chrome/aceomm4bgo4gjd56jq2ebspjaama_102.0.5005.115/102.0.5005.115_chrome_installer.exe#/ChromeBinary.7z"
     ],
     "hash": [
-        "255a6f36cb1598e9705a3d96b09a74968bc46074bae9da9d33a612c00ed3b5ea",
-        "bab92549e4a2b09897206d2b115195fe8594757406fb573f4ab1b2c2c1e0fd12"
+        "51322adbe1f2ee07cdfac4c2a2a6c8dcae8c564b381b228dbf865887be152f76",
+        "0e6c7af39b7bdda56b7ac5e2e0cfd344e891a1b2d69f042662ee15ae36c2fb9f"
     ],
     "installer": {
         "script": [
