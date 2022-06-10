@@ -2,8 +2,8 @@ on:
   workflow_dispatch:
   schedule:
     # run every 12 hours
-#     - cron: '0 */12 * * *'
-      - cron: '0 22 * * *' # 6:00 AM Philippine Time
+    - cron: '0 */12 * * *'
+#       - cron: '0 22 * * *' # 6:00 AM Philippine Time
 name: Excavator
 jobs:
   excavate:
