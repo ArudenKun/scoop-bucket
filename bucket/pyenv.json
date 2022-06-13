@@ -14,10 +14,7 @@
     "pre_install": "if (!(Test-Path \"$persist_dir\\pyenv-win\\version\")) { New-Item \"$dir\\pyenv-win\\version\" | Out-Null }",
     "bin": [
         "pyenv-win\\bin\\pyenv.ps1",
-        [
-            "pyenv-win\\bin\\pyenv.bat",
-            "pyenv-cmd.bat"
-        ]
+        "pyenv-win\\bin\\pyenv.bat"
     ],
     "env_add_path": "pyenv-win\\shims",
     "env_set": {
