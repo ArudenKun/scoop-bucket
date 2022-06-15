@@ -17,26 +17,25 @@
     "pre_install": [
         "if (!(Test-Path \"$dir\\NG-Launcher.bat\" ))",
         "{",
-        "   New-Item -Force -Path \"$dir\\NG-Launcher.bat\" -Value \"@start java.exe -jar NG-Launcher.jar\"",
+        "   New-Item -Force -Path \"$dir\\Novel-Grabber\\NG-Launcher.bat\" -Value \"@start java.exe -jar NG-Launcher.jar\"",
         "}",
-        "if (!(Test-Path \"$persist_dir\\bin\\config.ini\")) { New-Item \"$dir\\bin\\config.ini\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\bin\\library.json\")) { New-Item \"$dir\\bin\\library.json\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\bin\\log.txt\")) { New-Item \"$dir\\bin\\log.txt\" | Out-Null }"
+        "if (!(Test-Path \"$persist_dir\\bin\\config.ini\")) { New-Item \"$dir\\Novel-Grabber\\bin\\config.ini\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\bin\\library.json\")) { New-Item \"$dir\\Novel-Grabber\\bin\\library.json\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\bin\\log.txt\")) { New-Item \"$dir\\Novel-Grabber\\bin\\log.txt\" | Out-Null }"
     ],
-    "extract_dir": "Novel-Grabber",
-    "bin": "NG-Launcher.bat",
+    "bin": "Novel-Grabber\\NG-Launcher.bat",
     "shortcuts": [
         [
-            "NG-Launcher.bat",
+            "Novel-Grabber\\NG-Launcher.bat",
             "Novel Grabber",
             "",
-            "icon.ico"
+            "$dir\\icon.ico"
         ]
     ],
     "persist": [
-        "bin\\config.ini",
-        "bin\\library.json",
-        "bin\\log.txt"
+        "Novel-Grabber\\bin\\config.ini",
+        "Novel-Grabber\\bin\\library.json",
+        "Novel-Grabber\\bin\\log.txt"
     ],
     "checkver": {
         "regex": "Novel-Grabber (\\d(\\.\\d)+)"
