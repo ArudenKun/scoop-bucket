@@ -7,15 +7,21 @@
         "JDK": "java/openjdk"
     },
     "url": [
-        "https://github.com/Flameish/Novel-Grabber/releases/download/3.9.2/Novel-Grabber.zip",
-        "https://github.com/Flameish/Novel-Grabber/raw/master/src/main/resources/images/favicon.png#/icon.ico"
+        "https://github.com/Flameish/Novel-Grabber/releases/latest/download/Novel-Grabber.zip",
+        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/novel-grabber/icon.ico"
     ],
-    "hash": "4fc0e5007bfbd0373694aef32bccf1819b4a4c97cbcb315f21ee3c8aecd9b074",
+    "hash": [
+        "4fc0e5007bfbd0373694aef32bccf1819b4a4c97cbcb315f21ee3c8aecd9b074",
+        "01E8CA185D7FF8BAC2F0C02449A7A25258359871AD91A06EF77F2C7F07ED6A9C"
+    ],
     "pre_install": [
         "if (!(Test-Path \"$dir\\NG-Launcher.bat\" ))",
         "{",
-        "   New-Item -Force -Path \"$dir\\NG-Launcher.bat\" -Value \"@start javaw.exe -jar %~dp0NG-Launcher.jar -Encoding Ascii\"",
-        "}"
+        "   New-Item -Force -Path \"$dir\\NG-Launcher.bat\" -Value \"@start java.exe -jar NG-Launcher.jar\"",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\bin\\config.ini\")) { New-Item \"$dir\\bin\\config.ini\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\bin\\library.json\")) { New-Item \"$dir\\bin\\library.json\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\bin\\log.txt\")) { New-Item \"$dir\\bin\\log.txt\" | Out-Null }"
     ],
     "extract_dir": "Novel-Grabber",
     "bin": "NG-Launcher.bat",
@@ -27,8 +33,15 @@
             "icon.ico"
         ]
     ],
-    "checkver": "github",
+    "persist": [
+        "bin\\config.ini",
+        "bin\\library.json",
+        "bin\\log.txt"
+    ],
+    "checkver": {
+        "regex": "Novel-Grabber (\\d(\\.\\d)+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/Flameish/Novel-Grabber/releases/download/$version/Novel-Grabber.zip"
+        "url": "https://github.com/Flameish/Novel-Grabber/releases/latest/download/Novel-Grabber.zip"
     }
 }
