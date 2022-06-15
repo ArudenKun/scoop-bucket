@@ -29,7 +29,7 @@
             "Novel-Grabber\\NG-Launcher.bat",
             "Novel Grabber",
             "",
-            "$dir\\icon.ico"
+            "icon.ico"
         ]
     ],
     "persist": [
