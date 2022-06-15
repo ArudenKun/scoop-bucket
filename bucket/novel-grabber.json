@@ -1,0 +1,34 @@
+{
+    "version": "3.3.0",
+    "homepage": "https://github.com/Flameish/Novel-Grabber",
+    "description": "Novel-Grabber can download novels from pretty much any webnovel and lightnovel site. ",
+    "license": "MIT",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": [
+        "https://github.com/Flameish/Novel-Grabber/releases/download/3.9.2/Novel-Grabber.zip",
+        "https://github.com/Flameish/Novel-Grabber/raw/master/src/main/resources/images/favicon.png#/icon.ico"
+    ],
+    "hash": "4FC0E5007BFBD0373694AEF32BCCF1819B4A4C97CBCB315F21EE3C8AECD9B074",
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\NG-Launcher.bat\" ))",
+        "{",
+        "   New-Item -Force -Path \"$dir\\NG-Launcher.bat\" -Value \"@start javaw.exe -jar %~dp0NG-Launcher.jar -Encoding Ascii\"",
+        "}"
+    ],
+    "extract_dir": "Novel-Grabber",
+    "bin": "NG-Launcher.bat",
+    "shortcuts": [
+        [
+            "NG-Launcher.bat",
+            "Novel Grabber",
+            "",
+            "icon.ico"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Flameish/Novel-Grabber/releases/download/$version/Novel-Grabber.zip"
+    }
+}
