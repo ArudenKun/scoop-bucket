@@ -16,7 +16,7 @@
     ],
     "extract_dir": "Textractor\\x86",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\SavedExtensions.txt\")) { New-Item \"$dir\\SavedExtensions.txt\" -Value \"Copy to Clipboard>Remove Repeated Characters>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\SavedExtensions.txt\")) { New-Item \"$dir\\SavedExtensions.txt\" -Value \"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\SavedGames.txt\")) { New-Item \"$dir\\SavedGames.txt\" | Out-Null }"
     ],
     "persist": [
