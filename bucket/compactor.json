@@ -1,0 +1,19 @@
+{
+    "version": "0.10.1",
+    "description": "碧蓝航线脚本 Azur Lane automation bot (CN/EN/JP/TW) | 无缝委托科研，全自动大世界",
+    "homepage": "https://github.com/Freaky/Compactor",
+    "license": "MIT",
+    "url": "https://github.com/Freaky/Compactor/releases/download/v0.10.1/Compactor-0.10.1.7z",
+    "hash": "1dc75fd5dad212e0cbf29a363632e0299945183d722b2c00e527e54ed86de379",
+    "extract_dir": "Compactor-$version",
+    "shortcuts": [
+        [
+            "Compactor.exe",
+            "Compactor"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Freaky/Compactor/releases/download/v$version/Compactor-$version.7z"
+    }
+}
