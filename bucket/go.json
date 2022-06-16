@@ -27,6 +27,7 @@
         "GOROOT": "$dir",
         "GOPATH": "$dir\\modules"
     },
+    "persist": "modules",
     "checkver": {
         "url": "https://golang.org/dl/",
         "regex": "go([\\d.]+)\\.windows-"
