@@ -1,0 +1,29 @@
+{
+    "version": "0.3.0",
+    "description": "Set up any game with Goldberg's emulator easily and automatically.",
+    "homepage": "https://git.jeddunk.xyz/jeddunk/GoldbergGUI",
+    "license": "GPL-3.0-only",
+    "url": [
+        "https://git.jeddunk.xyz/jeddunk/GoldbergGUI/releases/download/0.3.0/GoldbergGUI-0.3.0.7z",
+        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/auto-creamapi-2/icon.ico"
+    ],
+    "hash": [
+        "696068d44030f84280eeaca632894fa13c946e7b6e1c3ea7cbbdc3e2a6e7f1bc",
+        "81B1BE4C422D045A9C9708F70CF7F981E4C4DD8FCA357A6473D80F34FD287A76"
+    ],
+    "shortcuts": [
+        [
+            "GoldbergGUI.WPF.exe",
+            "GoldbergGUI",
+            "",
+            "icon.ico"
+        ]
+    ],
+    "checkver": {
+        "url": "https://git.jeddunk.xyz/jeddunk/GoldbergGUI/tags",
+        "regex": "/archive/(\\d(\\.\\d)+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://git.jeddunk.xyz/jeddunk/GoldbergGUI/releases/download/$version/GoldbergGUI-$version.7z"
+    }
+}
