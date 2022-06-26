@@ -1,0 +1,28 @@
+{
+    "version": "1.23.1",
+    "description": "A secure runtime for JavaScript and TypeScript",
+    "homepage": "https://deno.land",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/denoland/deno/releases/download/v1.23.1/deno-x86_64-pc-windows-msvc.zip",
+            "hash": "adc4cd8b947daaa2bccdc25884e493ecd70ebd121d5f0e7b2af53670fe54d8a6"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\cache\")) { New-Item \"$dir\\cache\" -ItemType Directory | Out-Null }",
+    "bin": "deno.exe",
+    "checkver": {
+        "github": "https://github.com/denoland/deno"
+    },
+    "env_set": {
+        "DENO_DIR": "$dir\\cache"
+    },
+    "persist": "cache",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
