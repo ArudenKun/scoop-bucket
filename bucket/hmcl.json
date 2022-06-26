@@ -29,7 +29,7 @@
     "autoupdate": {
         "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe#/hmcl.exe",
         "hash": {
-            "url": "$baseurl/HMCL-$version.exe.sha1"
+            "url": "$url.sha1"
         }
     }
 }
