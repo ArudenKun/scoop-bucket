@@ -24,5 +24,6 @@
                 "url": "https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-pc-windows-msvc.zip"
             }
         }
-    }
+    },
+    "notes": "Restart required for the ENV variables to reflect"
 }
