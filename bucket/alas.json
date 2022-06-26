@@ -6,13 +6,13 @@
     "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_0.3.7.7z",
     "hash": "79d8f2bf177888c039b9fd992b3fbf0cdbb63db93793c0d557bb3a12f0639f62",
     "extract_dir": "AzurLaneAutoScript",
-    "persist": "config",
     "shortcuts": [
         [
             "Alas.exe",
             "Alas"
         ]
     ],
+    "persist": "config",
     "checkver": {
         "regex": "Easy Install V5 \\(v(\\d(\\.\\d)+)\\)"
     },

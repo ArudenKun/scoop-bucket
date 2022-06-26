@@ -9,7 +9,6 @@
             "hash": "adc4cd8b947daaa2bccdc25884e493ecd70ebd121d5f0e7b2af53670fe54d8a6"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\cache\")) { New-Item \"$dir\\cache\" -ItemType Directory | Out-Null }",
     "bin": "deno.exe",
     "checkver": {
         "github": "https://github.com/denoland/deno"
@@ -25,5 +24,6 @@
             }
         }
     },
-    "notes": "Restart required for the ENV variables to reflect"
+    "notes": "Restart required for the ENV variables to reflect",
+    "##": "if (!(Test-Path \"$persist_dir\\cache\")) { New-Item \"$dir\\cache\" -ItemType Directory | Out-Null }"
 }

@@ -17,7 +17,6 @@
             "hash": "6661798e9669c3f03498a2e018ed948d9f53a90c5ccbd05b4e4b36303facb33e"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\modules\")) { New-Item \"$dir\\modules\" -ItemType Directory | Out-Null }",
     "extract_dir": "go",
     "bin": [
         "bin\\go.exe",
