@@ -18,13 +18,6 @@
             "-c \"$dir\\config\\config.yml\""
         ]
     ],
-    "shortcuts": [
-        [
-            "stash-win.exe",
-            "Stash",
-            "-c \"$dir\\config\\config.yml\""
-        ]
-    ],
     "persist": "config",
     "checkver": {
         "github": "https://github.com/stashapp/stash"
