@@ -1,10 +1,10 @@
 {
-    "version": "7.0.3.0",
+    "version": "7.0.3.1",
     "description": "Android Emulator",
     "homepage": "https://www.bignox.com",
     "license": "Unknown",
     "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
-    "hash": "3bcba7786f423e0cae12fa72b1f277c3b35cba2ea6d622b21e1b2578b64aef3d",
+    "hash": "94163941efb5a14b81a54a781e771de7d825a9bc7ffa437e75285d8015e0d030",
     "persist": "bin\\BignoxVMS",
     "shortcuts": [
         [
