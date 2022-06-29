@@ -20,4 +20,4 @@ To make a new manifest contribution, please read the [Contributing Guide](https:
 #### To use this template
 
 - Modify the Readme.md and the bin/auto-pr.ps1 files accordingly.
-- Enable GitHub Actions for this repository.
+- Enable GitHub Actions for this repository. 
