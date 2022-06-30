@@ -3,7 +3,7 @@
     "description": "A simple app that lets you text, video chat, and stay close with people you care about.",
     "homepage": "https://www.messenger.com/desktop",
     "license": "Proprietary",
-    "url": "https://aruden-scoop-bucket-api.deno.dev/appxmessenger?dl#/FACEBOOK.317180B0BB486_1530.18.110.0_x64__8xx8rvfyw5nnt.appx.7z",
+    "url": "https://aruden-scoop-bucket-api.deno.dev/appx_messenger?dl#/FACEBOOK.317180B0BB486_1530.18.110.0_x64__8xx8rvfyw5nnt.appx.7z",
     "hash": "sha1:d7e2b828eafc0d24269efd713e7b27a677633097",
     "extract_dir": "app",
     "shortcuts": [
@@ -13,13 +13,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://aruden-scoop-bucket-api.deno.dev/appxmessenger",
+        "url": "https://aruden-scoop-bucket-api.deno.dev/appx_messenger",
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://aruden-scoop-bucket-api.deno.dev/appxmessenger?dl#/FACEBOOK.317180B0BB486_$version_x64__8xx8rvfyw5nnt.appx.7z",
+        "url": "https://aruden-scoop-bucket-api.deno.dev/appx_messenger?dl#/FACEBOOK.317180B0BB486_$version_x64__8xx8rvfyw5nnt.appx.7z",
         "hash": {
-            "url": "https://aruden-scoop-bucket-api.deno.dev/appxmessenger",
+            "url": "https://aruden-scoop-bucket-api.deno.dev/appx_messenger",
             "jsonpath": "$.sha1"
         }
     }
