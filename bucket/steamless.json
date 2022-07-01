@@ -17,6 +17,10 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip"
+        "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip",
+        "hash": {
+            "url": "https://scoop-api.aruden.repl.co/steamless",
+            "jp": "$.sha256"
+        }
     }
 }
