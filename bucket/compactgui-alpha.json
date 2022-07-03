@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0-alpha.6",
+    "version": "3.0.0-alpha.7",
     "description": "CompactGUI is a standalone user interface that makes the Windows 10 compact.exe function easier to use.",
     "homepage": "https://github.com/ImminentFate/CompactGUI",
     "license": "GPL-3.0-only",
     "url": "https://github.com/IridiumIO/CompactGUI/releases/download/v3.0.0-alpha.6/CompactGUI.exe",
-    "hash": "82236b345c91ace9bded40e74be8c410f5aef1c68ecae31b6073ac9925af825a",
+    "hash": "9e0138f3330f524851c0eae6dc24499bbacd3eaee9fdd1418dac1c714e8bfcb7",
     "bin": "CompactGUI.exe",
     "shortcuts": [
         [
