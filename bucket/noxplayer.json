@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
         "hash": {
-            "url": "https://scoop-bucket-api.aruden.repl.co/noxplayer",
+            "url": "https://plunger-api.deno.dev/noxplayer",
             "jp": "$.sha256"
         }
     }

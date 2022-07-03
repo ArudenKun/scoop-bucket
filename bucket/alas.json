@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_$version.7z",
         "hash": {
-            "url": "https://scoop-bucket-api.aruden.repl.co/alas",
+            "url": "https://plunger-api.deno.dev/alas",
             "jp": "$.sha256"
         }
     }

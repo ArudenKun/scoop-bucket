@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip",
         "hash": {
-            "url": "https://scoop-bucket-api.aruden.repl.co/steamless",
+            "url": "https://plunger-api.deno.dev/steamless",
             "jp": "$.sha256"
         }
     }
