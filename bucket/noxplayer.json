@@ -4,7 +4,7 @@
     "homepage": "https://www.bignox.com",
     "license": "Unknown",
     "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
-    "hash": "94163941efb5a14b81a54a781e771de7d825a9bc7ffa437e75285d8015e0d030",
+    "hash": "c511037036d4be1993a9d48be49245ef3f158f0ffb2a15ad3e8c50056c40a580",
     "persist": "bin\\BignoxVMS",
     "shortcuts": [
         [
@@ -17,6 +17,10 @@
         "regex": "Version (\\d(\\.\\d)+)"
     },
     "autoupdate": {
-        "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z"
+        "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
+        "hash": {
+            "url": "https://scoop-bucket-api.aruden.repl.co/noxplayer",
+            "jp": "$.sha256"
+        }
     }
 }

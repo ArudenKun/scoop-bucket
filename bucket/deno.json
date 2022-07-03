@@ -14,9 +14,13 @@
         "github": "https://github.com/denoland/deno"
     },
     "env_set": {
-        "DENO_DIR": "$dir\\cache"
+        "DENO_DIR": "$dir\\cache",
+        "DENO_INSTALL_ROOT": "$dir\\scripts"
     },
-    "persist": "cache",
+    "persist": [
+        "cache",
+        "scripts"
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {
