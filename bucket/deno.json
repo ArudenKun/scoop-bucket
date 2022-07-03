@@ -13,6 +13,9 @@
     "checkver": {
         "github": "https://github.com/denoland/deno"
     },
+    "env_add_path": [
+        "scripts\\bin"
+    ],
     "env_set": {
         "DENO_DIR": "$dir\\cache",
         "DENO_INSTALL_ROOT": "$dir\\scripts"
