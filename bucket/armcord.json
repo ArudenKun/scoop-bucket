@@ -5,8 +5,8 @@
     "license": "OSL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ArmCord/ArmCord/releases/download/v3.0.7/ArmCord.Setup.3.0.7.exe#/dl.7z",
-            "hash": "sha512:c447ba03f12b7475238f40a3a279a7037890e8667b06466098987d532b08d695a1b5acdb7d0d24112b05d0c655313a153de5379a6f7a2c3e52c1531dfc6e158f",
+            "url": "https://github.com/ArudenKun/ArmCord/releases/download/v3.0.7/ArmCord.Setup.3.0.7.exe#/dl.7z",
+            "hash": "sha512:b58e5ae28a3639585e63f2f14d2bccb88838e72e8acc925782c39fc201c5852e638fdd981a954a97fd694f99a7231f5444d499b3afbad610e27656b4e08d3579",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ArmCord/ArmCord/releases/download/v$version/ArmCord.Setup.$version.exe#/dl.7z"
+                "url": "https://github.com/ArudenKun/ArmCord/releases/download/v$version/ArmCord.Setup.$version.exe#/dl.7z"
             }
         },
         "hash": {
