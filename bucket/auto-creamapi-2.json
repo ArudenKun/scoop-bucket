@@ -26,6 +26,10 @@
         "regex": "/archive/(\\d(\\.\\d)+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/releases/download/$version/auto-creamapi-$version.zip"
+        "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/releases/download/$version/auto-creamapi-$version.zip",
+        "hash": {
+            "url": "https://plunger-api.deno.dev/auto_creamapi_2",
+            "jp": "$.sha256"
+        }
     }
 }
