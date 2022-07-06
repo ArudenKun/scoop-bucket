@@ -111,6 +111,7 @@
         "Uninst",
         "vcredist",
         "venv",
+        "virtualenvs",
         "vmoptions",
         "waterfox",
         "webnovel",

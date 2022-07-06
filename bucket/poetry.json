@@ -10,11 +10,20 @@
     "hash": "3e6e8ee8d8dc22c2a5bec5ecfb89a152f59dee77736c1491b3fe7dcc4a99df9f",
     "installer": {
         "script": [
-            "$env:POETRY_HOME=\"$dir\"",
             "python3 \"$dir\\$fname\" --version $version"
         ]
     },
     "bin": "venv\\Scripts\\poetry.exe",
+    "env_set": {
+        "POETRY_HOME": "$dir",
+        "POETRY_VIRTUALENVS_IN_PROJECT": "true",
+        "POETRY_CACHE_DIR": "$dir\\Cache",
+        "POETRY_VIRTUALENVS_PATH": "$dir\\Cache\\virtualenvs"
+    },
+    "persist": [
+        "Cache",
+        "Cache\\virtualenvs"
+    ],
     "checkver": {
         "github": "https://github.com/python-poetry/poetry/"
     },
