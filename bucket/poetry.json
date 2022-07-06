@@ -14,9 +14,6 @@
             "python3 \"$dir\\$fname\" --version $version"
         ]
     },
-    "uninstaller": {
-        "script": "Remove-Item Env:\\POETRY_HOME"
-    },
     "bin": "venv\\Scripts\\poetry.exe",
     "persist": "cache",
     "checkver": {
