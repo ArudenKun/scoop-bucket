@@ -29,6 +29,6 @@
             }
         }
     },
-    "notes": "Restart required for the ENV variables to reflect",
+    "notes": "Restart the shell for the env to take effect",
     "##": "if (!(Test-Path \"$persist_dir\\cache\")) { New-Item \"$dir\\cache\" -ItemType Directory | Out-Null }"
 }
