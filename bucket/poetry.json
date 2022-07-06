@@ -15,9 +15,6 @@
         ]
     },
     "bin": "venv\\Scripts\\poetry.exe",
-    "env_set": {
-        "POETRY_HOME": "$dir"
-    },
     "checkver": {
         "github": "https://github.com/python-poetry/poetry/"
     },
