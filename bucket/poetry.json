@@ -11,12 +11,14 @@
     "installer": {
         "script": [
             "$env:POETRY_HOME=\"$dir\"",
-            "$env:POETRY_CACHE_DIR=\"$dir\\cache\"",
-            "$env:POETRY_VIRTUALENVS_IN_PROJECT=\"true\"",
             "python3 \"$dir\\$fname\" --version $version"
         ]
     },
     "bin": "venv\\Scripts\\poetry.exe",
+    "env_set": {
+        "POETRY_CACHE_DIR": "$dir\\cache",
+        "POETRY_VIRTUALENVS_IN_PROJECT": "true"
+    },
     "persist": "cache",
     "checkver": {
         "github": "https://github.com/python-poetry/poetry/"
