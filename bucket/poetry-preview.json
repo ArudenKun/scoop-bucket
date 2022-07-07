@@ -19,7 +19,7 @@
     "env_set": {
         "POETRY_CACHE_DIR": "$dir\\cache",
         "POETRY_CONFIG_DIR": "$dir",
-        "POETRY_DATA_DIR": "$dir\\cache",
+        "POETRY_DATA_DIR": "$dir",
         "POETRY_VIRTUALENVS_IN_PROJECT": "true"
     },
     "persist": [
