@@ -35,10 +35,13 @@
             "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal"
         ]
     },
+    "post_install": [
+        "volta install node",
+        "npm config set cache $dir\\cache\\npm-cache --location=global",
+        "yarn config set cache-folder $dir\\cache\\yarn-cache"
+    ],
     "env_set": {
-        "VOLTA_HOME": "$dir\\appdata",
-        "NPM_CONFIG_SET_CACHE": "$dir\\cache\\npm-cache",
-        "YARN_CACHE_FOLDER": "$dir\\cache\\yarn-cache"
+        "VOLTA_HOME": "$dir\\appdata"
     },
     "env_add_path": "appdata\\bin",
     "persist": [
