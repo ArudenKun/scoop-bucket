@@ -8,7 +8,7 @@
     },
     "url": "https://install.python-poetry.org#/install-poetry.py",
     "hash": "3e6e8ee8d8dc22c2a5bec5ecfb89a152f59dee77736c1491b3fe7dcc4a99df9f",
-    "pre_install": "if(!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" | Out-Null }",
+    "pre_install": "if(!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" -Value \"[virtualenvs]`nin-project = true\"| Out-Null }",
     "installer": {
         "script": [
             "$env:POETRY_HOME=\"$dir\"",
@@ -19,8 +19,7 @@
     "env_set": {
         "POETRY_CACHE_DIR": "$dir\\cache",
         "POETRY_CONFIG_DIR": "$dir",
-        "POETRY_DATA_DIR": "$dir",
-        "POETRY_VIRTUALENVS_IN_PROJECT": "true"
+        "POETRY_DATA_DIR": "$dir"
     },
     "persist": [
         "cache",
