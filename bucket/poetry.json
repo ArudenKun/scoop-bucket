@@ -31,6 +31,5 @@
     },
     "autoupdate": {
         "url": "https://install.python-poetry.org#/install-poetry.py"
-    },
-    "notes": "Restart the shell for the env to take effect"
+    }
 }

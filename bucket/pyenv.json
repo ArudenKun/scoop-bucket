@@ -17,13 +17,15 @@
         "pyenv-win\\bin"
     ],
     "env_set": {
-        "PYENV": "$dir\\pyenv-win"
+        "PYENV": "$dir\\pyenv-win",
+        "PIP_CACHE_DIR": "$dir\\cache"
     },
     "persist": [
         "pyenv-win\\version",
         "pyenv-win\\shims",
         "pyenv-win\\versions",
-        "pyenv-win\\install_cache"
+        "pyenv-win\\install_cache",
+        "cache"
     ],
     "checkver": {
         "github": "https://github.com/pyenv-win/pyenv-win"
