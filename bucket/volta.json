@@ -32,19 +32,18 @@
             "UpdateExeFile 'volta-shim.exe' 'yarn.exe'",
             "UpdateExeFile 'volta.exe' 'volta.exe' -Removal",
             "UpdateExeFile 'volta-migrate.exe' 'volta-migrate.exe' -Removal",
-            "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal",
-            "npm config set cache $dir\\npm_cache --location=global",
-            "yarn config set $dir\\yarn_cache"
+            "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal"
         ]
     },
     "env_set": {
-        "VOLTA_HOME": "$dir\\appdata"
+        "VOLTA_HOME": "$dir\\appdata",
+        "NPM_CONFIG_SET_CACHE": "$dir\\cache\\npm_cache",
+        "YARN_CACHE_FOLDER": "$dir\\cache\\yarn_cache"
     },
     "env_add_path": "appdata\\bin",
     "persist": [
         "appdata",
-        "npm_cache",
-        "yarn_cache"
+        "cache"
     ],
     "checkver": {
         "github": "https://github.com/volta-cli/volta"
