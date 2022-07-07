@@ -17,9 +17,14 @@
     "bin": "venv\\Scripts\\poetry.exe",
     "env_set": {
         "POETRY_CACHE_DIR": "$dir\\cache",
+        "POETRY_CONFIG_DIR": "$dir",
+        "POETRY_DATA_DIR": "$dir\\cache",
         "POETRY_VIRTUALENVS_IN_PROJECT": "true"
     },
-    "persist": "cache",
+    "persist": [
+        "cache",
+        "config.toml"
+    ],
     "checkver": {
         "github": "https://github.com/python-poetry/poetry/"
     },
