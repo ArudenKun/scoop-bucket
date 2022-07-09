@@ -1,5 +1,5 @@
 {
-    "version": "7.0.3.1",
+    "version": "7.0.1.1",
     "description": "Android Emulator",
     "homepage": "https://www.bignox.com",
     "license": "Unknown",
@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
         "hash": {
-            "url": "https://plunger-api.deno.dev/noxplayer",
+            "url": "https://plunger-api.azurewebsites.net/api/app/noxplayer",
             "regex": "$checksum"
         }
     }
