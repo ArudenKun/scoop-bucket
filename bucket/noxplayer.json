@@ -20,7 +20,7 @@
         "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
         "hash": {
             "url": "https://plunger-api.azurewebsites.net/api/app/noxplayer",
-            "regex": "$checksum"
+            "regex": "$sha256"
         }
     }
 }
