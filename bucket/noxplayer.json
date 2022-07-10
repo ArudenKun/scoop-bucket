@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/noxplayer",
+            "url": "https://plunger-dotnet-api.herokuapp.com/noxplayer",
             "regex": "$sha256"
         }
     }

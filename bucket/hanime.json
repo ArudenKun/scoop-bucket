@@ -10,7 +10,7 @@
     "autoupdate": {
         "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/hanime",
+            "url": "https://plunger-dotnet-api.herokuapp.com/hanime",
             "jp": "$.sha256"
         }
     }

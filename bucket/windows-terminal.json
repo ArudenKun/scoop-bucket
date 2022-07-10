@@ -50,7 +50,7 @@
     "autoupdate": {
         "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminal_Win10_$version_8wekyb3d8bbwe.msixbundle#/dl.7z",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/windowsterminal",
+            "url": "https://plunger-dotnet-api.herokuapp.com/windowsterminal",
             "jp": "$.sha256"
         }
     }

@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_$version.7z",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/azurlaneautoScript",
+            "url": "https://plunger-dotnet-api.herokuapp.com/azurlaneautoScript",
             "jp": "$.sha256"
         }
     }

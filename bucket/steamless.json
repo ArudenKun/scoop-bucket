@@ -19,7 +19,7 @@
     "autoupdate": {
         "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/steamless",
+            "url": "https://plunger-dotnet-api.herokuapp.com/steamless",
             "jp": "$.sha256"
         }
     }
