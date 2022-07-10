@@ -1,5 +1,5 @@
 {
-    "version": "2.1.7",
+    "version": "1.1.7",
     "description": "Set your game automatically up for use with CreamAPI.",
     "homepage": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2",
     "license": "GPL-3.0-only",
@@ -28,7 +28,7 @@
     "autoupdate": {
         "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/releases/download/$version/auto-creamapi-$version.zip",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/api/app/autocreamapi2",
+            "url": "https://plunger-api.azurewebsites.net/autocreamapi2",
             "jp": "$.sha256"
         }
     }

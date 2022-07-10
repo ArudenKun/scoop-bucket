@@ -1,5 +1,5 @@
 {
-    "version": "1.0.7",
+    "version": "0.0.7",
     "description": "📥 Command-line tool to download videos from hanime.tv",
     "homepage": "https://github.com/IchBinLeoon/hanime",
     "license": "MIT License",
@@ -10,7 +10,7 @@
     "autoupdate": {
         "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe",
         "hash": {
-            "url": "https://plunger-api.azurewebsites.net/api/app/hanime",
+            "url": "https://plunger-api.azurewebsites.net/hanime",
             "jp": "$.sha256"
         }
     }
