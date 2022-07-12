@@ -7,7 +7,7 @@
     "url": [
         "https://github.com/ArudenKun/scoop-bucket-assets/releases/download/Apps/Portable-VirtualBox.7z",
         "https://download.virtualbox.org/virtualbox/6.1.34/VirtualBox-6.1.34a-150636-Win.exe#/VirtualBox.exe",
-        "https://download.virtualbox.org/virtualbox/6.1.34/Oracle_VM_VirtualBox_Extension_Pack-6.1.34.vbox-extpack"
+        "https://download.virtualbox.org/virtualbox/6.1.34/Oracle_VM_VirtualBox_Extension_Pack-6.1.34.vbox-extpack#/Extension"
     ],
     "hash": [
         "01559d76f574b3c2770bad80bb2d23e07228fbe62190f0ebd1b61a83b78e7b32",
