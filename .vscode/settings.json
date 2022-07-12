@@ -29,6 +29,7 @@
         "asar",
         "Autoruns",
         "autorunsc",
+        "AUTOSOFTWAREUPDATE",
         "autoupdate",
         "Azur",
         "Bignox",
@@ -38,7 +39,9 @@
         "Buvik",
         "checkver",
         "chromechecker",
+        "cosi",
         "creamapi",
+        "DATACOLLECTION",
         "DLCs",
         "dnmultiplayer",
         "dnplayer",
@@ -66,6 +69,7 @@
         "imgui",
         "Inno",
         "innovatively",
+        "INSTALLDIR",
         "intellij",
         "javaw",
         "jetbrains",
@@ -99,6 +103,7 @@
         "runtimever",
         "smartgit",
         "Spacedesk",
+        "STARTMENU",
         "Steamless",
         "Steamworks",
         "stormhen",
@@ -113,6 +118,7 @@
         "vcredist",
         "venv",
         "virtualenvs",
+        "vmnetcfg",
         "vmoptions",
         "waterfox",
         "webnovel",
@@ -121,5 +127,20 @@
         "wireshark",
         "xmcl",
         "zulufx"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Test",
+            "database": "test",
+            "username": "root",
+            "password": ""
+        }
     ]
 }
