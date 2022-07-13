@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "version": "32",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Freeware",
@@ -8,6 +9,17 @@
     ],
     "hash": [
         "a46b1701d7d366e956a34c086b61259a675dfde2be9dc96127a31e2bd7bd956b",
+=======
+    "version": "0.7.5",
+    "homepage": "https://github.com/Akebi-Group/Akebi-GC",
+    "license": "Freeware",
+    "url": [
+        "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.7.5/akebi-gc-v0.7.5.v2.7.-binaries.zip",
+        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/genshin-impact/icon.ico"
+    ],
+    "hash": [
+        "83071d27476162a06d8b9e39023a607cc1b5aff7a07fcca875b2f375da7fba28",
+>>>>>>> 49f200c (asd)
         "fb6d11eef28d352a35de4f373593f59548cad18676b3716bd2c47fdf2424f45d"
     ],
     "pre_install": [
@@ -15,7 +27,6 @@
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" | Out-Null }"
     ],
-    "extract_dir": "bin\\Release-x64",
     "persist": [
         "cfg.ini",
         "cfg.json",
@@ -29,11 +40,11 @@
             "icon.ico"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\bin\"",
     "checkver": {
-        "github": "https://github.com/Legend-Recalls/genshin-cheat-releases"
+        "github": "https://github.com/Akebi-Group/Akebi-GC",
+        "regex": "akebi-gc-v(\\d(\\.\\d)+)\\.v(?<ver>\\d(\\.\\d)+)\\.-binaries\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/Legend-Recalls/genshin-cheat-releases/releases/download/V$version/bin.zip"
+        "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v$version/akebi-gc-v$version.v$matchVer.-binaries.zip"
     }
 }
