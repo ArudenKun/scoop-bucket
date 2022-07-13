@@ -15,7 +15,7 @@
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" | Out-Null }"
     ],
-    "extract_dir": "Release-x64",
+    "extract_dir": "bin\\Release-x64",
     "persist": [
         "cfg.ini",
         "cfg.json",
