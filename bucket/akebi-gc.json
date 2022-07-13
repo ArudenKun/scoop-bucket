@@ -1,13 +1,13 @@
 {
-    "version": "30",
+    "version": "32",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Freeware",
     "url": [
-        "https://github.com/Legend-Recalls/genshin-cheat-releases/releases/download/V30/bin.zip",
+        "https://github.com/Legend-Recalls/genshin-cheat-releases/releases/download/V32/bin.zip",
         "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/genshin-impact/icon.ico"
     ],
     "hash": [
-        "893a5f2108e964ff46f4158665579d69c87c68470497f77f46ffd2f15da0e758",
+        "a46b1701d7d366e956a34c086b61259a675dfde2be9dc96127a31e2bd7bd956b",
         "fb6d11eef28d352a35de4f373593f59548cad18676b3716bd2c47fdf2424f45d"
     ],
     "pre_install": [
