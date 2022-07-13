@@ -29,6 +29,7 @@
             "icon.ico"
         ]
     ],
+    "post_install": "Remove-Item \"$dir\\bin\"",
     "checkver": {
         "github": "https://github.com/Legend-Recalls/genshin-cheat-releases"
     },
