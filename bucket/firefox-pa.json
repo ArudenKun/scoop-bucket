@@ -16,7 +16,7 @@
     "persist": "Data",
     "checkver": {
         "url": "https://portableapps.com/apps/internet/firefox_portable",
-        "re": "Version ([0-9]+(\\.[0-9]+)+) for Windows"
+        "re": "Version ([\\d.]+) for Windows"
     },
     "autoupdate": {
         "url": "https://portableapps.com/redirect/?a=FirefoxPortable&s=s&d=pa&f=FirefoxPortable_$version_English.paf.exe#/dl.7z",

@@ -10,9 +10,6 @@
         }
     },
     "bin": "deno.exe",
-    "checkver": {
-        "github": "https://github.com/denoland/deno"
-    },
     "env_add_path": "scripts\\bin",
     "env_set": {
         "DENO_DIR": "$dir\\cache",
@@ -22,6 +19,9 @@
         "cache",
         "scripts"
     ],
+    "checkver": {
+        "github": "https://github.com/denoland/deno"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

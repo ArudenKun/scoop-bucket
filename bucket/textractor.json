@@ -31,10 +31,7 @@
         ]
     ],
     "post_install": "Remove-Item $dir\\Textractor\\ | Out-Null",
-    "checkver": {
-        "github": "https://github.com/Artikash/Textractor",
-        "re": "Textractor-(\\d(\\.\\d)+)-Zip-Version-English-Only\\.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Artikash/Textractor/releases/download/v$version/Textractor-$version-Zip-Version-English-Only.zip",
         "extract_dir": "Textractor\\x86",
