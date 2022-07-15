@@ -22,10 +22,7 @@
         ".minecraft",
         "hmcl.json"
     ],
-    "checkver": {
-        "github": "https://github.com/huanghongxun/HMCL",
-        "regex": "v([0-9]+(\\.[0-9]+)+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe#/hmcl.exe",
         "hash": {

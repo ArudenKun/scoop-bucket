@@ -38,12 +38,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/HandBrake/HandBrake/releases/download/$version/HandBrake-$version-x86_64-Win_GUI.zip"
+                "url": "https://github.com/HandBrake/HandBrake/releases/download/$version/HandBrake-$version-x86_64-Win_GUI.zip",
+                "hash": {
+                    "url": "https://handbrake.fr/rotation.php?file=$basename",
+                    "regex": "$sha256"
+                }
             }
-        },
-        "hash": {
-            "url": "https://handbrake.fr/rotation.php?file=$basename",
-            "regex": "$sha256"
         }
     }
 }

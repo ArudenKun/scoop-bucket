@@ -28,8 +28,7 @@
     ],
     "persist": "editor_data",
     "checkver": {
-        "url": "https://godotengine.org/download",
-        "regex": "<h2>Godot <em>([\\d.]+)</em></h2>"
+        "github": "https://github.com/godotengine/godot"
     },
     "autoupdate": {
         "architecture": {
