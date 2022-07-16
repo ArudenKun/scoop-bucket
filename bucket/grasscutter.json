@@ -1,0 +1,17 @@
+{
+    "version": "1.2.0",
+    "description": "A server software reimplementation for a certain anime game.",
+    "homepage": "https://github.com/Grasscutters/Grasscutter",
+    "license": "AGPL-3.0",
+    "url": [
+        "https://github.com/Grasscutters/Grasscutter/releases/download/v1.2.0/grasscutter-1.2.0.jar",
+        "https://github.com/Koko-boya/Grasscutter_Resources/archive/refs/heads/main.zip",
+        "https://raw.githubusercontent.com/Grasscutters/Grasscutter/stable/keystore.p12"
+    ],
+    "hash": "5e87f705e5e9f449b74d7069aab6edad8093a2b050645ff6dcb5c7db55a67e82",
+    "extract_dir": "Grasscutter_Resources-main",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Grasscutters/Grasscutter/releases/download/v$version/grasscutter-1.2.0.jar"
+    }
+}
