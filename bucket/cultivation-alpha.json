@@ -12,7 +12,6 @@
             "Cultivation"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\Cultivation\"",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Grasscutters/Cultivation/releases/download/v$version-alpha/Cultivation_$version_x64_en-US.msi"
