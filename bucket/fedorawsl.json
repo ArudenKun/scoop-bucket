@@ -10,8 +10,8 @@
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\Fedora*.zip\" \"$dir\"",
-            "Rename-Item $dir\\Fedora*.exe Fedora.exe",
-            "Remove-Item \"$dir\\Fedora*.zip"
+            "Rename-Item \"$dir\\Fedora*.exe\" Fedora.exe",
+            "Remove-Item \"$dir\\Fedora*.zip\""
         ]
     },
     "post_install": [
