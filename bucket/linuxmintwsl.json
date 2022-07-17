@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220622",
-    "description": "Install Linux Mint as a WSL Instance",
+    "version": "20220422",
+    "description": "Install LinuxMintWSL as a WSL Instance",
     "homepage": "https://github.com/sileshn/LinuxmintWSL2",
     "license": "MIT",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20220622/LinuxmintWSL2.zip",
-    "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
+    "hash": "ec729b36480900fd1a977bd126fbc0b48e3618edc8de2fd8dec9c5efe7033672",
     "post_install": [
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
@@ -17,14 +17,14 @@
         "}",
         "& \"$dir\\Mint.exe\" 'isregd'",
         "if ($?) {",
-        "    warn 'Linux Mint is already registered'",
+        "    warn 'LinuxMintWSL is already registered'",
         "    $installable = $false",
         "}",
         "if ($installable) {",
         "    Copy-Item \"$dir\\Mint.exe\" \"$persist_dir\\data\\Mint.exe\"",
         "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Mint.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
         "    Remove-Item \"$persist_dir\\data\\Mint.exe\" -Force",
-        "    if(!$res) { error 'Linux Mint installation failed!'; return }",
+        "    if(!$res) { error 'LinuxMintWSL installation failed!'; return }",
         "}",
         "Remove-Item \"$dir\\rootfs.tar.gz\" -Force"
     ],
@@ -32,7 +32,7 @@
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
             "$res = Invoke-ExternalCommand \"$dir\\Mint.exe\" 'isregd'",
-            "if(!$res) { error 'Linux Mint is not registered!'; return }",
+            "if(!$res) { error 'LinuxMintWSL is not registered!'; return }",
             "Invoke-ExternalCommand \"$dir\\Mint.exe\" 'clean', '-y' | Out-Null"
         ]
     },
