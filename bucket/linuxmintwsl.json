@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220422",
+    "version": "20220622",
     "description": "Install LinuxMintWSL as a WSL Instance",
     "homepage": "https://github.com/sileshn/LinuxmintWSL2",
     "license": "MIT",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20220622/LinuxmintWSL2.zip",
-    "hash": "ec729b36480900fd1a977bd126fbc0b48e3618edc8de2fd8dec9c5efe7033672",
+    "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
     "post_install": [
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
