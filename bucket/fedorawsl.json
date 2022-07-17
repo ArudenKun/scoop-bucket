@@ -9,9 +9,7 @@
     "hash": "d99c30a4a32f5042dcade66d8e636da6d226a8816e9923cb437408a1d175c3df",
     "installer": {
         "script": [
-            "Expand-Archive $dir\\Fedora*.zip",
-            "Rename-Item $dir\\Fedora*.exe Fedora.exe",
-            "Remove-Item $dir\\Fedora*.zip"
+            "Rename-Item $dir\\Fedora*.exe Fedora.exe"
         ]
     },
     "post_install": [
