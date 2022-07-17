@@ -7,8 +7,14 @@
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": "https://github.com/yosukes-dev/FedoraWSL/releases/download/36.20220625.0/Fedora36.zip",
     "hash": "d99c30a4a32f5042dcade66d8e636da6d226a8816e9923cb437408a1d175c3df",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\Fedora*.zip\" \"$dir\"",
+            "Rename-Item $dir\\Fedora*.exe Fedora.exe",
+            "Remove-Item \"$dir\\Fedora*.zip"
+        ]
+    },
     "post_install": [
-        "Rename-Item $dir\\Fedora*.exe Fedora.exe",
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
         "    warn 'WSL appears not to be enabled!'",
