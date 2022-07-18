@@ -1,10 +1,10 @@
 {
-    "version": "0.29.2",
+    "version": "0.30.0",
     "description": "An Open Source Minecraft Launcher with Modern UX.",
     "homepage": "https://xmcl.app/",
     "license": "MIT",
-    "url": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.29.2/xmcl-0.29.2-win32-x64-unsigned.zip",
-    "hash": "d782a04e76a594ce54910efc3e9950615f710306d78ceb0ed46410bfd21ea54d",
+    "url": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.30.0/xmcl-0.30.0-win32-x64-unsigned.zip",
+    "hash": "03e5b420ca9e7ab4ddec78639cf8021c5d3c9824cc8c218196a87a3aebf92ecc",
     "shortcuts": [
         [
             "xmcl.exe",
