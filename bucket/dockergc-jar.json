@@ -1,0 +1,33 @@
+{
+    "version": "301416157",
+    "description": "A server software reimplementation for a certain anime game.",
+    "homepage": "https://github.com/akbaryahya/DockerGC",
+    "license": "AGPL-3.0",
+    "suggest": {
+        "Java": "JDK 17",
+        "Cultivation": "Cultivation"
+    },
+    "url": "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip",
+    "hash": "17ccb9e928d3d76d4067c50fb646c9844e67231ef1f83f4ae48a54895e26fa18",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\DockerGC.zip\" \"$dir\"",
+            "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\"",
+            "Move-Item -Path \"$dir\\work\\*\" -Destination \"$dir\""
+        ]
+    },
+    "persist": [
+        "data",
+        "logs",
+        "plugins",
+        "config.json"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/akbaryahya/DockerGC/actions/artifacts",
+        "jp": "$.artifacts[0].id"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip"
+    }
+}
