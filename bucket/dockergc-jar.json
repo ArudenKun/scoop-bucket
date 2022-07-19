@@ -16,14 +16,16 @@
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\dockergc.bat\"))",
+        "if (!(Test-Path \"$dir\\dockergc.bat\"))",
         "{",
         "   New-Item \"$dir\\dockergc.bat\" -Value '@start java -jar grasscutter.jar`n@start mongod' | Out-Null",
         "}"
     ],
     "installer": {
         "script": [
-            "Expand-7zipArchive \"$dir\\DockerGC\\dockergc.tar\" \"$dir\""
+            "Expand-7zipArchive \"$dir\\DockerGC.zip\" \"$dir\"",
+            "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\"",
+            "Expand-7zipArchive \"$dir\\GrasscutterResources-2.8.zip\" \"$dir\""
         ]
     },
     "extract_dir": [
