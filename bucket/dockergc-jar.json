@@ -26,10 +26,6 @@
             "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\""
         ]
     },
-    "extract_dir": [
-        "work",
-        "GrasscutterResources-2.8"
-    ],
     "bin": "dockergc.bat",
     "post_install": "java -jar grasscutter.jar -handbook",
     "persist": [
