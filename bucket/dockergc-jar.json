@@ -11,8 +11,9 @@
         "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip"
     ],
     "hash": [
-        "17ccb9e928d3d76d4067c50fb646c9844e67231ef1f83f4ae48a54895e26fa18",
-        "c5985c61967a07490a6ad8e1d8d53dfc32ee9aa42fafac68d605eebf3e7e6b3d"
+        "c5985c61967a07490a6ad8e1d8d53dfc32ee9aa42fafac68d605eebf3e7e6b3d",
+        "17ccb9e928d3d76d4067c50fb646c9844e67231ef1f83f4ae48a54895e26fa18"
+
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
