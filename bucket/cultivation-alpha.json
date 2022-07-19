@@ -3,9 +3,8 @@
     "description": "A custom launcher designed to make it as easy as possible to proxy anime game traffic to private servers. ",
     "homepage": "https://github.com/Grasscutters/Cultivation",
     "license": "Apache-2.0",
-    "url": "https://github.com/Grasscutters/Cultivation/releases/download/v1.0.3-alpha/Cultivation_1.0.3_x64_en-US.msi",
+    "url": "https://github.com/Grasscutters/Cultivation/releases/download/v1.0.3-alpha/Cultivation.zip",
     "hash": "f2a7ec692c36ad02dfa8fe85641119d4b7fc26928ce756197fb4e3f7f9bc7ae3",
-    "extract_dir": "PFiles\\Cultivation",
     "shortcuts": [
         [
             "Cultivation.exe",
@@ -18,6 +17,6 @@
         "replace": "${alpha}-alpha"
     },
     "autoupdate": {
-        "url": "https://github.com/Grasscutters/Cultivation/releases/download/v$version/Cultivation_$matchAlpha_x64_en-US.msi"
+        "url": "https://github.com/Grasscutters/Cultivation/releases/download/v$version/Cultivation.zip"
     }
 }
