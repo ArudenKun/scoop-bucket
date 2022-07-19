@@ -7,7 +7,7 @@
         "Java": "JDK 17"
     },
     "url": [
-        "https://nightly.link/akbaryahya/DockerGC/actions/artifacts/301416157.zip",
+        "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip",
         "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.8/GrasscutterResources-2.8.zip"
     ],
     "hash": [
@@ -22,7 +22,7 @@
         "}"
     ],
     "extract_dir": [
-        "dockergc.tar\\work",
+        "DockerGC.zip\\dockergc.tar\\work",
         "GrasscutterResources-2.8"
     ],
     "bin": "dockergc.bat",
