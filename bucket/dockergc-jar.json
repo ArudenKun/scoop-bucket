@@ -25,11 +25,10 @@
         "script": [
             "Expand-7zipArchive \"$dir\\DockerGC.zip\" \"$dir\"",
             "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\"",
-            "Expand-7zipArchive \"$dir\\GrasscutterResources-2.8.zip\" \"$dir\""
+            "Move-Item -Path \"$dir\\work\" -Destination \"$dir\""
         ]
     },
     "extract_dir": [
-        "work",
         "GrasscutterResources-2.8"
     ],
     "bin": "dockergc.bat",
