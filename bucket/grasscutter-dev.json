@@ -5,12 +5,12 @@
     "license": "AGPL-3.0",
     "url": [
         "https://nightly.link/Grasscutters/Grasscutter/workflows/build/development/Grasscutter.zip",
-        "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.8/GrasscutterResources-2.8.zip",
+        "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.7/GrasscutterResources-2.7.zip",
         "https://github.com/Grasscutters/Grasscutter/archive/refs/heads/development.zip"
     ],
     "hash": [
         "6956d26ffd7540a909626c5dff8e3a931e6f47a5f90a17b5dc15f650d9e85309",
-        "2349a0ecd9238d022656ce16fb5fcf408dd918f0f7422a7f5b32677a2f87a659",
+        "c5985c61967a07490a6ad8e1d8d53dfc32ee9aa42fafac68d605eebf3e7e6b3d",
         "6a915b1ad59a704dc68d753fea1db2b1eb2402ca1bd1773f35612edae0b4bf73"
     ],
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",

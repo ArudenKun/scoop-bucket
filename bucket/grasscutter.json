@@ -5,7 +5,7 @@
     "license": "AGPL-3.0",
     "url": [
         "https://github.com/Grasscutters/Grasscutter/releases/download/v1.2.0/grasscutter-1.2.0.jar#/grasscutter.jar",
-        "https://codeload.github.com/Koko-boya/Grasscutter_Resources/zip/refs/heads/main",
+        "https://github.com/Koko-boya/Grasscutter_Resources.git",
         "https://raw.githubusercontent.com/Grasscutters/Grasscutter/stable/keystore.p12"
     ],
     "hash": [
