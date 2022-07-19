@@ -23,6 +23,7 @@
         "Resource",
         "config.json"
     ],
+    "post_install": "Remove-Item \"$dir\\dockergc.tar\"",
     "checkver": {
         "url": "https://api.github.com/repos/akbaryahya/DockerGC/actions/artifacts",
         "jp": "$.artifacts[0].id"
