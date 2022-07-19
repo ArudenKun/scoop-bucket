@@ -25,7 +25,7 @@
         "script": [
             "Expand-7zipArchive \"$dir\\DockerGC.zip\" \"$dir\"",
             "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\"",
-            "Move-Item -Path \"$dir\\work\" -Destination \"$dir\""
+            "Move-Item -Path \"$dir\\work\\*\" -Destination \"$dir\""
         ]
     },
     "extract_dir": "GrasscutterResources-2.8",
