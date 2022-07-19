@@ -21,8 +21,13 @@
         "   New-Item \"$dir\\dockergc.bat\" -Value '@start java -jar grasscutter.jar`n@start mongod' | Out-Null",
         "}"
     ],
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\""
+        ]
+    },
     "extract_dir": [
-        "DockerGC.zip\\dockergc.tar\\work",
+        "work",
         "GrasscutterResources-2.8"
     ],
     "bin": "dockergc.bat",
