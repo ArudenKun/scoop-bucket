@@ -7,8 +7,8 @@
         "Java": "JDK 17"
     },
     "url": [
-        "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip",
-        "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.8/GrasscutterResources-2.8.zip"
+        "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.8/GrasscutterResources-2.8.zip",
+        "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip"
     ],
     "hash": [
         "17ccb9e928d3d76d4067c50fb646c9844e67231ef1f83f4ae48a54895e26fa18",
@@ -28,9 +28,7 @@
             "Move-Item -Path \"$dir\\work\" -Destination \"$dir\""
         ]
     },
-    "extract_dir": [
-        "GrasscutterResources-2.8"
-    ],
+    "extract_dir": "GrasscutterResources-2.8",
     "bin": "dockergc.bat",
     "post_install": "java -jar grasscutter.jar -handbook",
     "persist": [
