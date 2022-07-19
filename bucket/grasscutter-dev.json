@@ -1,15 +1,15 @@
 {
-    "version": "1.2.0",
+    "version": "302186546",
     "description": "A server software reimplementation for a certain anime game.",
     "homepage": "https://github.com/Grasscutters/Grasscutter/tree/development",
     "license": "AGPL-3.0",
     "url": [
-        "https://nightly.link/Grasscutters/Grasscutter/workflows/build/development/Grasscutter.zip'",
+        "https://nightly.link/Grasscutters/Grasscutter/workflows/build/development/Grasscutter.zip",
         "https://gitlab.com/yukiz/GrasscutterResources/-/archive/2.8/GrasscutterResources-2.8.zip",
         "https://github.com/Grasscutters/Grasscutter/archive/refs/heads/development.zip"
     ],
     "hash": [
-        "5e87f705e5e9f449b74d7069aab6edad8093a2b050645ff6dcb5c7db55a67e82",
+        "6956d26ffd7540a909626c5dff8e3a931e6f47a5f90a17b5dc15f650d9e85309",
         "2349a0ecd9238d022656ce16fb5fcf408dd918f0f7422a7f5b32677a2f87a659",
         "6a915b1ad59a704dc68d753fea1db2b1eb2402ca1bd1773f35612edae0b4bf73"
     ],
