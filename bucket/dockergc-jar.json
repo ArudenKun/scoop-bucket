@@ -9,6 +9,7 @@
     },
     "url": "https://nightly.link/akbaryahya/DockerGC/workflows/DockerGC_alpine_2.8_early/main/DockerGC.zip",
     "hash": "17ccb9e928d3d76d4067c50fb646c9844e67231ef1f83f4ae48a54895e26fa18",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -Value ''| Out-Null }",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\dockergc.tar\" \"$dir\"",
@@ -19,7 +20,8 @@
         "data",
         "logs",
         "plugins",
-        "resources"
+        "resources",
+        "config.json"
     ],
     "post_install": [
         "Remove-Item \"$dir\\dockergc.tar\"",
