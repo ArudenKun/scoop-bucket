@@ -8,6 +8,7 @@
     "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20220622/LinuxmintWSL2.zip",
     "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
     "post_install": [
+        "Rename-Item $dir\\Mint.exe 'Linux Mint.exe'",
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
         "    warn 'WSL appears not to be enabled!'",
@@ -15,15 +16,15 @@
         "    warn 'from an elevated PowerShell. Restart your computer when prompted and reinstall LinuxMintWsl.'",
         "    $installable = $false",
         "}",
-        "& \"$dir\\Mint.exe\" 'isregd'",
+        "& \"$dir\\Linux Mint.exe\" 'isregd'",
         "if ($?) {",
         "    warn 'LinuxMintWSL is already registered'",
         "    $installable = $false",
         "}",
         "if ($installable) {",
-        "    Copy-Item \"$dir\\Mint.exe\" \"$persist_dir\\data\\Mint.exe\"",
-        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Mint.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
-        "    Remove-Item \"$persist_dir\\data\\Mint.exe\" -Force",
+        "    Copy-Item \"$dir\\Linux Mint.exe\" \"$persist_dir\\data\\Linux Mint.exe\"",
+        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Linux Mint.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
+        "    Remove-Item \"$persist_dir\\data\\Linux Mint.exe\" -Force",
         "    if(!$res) { error 'LinuxMintWSL installation failed!'; return }",
         "}",
         "Remove-Item \"$dir\\rootfs.tar.gz\" -Force"
@@ -31,15 +32,15 @@
     "uninstaller": {
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
-            "$res = Invoke-ExternalCommand \"$dir\\Mint.exe\" 'isregd'",
+            "$res = Invoke-ExternalCommand \"$dir\\Linux Mint.exe\" 'isregd'",
             "if(!$res) { error 'LinuxMintWSL is not registered!'; return }",
-            "Invoke-ExternalCommand \"$dir\\Mint.exe\" 'clean', '-y' | Out-Null"
+            "Invoke-ExternalCommand \"$dir\\Linux Mint.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "bin": "Mint.exe",
+    "bin": "Linux Mint.exe",
     "shortcuts": [
         [
-            "Mint.exe",
+            "Linux Mint.exe",
             "Linux Mint"
         ]
     ],
