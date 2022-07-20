@@ -9,9 +9,7 @@
     "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
     "installer": {
         "script": [
-            "Expand-7zipArchive \"$dir\\LinuxmintWSL2.zip\" \"$dir\"",
-            "Rename-Item -Path \"$dir\\Mint.exe\" -NewName \"Linux Mint.exe\"",
-            "Remove-Item \"$dir\\LinuxmintWSL2.zip\""
+            "Rename-Item -Path \"$dir\\Mint.exe\" -NewName \"Linux Mint.exe\""
         ]
     },
     "post_install": [
