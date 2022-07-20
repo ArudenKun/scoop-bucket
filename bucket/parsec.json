@@ -19,5 +19,6 @@
             "parsecd.exe",
             "Parsec"
         ]
-    ]
+    ],
+    "##": "Disable the junction config as this does not work for symlinks then install this program and re enable the junction config"
 }
