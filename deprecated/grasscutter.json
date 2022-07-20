@@ -15,15 +15,13 @@
     ],
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
     "extract_dir": "Grasscutter_Resources-main",
-    "post_install": "java -jar grasscutter.jar -handbook",
     "persist": [
         "data",
         "logs",
-        "plugins",
-        "config.json"
+        "plugins"
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Grasscutters/Grasscutter/releases/download/v$version/grasscutter-1.2.0.jar"
+        "url": "https://github.com/Grasscutters/Grasscutter/releases/download/v$version/grasscutter-$version.jar"
     }
 }

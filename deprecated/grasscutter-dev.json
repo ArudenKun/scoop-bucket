@@ -13,14 +13,11 @@
         "c5985c61967a07490a6ad8e1d8d53dfc32ee9aa42fafac68d605eebf3e7e6b3d",
         "6a915b1ad59a704dc68d753fea1db2b1eb2402ca1bd1773f35612edae0b4bf73"
     ],
-    "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
     "extract_dir": "Grasscutter_Resources-main",
-    "post_install": "java -jar grasscutter.jar -handbook",
     "persist": [
         "data",
         "logs",
-        "plugins",
-        "config.json"
+        "plugins"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/Grasscutters/Grasscutter/actions/artifacts",
