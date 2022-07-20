@@ -13,20 +13,12 @@
             "hash": "e936e0b5291004d90bd427ec65b615fb75f152bf1f502ac90880381b0a01f2ab"
         }
     },
-    "pre_install": [
-        "if(!(Test-Path \"$persist_dir\\user.bin\")) { New-Item \"$dir\\user.bin\" | Out-Null }",
-        "if(!(Test-Path \"$persist_dir\\config.txt\")) { New-Item \"$dir\\config.txt\" | Out-Null }"
-    ],
     "bin": "parsecd.exe",
     "shortcuts": [
         [
             "parsecd.exe",
             "Parsec"
         ]
-    ],
-    "persist": [
-        "user.bin",
-        "config.txt"
     ],
     "checkver": {
         "url": "https://parsec.app/changelog",
