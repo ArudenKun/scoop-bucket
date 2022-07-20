@@ -9,7 +9,7 @@
     "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
     "installer": {
         "script": [
-            "Rename-Item -Path \"$dir\\Mint.exe\" -NewName \"Linux Mint.exe\""
+            "Rename-Item -Path \"$dir\\Mint.exe\" -NewName \"Linux-Mint.exe\""
         ]
     },
     "post_install": [
@@ -20,15 +20,15 @@
         "    warn 'from an elevated PowerShell. Restart your computer when prompted and reinstall LinuxMintWsl.'",
         "    $installable = $false",
         "}",
-        "& \"$dir\\Linux Mint.exe\" 'isregd'",
+        "& \"$dir\\Linux-Mint.exe\" 'isregd'",
         "if ($?) {",
         "    warn 'LinuxMintWSL is already registered'",
         "    $installable = $false",
         "}",
         "if ($installable) {",
-        "    Copy-Item \"$dir\\Linux Mint.exe\" \"$persist_dir\\data\\Linux Mint.exe\"",
-        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Linux Mint.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
-        "    Remove-Item \"$persist_dir\\data\\Linux Mint.exe\" -Force",
+        "    Copy-Item \"$dir\\Linux-Mint.exe\" \"$persist_dir\\data\\Linux-Mint.exe\"",
+        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Linux-Mint.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
+        "    Remove-Item \"$persist_dir\\data\\Linux-Mint.exe\" -Force",
         "    if(!$res) { error 'LinuxMintWSL installation failed!'; return }",
         "}",
         "Remove-Item \"$dir\\rootfs.tar.gz\" -Force"
@@ -36,15 +36,15 @@
     "uninstaller": {
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
-            "$res = Invoke-ExternalCommand \"$dir\\Linux Mint.exe\" 'isregd'",
+            "$res = Invoke-ExternalCommand \"$dir\\Linux-Mint.exe\" 'isregd'",
             "if(!$res) { error 'LinuxMintWSL is not registered!'; return }",
-            "Invoke-ExternalCommand \"$dir\\Linux Mint.exe\" 'clean', '-y' | Out-Null"
+            "Invoke-ExternalCommand \"$dir\\Linux-Mint.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "bin": "Linux Mint.exe",
+    "bin": "Linux-Mint.exe",
     "shortcuts": [
         [
-            "Linux Mint.exe",
+            "Linux-Mint.exe",
             "Linux Mint"
         ]
     ],
