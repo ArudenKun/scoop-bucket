@@ -12,9 +12,12 @@
     },
     "bin": "pnpm.exe",
     "post_install": [
-        "pnpm config set store-dir $dir\\pnpm-store"
+        "pnpm config set store-dir $dir\\appdata\\pnpm-store",
+        "pnpm config set cache-dir $dir\\appdata\\pnpm-cache",
+        "pnpm config set state-dir $dir\\appdata\\pnpm-state",
+        "pnpm config set global-dir $dir\\appdata\\pnpm-global"
     ],
-    "persist": "pnpm-store",
+    "persist": "appdata",
     "checkver": {
         "script": [
             "# Using checkver script to check through all release tags",
