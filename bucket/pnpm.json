@@ -3,6 +3,7 @@
     "description": "A fast and disk space efficient Node package manager.",
     "homepage": "https://pnpm.io/",
     "license": "MIT",
+    "depends": "custom/volta",
     "architecture": {
         "64bit": {
             "url": "https://github.com/pnpm/pnpm/releases/download/v7.5.2/pnpm-win-x64.exe#/pnpm.exe",
