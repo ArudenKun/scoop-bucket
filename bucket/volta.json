@@ -37,9 +37,7 @@
     },
     "post_install": [
         "volta install node",
-        "volta install yarn",
-        "npm config set cache $dir\\cache\\npm-cache --location=global",
-        "yarn config set cache-folder $dir\\cache\\yarn-cache"
+        "npm config set cache $dir\\cache\\npm-cache --location=global"
     ],
     "env_set": {
         "VOLTA_HOME": "$dir\\appdata"
