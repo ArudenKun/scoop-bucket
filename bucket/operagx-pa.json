@@ -1,0 +1,28 @@
+{
+    "version": "88.0.4412.85",
+    "homepage": "https://portableapps.com/apps/internet/opera-gx-portable",
+    "description": "Gaming counterpart of Opera web browser",
+    "license": "",
+    "url": "https://portableapps.com/redirect/?a=OperaGXPortable&s=s&d=pa&f=OperaGXPortable_88.0.4412.85.paf.exe",
+    "hash": "41da3e180f42bef6f63be180ce47b32bfb3a62e18e355b7ad7ee8ac3232eb217",
+    "bin": "OperaGXPortable.exe",
+    "shortcuts": [
+        [
+            "OperaGXPortable.exe",
+            "Opera GX"
+        ]
+    ],
+    "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "persist": "Data",
+    "checkver": {
+        "url": "https://portableapps.com/apps/internet/opera-gx-portable",
+        "re": "Version ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url": "https://portableapps.com/redirect/?a=OperaGXPortable&s=s&d=pa&f=OperaGXPortable_$version.paf.exe",
+        "hash": {
+            "url": "https://portableapps.com/apps/internet/opera-gx-portable",
+            "regex": ": $sha256"
+        }
+    }
+}
