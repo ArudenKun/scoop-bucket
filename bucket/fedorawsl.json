@@ -7,7 +7,12 @@
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": "https://github.com/yosukes-dev/FedoraWSL/releases/download/36.20220625.0/Fedora36.zip",
     "hash": "d99c30a4a32f5042dcade66d8e636da6d226a8816e9923cb437408a1d175c3df",
-    "_comment": [
+    "installer": {
+        "script": [
+            "Rename-Item $dir\\Fedora*.exe Fedora.exe"
+        ]
+    },
+    "post_install": [
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
         "    warn 'WSL appears not to be enabled!'",
@@ -15,15 +20,15 @@
         "    warn 'from an elevated PowerShell. Restart your computer when prompted and reinstall FedoraWSL.'",
         "    $installable = $false",
         "}",
-        "& \"$dir\\Fedora*.exe\" 'isregd'",
+        "& \"$dir\\Fedora.exe\" 'isregd'",
         "if ($?) {",
         "    warn 'FedoraWSL is already registered'",
         "    $installable = $false",
         "}",
         "if ($installable) {",
-        "    Copy-Item \"$dir\\Fedora*.exe\" \"$persist_dir\\data\\Fedora*.exe\"",
-        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Fedora*.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
-        "    Remove-Item \"$persist_dir\\data\\Fedora*.exe\" -Force",
+        "    Copy-Item \"$dir\\Fedora.exe\" \"$persist_dir\\data\\Fedora.exe\"",
+        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Fedora.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
+        "    Remove-Item \"$persist_dir\\data\\Fedora.exe\" -Force",
         "    if(!$res) { error 'FedoraWSL installation failed!'; return }",
         "}",
         "Remove-Item \"$dir\\rootfs.tar.gz\" -Force"
@@ -31,15 +36,15 @@
     "uninstaller": {
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
-            "$res = Invoke-ExternalCommand \"$dir\\Fedora*.exe\" 'isregd'",
+            "$res = Invoke-ExternalCommand \"$dir\\Fedora.exe\" 'isregd'",
             "if(!$res) { error 'FedoraWSL is not registered!'; return }",
-            "Invoke-ExternalCommand \"$dir\\Fedora*.exe\" 'clean', '-y' | Out-Null"
+            "Invoke-ExternalCommand \"$dir\\Fedora.exe\" 'clean', '-y' | Out-Null"
         ]
     },
     "bin": "Fedora*.exe",
     "shortcuts": [
         [
-            "Fedora*.exe",
+            "Fedora.exe",
             "Fedora Linux"
         ]
     ],
