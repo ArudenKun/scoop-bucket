@@ -141,19 +141,5 @@
         "xmcl",
         "zulufx"
     ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MariaDB",
-            "name": "Test",
-            "database": "test",
-            "username": "root",
-            "password": ""
-        }
-    ]
+    "sqltools.connections": []
 }
