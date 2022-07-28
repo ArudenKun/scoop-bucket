@@ -18,7 +18,7 @@
         "replace": "${ver}-alpha.${alpha}"
     },
     "autoupdate": {
-        "url": "https://github.com/IridiumIO/CompactGUI/releases/download/v3.0.0-alpha.6/CompactGUI.exe",
+        "url": "https://github.com/IridiumIO/CompactGUI/releases/download/v$version/CompactGUI.exe",
         "hash": {
             "url": "https://github.com/IridiumIO/CompactGUI/releases/tag/v$version/",
             "regex": "SHA-256</span>:\\s+<span\\sclass=\"pl-s\">$sha256"
