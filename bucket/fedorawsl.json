@@ -41,7 +41,7 @@
             "Invoke-ExternalCommand \"$dir\\Fedora.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "bin": "Fedora*.exe",
+    "bin": "Fedora.exe",
     "shortcuts": [
         [
             "Fedora.exe",
