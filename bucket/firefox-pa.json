@@ -1,10 +1,10 @@
 {
-    "version": "102.0.1",
+    "version": "103.0",
     "homepage": "https://portableapps.com/go/FirefoxPortable",
     "description": "Browser",
     "license": "",
-    "url": "https://portableapps.com/redirect/?a=FirefoxPortable&s=s&d=pa&f=FirefoxPortable_102.0.1_English.paf.exe#/dl.7z",
-    "hash": "2bd8bcb6ec2a32f1c416faaed6f1f865b0a39f735fccfdbab95632315ba7fcc2",
+    "url": "https://portableapps.com/redirect/?a=FirefoxPortable&s=s&d=pa&f=FirefoxPortable_103.0_English.paf.exe#/dl.7z",
+    "hash": "31f738de4b2e668a45f9dd24356ed377ac5ed38b1ce9e4ac755b0c513aad6c41",
     "bin": "FirefoxPortable.exe",
     "shortcuts": [
         [
