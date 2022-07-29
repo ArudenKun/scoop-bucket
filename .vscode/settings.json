@@ -43,6 +43,7 @@
         "cosi",
         "creamapi",
         "DATACOLLECTION",
+        "DFSG",
         "distromanager",
         "DLCs",
         "dnmultiplayer",
@@ -138,6 +139,7 @@
         "winver",
         "wireshark",
         "wslconfig",
+        "WSLDL",
         "xmcl",
         "zulufx"
     ],
