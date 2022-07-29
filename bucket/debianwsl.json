@@ -1,13 +1,13 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "22.3.18.0",
+    "version": "20220729",
     "description": "Install Debian Linux as a WSL Instance",
     "homepage": "https://www.debian.org/",
     "license": "DFSG",
     "depends": "custom/wsldl",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
-    "url": "https://images.linuxcontainers.org/images/debian/buster/amd64/default/20220729_05:24/rootfs.tar.xz",
-    "hash": "ec729b36480900fd1a977bd126fbc0b48e3618edc8de2fd8dec9c5efe7033672",
+    "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220729_05:24/rootfs.tar.xz#/dl.7z",
+    "hash": "4a9474e89d1cd05d43869094c32c0e6ba225f16756a7f2f09ffb7cc641ade0ed",
     "pre_install": [
         "Copy-Item $env:USERPROFILE\\scoop\\apps\\wsldl\\current\\wsldl.exe $dir",
         "Rename-Item $dir\\wsldl.exe $dir\\Debian.exe"
@@ -49,8 +49,12 @@
         ]
     ],
     "persist": "data",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://images.linuxcontainers.org",
+        "re": "bullseye</td><td>amd64</td><td>default</td><td>(?<build>[\\d.]+)_(?<time>.+?)<",
+        "replace": "${build}"
+    },
     "autoupdate": {
-        "url": "https://github.com/yuk7/DebianWSL/releases/download/$version/Arch.zip"
+        "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz#/dl.7z"
     }
 }
