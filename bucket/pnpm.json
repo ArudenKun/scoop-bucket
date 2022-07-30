@@ -16,9 +16,9 @@
         "pnpm config set cache-dir $dir\\data\\cache",
         "pnpm config set state-dir $dir\\data\\state",
         "pnpm config set global-dir $dir\\data\\global",
-        "pnpm config set global-bin-dir $dir\\global-bin"
+        "pnpm config set global-bin-dir $dir\\data\\global-bin"
     ],
-    "env_add_path": "global-bin",
+    "env_add_path": "data\\global-bin",
     "persist": "data",
     "checkver": {
         "script": [
