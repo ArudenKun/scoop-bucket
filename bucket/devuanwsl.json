@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220729",
+    "version": "22010300",
     "description": "Install Devuan Linux as a WSL Instance",
     "homepage": "https://github.com/VPraharsha03/DevuanWSL",
     "license": "MIT",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": "https://github.com/VPraharsha03/DevuanWSL/releases/download/22010300/Devuan.zip",
-    "hash": "4a9474e89d1cd05d43869094c32c0e6ba225f16756a7f2f09ffb7cc641ade0ed",
+    "hash": "b810146e9b5d589a15ff37289a5adba1afd8e027d5734d7078b335a8d5ff7cee",
     "post_install": [
         "$installable = $true",
         "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
