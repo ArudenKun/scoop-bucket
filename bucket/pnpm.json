@@ -10,7 +10,6 @@
             "hash": "b7889cf210b63bb14faaae6e68062c8772a2db83e02c6ffa080d33fd1ddf9f3e"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\global-bin\")) { New-Item \"$dir\\global-bin\" -ItemType Directory }",
     "bin": "pnpm.exe",
     "post_install": [
         "pnpm config set store-dir $dir\\data\\store",
