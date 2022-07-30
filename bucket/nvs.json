@@ -18,6 +18,7 @@
         "ConvertTo-Json $CONF | Out-File -encoding \"ASCII\" \"$persist_dir\\nodejs\\settings.json\"",
         "nvs add lts",
         "nvs link lts",
+        "nvs use lts",
         "nvs auto on"
     ],
     "persist": [
