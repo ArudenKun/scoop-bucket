@@ -44,7 +44,7 @@
     "bin": "Linux-Mint-Debian.exe",
     "shortcuts": [
         [
-            "Linux-Mint-Debian",
+            "Linux-Mint-Debian.exe",
             "Linux Mint Debian Edition"
         ]
     ],
