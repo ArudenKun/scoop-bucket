@@ -41,7 +41,7 @@
             "Invoke-ExternalCommand \"$dir\\Linux-Mint-Debian.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "bin": "Linux-Mint-Debian",
+    "bin": "Linux-Mint-Debian.exe",
     "shortcuts": [
         [
             "Linux-Mint-Debian",
