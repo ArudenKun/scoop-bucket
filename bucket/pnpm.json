@@ -19,6 +19,7 @@
         "pnpm config set global-dir $dir\\data\\global",
         "pnpm config set global-bin-dir $dir\\global-bin"
     ],
+    "env_add_path": "$dir\\global-bin",
     "persist": "data",
     "checkver": {
         "script": [
