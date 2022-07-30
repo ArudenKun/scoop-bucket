@@ -15,7 +15,8 @@
         "pnpm config set store-dir $dir\\data\\store",
         "pnpm config set cache-dir $dir\\data\\cache",
         "pnpm config set state-dir $dir\\data\\state",
-        "pnpm config set global-dir $dir\\data\\global"
+        "pnpm config set global-dir $dir\\data\\global",
+        "pnpm config set global-bin-dir $dir\\data\\global-bin"
     ],
     "persist": "data",
     "checkver": {
