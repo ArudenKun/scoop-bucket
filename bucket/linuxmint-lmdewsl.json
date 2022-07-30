@@ -1,0 +1,56 @@
+{
+    "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
+    "version": "20220622",
+    "description": "Install LinuxMintLmdeWSL as a WSL Instance",
+    "homepage": "https://github.com/sileshn/LinuxmintLmdeWSL2",
+    "license": "MIT",
+    "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
+    "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20220622/LinuxmintlmdeWSL2.zip",
+    "hash": "8db896210cb30cc26ed58e74f40123e570406f6f66cde412c7bb3c8dbe8a3cbd",
+    "installer": {
+        "script": [
+            "Rename-Item -Path \"$dir\\Mint.exe\" -NewName \"Linux-Mint-Debian.exe\""
+        ]
+    },
+    "post_install": [
+        "$installable = $true",
+        "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
+        "    warn 'WSL appears not to be enabled!'",
+        "    warn 'Run ''Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux'''",
+        "    warn 'from an elevated PowerShell. Restart your computer when prompted and reinstall LinuxMintLmdeWsl.'",
+        "    $installable = $false",
+        "}",
+        "& \"$dir\\Linux-Mint-Debian.exe\" 'isregd'",
+        "if ($?) {",
+        "    warn 'LinuxMintLmdeWSL is already registered'",
+        "    $installable = $false",
+        "}",
+        "if ($installable) {",
+        "    Copy-Item \"$dir\\Linux-Mint-Debian.exe\" \"$persist_dir\\data\\Linux-Mint-Debian.exe\"",
+        "    $res = Invoke-ExternalCommand \"$persist_dir\\data\\Linux-Mint-Debian.exe\" 'install', \"$dir\\rootfs.tar.gz\"",
+        "    Remove-Item \"$persist_dir\\data\\Linux-Mint-Debian.exe\" -Force",
+        "    if(!$res) { error 'LinuxMintLmdeWSL installation failed!'; return }",
+        "}",
+        "Remove-Item \"$dir\\rootfs.tar.gz\" -Force"
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -ne 'uninstall') { return }",
+            "$res = Invoke-ExternalCommand \"$dir\\Linux-Mint-Debian.exe\" 'isregd'",
+            "if(!$res) { error 'LinuxMintLmdeWSL is not registered!'; return }",
+            "Invoke-ExternalCommand \"$dir\\Linux-Mint-Debian.exe\" 'clean', '-y' | Out-Null"
+        ]
+    },
+    "bin": "Linux-Mint-Debian",
+    "shortcuts": [
+        [
+            "Linux-Mint-Debian",
+            "Linux Mint Debian Edition"
+        ]
+    ],
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/$version/LinuxmintlmdeWSL2.zip"
+    }
+}
