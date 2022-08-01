@@ -15,33 +15,32 @@
         "if (!(Test-Path \"$persist_dir\\x86\\SavedGames.txt\")) { New-Item \"$dir\\x86\\SavedGames.txt\" | Out-Null }"
     ],
     "extract_dir": "Textractor",
-    "installer": {
-        "script": [
-            "Rename-Item -Path $dir\\x64\\Textractor.exe -NewName Textractor-x64.exe",
-            "Rename-Item -Path $dir\\x86\\Textractor.exe -NewName Textractor-x86.exe",
-            "Rename-Item -Path $dir\\x64\\TextractorCLI.exe -NewName TextractorCLI-x64.exe",
-            "Rename-Item -Path $dir\\x86\\TextractorCLI.exe -NewName TextractorCLI-x86.exe"
+    "bin": [
+        [
+            "x64\\TextractorCLI.exe",
+            "TextractorCLIx64"
+        ],
+        [
+            "x86\\TextractorCLI.exe",
+            "TextractorCLIx86"
         ]
-    },
+    ],
+    "shortcuts": [
+        [
+            "x64\\Textractor.exe",
+            "Textractor-x64"
+        ],
+        [
+            "x86\\Textractor.exe",
+            "Textractor-x86"
+        ]
+    ],
     "persist": [
         "x64\\SavedExtensions.txt",
         "x64\\SavedGames.txt",
         "x86\\SavedExtensions.txt",
-        "x86\\SavedGames.txt"
-    ],
-    "bin": [
-        "x64\\TextractorCLI-x64.exe",
-        "x86\\TextractorCLI-x86.exe"
-    ],
-    "shortcuts": [
-        [
-            "x64\\Textractor-x64.exe",
-            "Textractor-x64"
-        ],
-        [
-            "x86\\Textractor-x86.exe",
-            "Textractor-x86"
-        ]
+        "x86\\SavedGames.txt",
+        "INSTALL_THIS_UNICODE_FONT.ttf"
     ],
     "checkver": "github",
     "autoupdate": {
