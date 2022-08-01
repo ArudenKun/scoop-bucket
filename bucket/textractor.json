@@ -15,6 +15,12 @@
         "if (!(Test-Path \"$persist_dir\\x86\\SavedGames.txt\")) { New-Item \"$dir\\x86\\SavedGames.txt\" | Out-Null }"
     ],
     "extract_dir": "Textractor",
+    "installer": {
+        "script": [
+            "Copy-Item $dir\\INSTALL_THIS_UNICODE_FONT.ttf $dir\\x64",
+            "Copy-Item $dir\\INSTALL_THIS_UNICODE_FONT.ttf $dir\\x86"
+        ]
+    },
     "bin": [
         [
             "x64\\TextractorCLI.exe",
