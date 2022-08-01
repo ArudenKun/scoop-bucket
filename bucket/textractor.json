@@ -9,10 +9,10 @@
     "url": "https://github.com/Artikash/Textractor/releases/download/v5.2.0/Textractor-5.2.0-Zip-Version-English-Only.zip",
     "hash": "3efdcf390261fcfb6a44220113c68b06eba22a3ef441ac618208238b52ee7974",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\x64\\SavedExtensions.txt\")) { New-Item \"$dir\\x64\\SavedExtensions.txt\" -Value",
-        "\"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\x86\\SavedExtensions.txt\")) { New-Item \"$dir\\x86\\SavedExtensions.txt\" -Value",
-        "\"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\x64\\SavedExtensions.txt\")) { New-Item \"$dir\\x64\\SavedExtensions.txt\"",
+        "-Value \"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\x86\\SavedExtensions.txt\")) { New-Item \"$dir\\x86\\SavedExtensions.txt\"",
+        "-Value \"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\x64\\SavedGames.txt\")) { New-Item \"$dir\\x64\\SavedGames.txt\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\x86\\SavedGames.txt\")) { New-Item \"$dir\\x86\\SavedGames.txt\" | Out-Null }"
     ],
