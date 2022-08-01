@@ -38,8 +38,7 @@
         "Textractor\\x64\\SavedExtensions.txt",
         "Textractor\\x64\\SavedGames.txt",
         "Textractor\\x86\\SavedExtensions.txt",
-        "Textractor\\x86\\SavedGames.txt",
-        "Textractor\\INSTALL_THIS_UNICODE_FONT.ttf"
+        "Textractor\\x86\\SavedGames.txt"
     ],
     "checkver": "github",
     "autoupdate": {
