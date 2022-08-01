@@ -1,5 +1,5 @@
 {
-    "version": "4.0.81",
+    "version": "4.0.1",
     "description": "An Android emulator optimized for mobile gaming with lower resource consumption",
     "homepage": "https://www.ldplayer.net",
     "license": "Unknown",
@@ -28,7 +28,7 @@
         "vms"
     ],
     "checkver": {
-        "url": "https://www.ldplayer.net/other/version-history-and-release-notes.html",
+        "url": "https://www.ldplayer.net/other/version-history-and-release-notes.html?log=4",
         "regex": "version:\"(4[\\d.]+)\""
     },
     "autoupdate": {
