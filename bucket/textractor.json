@@ -5,36 +5,48 @@
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/Artikash/Textractor/blob/master/LICENSE"
     },
-    "notes": "Install Required_Font.tff after installation",
-    "url": [
-        "https://github.com/Artikash/Textractor/releases/download/v5.2.0/Textractor-5.2.0-Zip-Version-English-Only.zip",
-        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/fonts/textractor/Required_Font.ttf"
-    ],
-    "hash": [
-        "3efdcf390261fcfb6a44220113c68b06eba22a3ef441ac618208238b52ee7974",
-        "32B64B69D4941E7A9636A6E261440002BE612796B9BD3EBB76CBE84C8EAB042A"
-    ],
-    "extract_dir": "Textractor\\x86",
+    "notes": "Install the required font inside the directory after installation",
+    "url": "https://github.com/Artikash/Textractor/releases/download/v5.2.0/Textractor-5.2.0-Zip-Version-English-Only.zip",
+    "hash": "3efdcf390261fcfb6a44220113c68b06eba22a3ef441ac618208238b52ee7974",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\SavedExtensions.txt\")) { New-Item \"$dir\\SavedExtensions.txt\" -Value \"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\SavedGames.txt\")) { New-Item \"$dir\\SavedGames.txt\" | Out-Null }"
+        "if (!(Test-Path \"$persist_dir\\x64\\SavedExtensions.txt\")) { New-Item \"$dir\\x64\\SavedExtensions.txt\" -Value",
+        "\"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\x86\\SavedExtensions.txt\")) { New-Item \"$dir\\x86\\SavedExtensions.txt\" -Value",
+        "\"Remove Repeated Characters>Copy to Clipboard>Extra Newlines>\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\x64\\SavedGames.txt\")) { New-Item \"$dir\\x64\\SavedGames.txt\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\x86\\SavedGames.txt\")) { New-Item \"$dir\\x86\\SavedGames.txt\" | Out-Null }"
     ],
+    "extract_dir": "Textractor",
+    "installer": {
+        "script": [
+            "Rename-Item -Path \"$dir\\x64\\Textractor.exe -NewName Textractor-x64.exe\"",
+            "Rename-Item -Path \"$dir\\x86\\Textractor.exe -NewName Textractor-x86.exe\"",
+            "Rename-Item -Path \"$dir\\x64\\TextractorCLI.exe -NewName TextractorCLI-x64.exe\"",
+            "Rename-Item -Path \"$dir\\x86\\TextractorCLI.exe -NewName TextractorCLI-x86.exe\""
+        ]
+    },
     "persist": [
-        "SavedExtensions.txt",
-        "SavedGames.txt"
+        "x64\\SavedExtensions.txt",
+        "x64\\SavedGames.txt",
+        "x86\\SavedExtensions.txt",
+        "x86\\SavedGames.txt"
     ],
-    "bin": "TextractorCLI.exe",
+    "bin": [
+        "x64\\TextractorCLI-x64.exe",
+        "x86\\TextractorCLI-x86.exe"
+    ],
     "shortcuts": [
         [
-            "Textractor.exe",
-            "Textractor"
+            "x64\\Textractor-x64.exe",
+            "Textractor-x64"
+        ],
+        [
+            "x86\\Textractor-x86.exe",
+            "Textractor-x86"
         ]
     ],
-    "post_install": "Remove-Item $dir\\Textractor\\ | Out-Null",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Artikash/Textractor/releases/download/v$version/Textractor-$version-Zip-Version-English-Only.zip",
-        "extract_dir": "Textractor\\x86",
-        "post_install": "Remove-Item $dir\\Textractor\\ | Out-Null"
+        "url": "https://github.com/Artikash/Textractor/releases/download/v$version/Textractor-$version-Zip-Version-English-Only.zip"
     }
 }
