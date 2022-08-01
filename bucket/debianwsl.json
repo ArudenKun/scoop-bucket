@@ -1,13 +1,13 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220731",
+    "version": "20220801",
     "description": "Install Debian Linux as a WSL Instance",
     "homepage": "https://www.debian.org/",
     "license": "DFSG",
     "depends": "custom/wsldl",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
-    "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220731_05:25/rootfs.tar.xz#/dl.7z",
-    "hash": "0d03913d74ae1852033ea2bfa79e580eb519cb4fa3785870b7ca6f47672e71a1",
+    "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220801_05:24/rootfs.tar.xz#/dl.7z",
+    "hash": "4e3b84a0819909d3ebcd98eeea2d84acbdf1d91cca49b3d087395bd30d4ef7ff",
     "pre_install": [
         "Copy-Item $env:USERPROFILE\\scoop\\apps\\wsldl\\current\\wsldl.exe $dir",
         "Rename-Item $dir\\wsldl.exe $dir\\Debian.exe"
