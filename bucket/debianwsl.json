@@ -15,7 +15,7 @@
     },
     "hash": [
         "79db6645d37b5c9096e5871490ac74ebcc7703f2d5edc5a3261eecc735fb7779",
-        "4e3b84a0819909d3ebcd18eeea2d84acbdf1d91cca49b3d087395bd30d4ef7ff"
+        "06c0451582f545083778934cf48604080c222bf1f1dfd1b6b90e4019a5306539"
     ],
     "post_install": [
         "$installable = $true",
