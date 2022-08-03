@@ -1,6 +1,6 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220803",
+    "version": "20210803",
     "description": "Install Debian Linux as a WSL Instance",
     "homepage": "https://www.debian.org/",
     "license": "DFSG",
