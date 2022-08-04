@@ -6,11 +6,14 @@
     "license": "DFSG",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": [
-        "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220803_05:24/rootfs.tar.xz#/dl.7z",
+        "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220803_05:24/rootfs.tar.xz",
         "https://github.com/yuk7/wsldl/releases/latest/download/wsldl.exe"
     ],
     "installer": {
-        "script": "Rename-Item $dir\\wsldl.exe Debian.exe"
+        "script": [
+            "Rename-Item $dir\\wsldl.exe Debian.exe",
+            "Rename-Item $dir\\rootfs.tar.xz rootfs.tar.gz"
+        ]
     },
     "hash": [
         "79db6645d37b5c9096e5871490ac74ebcc7703f2d5edc5a3261eecc735fb7779",
@@ -59,6 +62,6 @@
         "replace": "${build}"
     },
     "autoupdate": {
-        "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz#/dl.7z"
+        "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz"
     }
 }
