@@ -11,8 +11,7 @@
     ],
     "installer": {
         "script": [
-            "Rename-Item $dir\\wsldl.exe Debian.exe",
-            "Rename-Item $dir\\rootfs.tar.xz rootfs.tar.gz"
+            "Rename-Item $dir\\wsldl.exe Debian.exe"
         ]
     },
     "hash": [
@@ -62,6 +61,9 @@
         "replace": "${build}"
     },
     "autoupdate": {
-        "url": "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz"
+        "url": [
+            "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz",
+            "https://github.com/yuk7/wsldl/releases/latest/download/wsldl.exe"
+        ]
     }
 }
