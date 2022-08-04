@@ -11,7 +11,8 @@
     ],
     "installer": {
         "script": [
-            "Rename-Item $dir\\wsldl.exe Debian.exe"
+            "Rename-Item $dir\\wsldl.exe Debian.exe",
+            "Rename-Item $dir\\dl rootfs.tar"
         ]
     },
     "hash": [
