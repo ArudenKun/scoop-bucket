@@ -28,7 +28,7 @@
         "vms"
     ],
     "checkver": {
-        "url": "https://www.ldplayer.net/other/version-history-and-release-notes.html?log=4",
+        "url": "https://www.ldplayer.net/other/version-history-and-release-notes.html",
         "regex": "version:\"(4[\\d.]+)\""
     },
     "autoupdate": {
