@@ -8,12 +8,14 @@
     },
     "url": "https://github.com/Anuken/Mindustry/releases/download/v137/Mindustry.jar",
     "hash": "2eefb439534c91b6ad73630620dd789a55817a36b15aab6c55525c108b6f6d75",
-    "pre_install": "Set-Content -Path \"$dir\\mindustry.bat\" -Value \"pushd $dir && javaw -jar Mindustry.jar && popd\"",
+    "pre_install": "Set-Content -Path \"$dir\\mindustry.bat\" -Value \"@start javaw -jar Mindustry.jar\"",
     "bin": "mindustry.bat",
     "shortcuts": [
         [
             "mindustry.bat",
-            "Mindustry"
+            "Mindustry",
+            "",
+            "icon.ico"
         ]
     ],
     "checkver": {
