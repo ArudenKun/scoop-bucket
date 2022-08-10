@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220809",
+    "version": "20220810",
     "description": "Install Debian Linux as a WSL Instance",
     "homepage": "https://www.debian.org/",
     "license": "DFSG",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": [
-        "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220809_05:25/rootfs.tar.xz#/dl.zip",
+        "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220810_05:25/rootfs.tar.xz#/dl.zip",
         "https://github.com/yuk7/wsldl/releases/latest/download/wsldl.exe"
     ],
     "installer": {
@@ -16,7 +16,7 @@
         ]
     },
     "hash": [
-        "6db651cd2e5a88c572add38386c5776718f3bc1a85f9565bbbf4bfd05ffd7852",
+        "5eca07b5619ea0dbe5a21636d38caf70d2590c665f8ebbfcdc8716c0b1e8e639",
         "06c0451582f545083778934cf48604080c222bf1f1dfd1b6b90e4019a5306539"
     ],
     "post_install": [
