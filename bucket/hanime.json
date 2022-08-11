@@ -3,12 +3,12 @@
     "description": "📥 Command-line tool to download videos from hanime.tv",
     "homepage": "https://github.com/IchBinLeoon/hanime",
     "license": "MIT License",
-    "url": "https://github.com/IchBinLeoon/hanime/releases/download/v1.0.7/hanime_windows_v1.0.7.exe",
+    "url": "https://github.com/IchBinLeoon/hanime/releases/download/v1.0.7/hanime_windows_v1.0.7.exe#/hanime.exe",
     "hash": "dd1a4b0571889b53813e4fa3d50fdf8f44694545f8b7f807df29fafe7b0fa006",
     "bin": "hanime.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe",
+        "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe#/hanime.exe",
         "hash": {
             "url": "https://plunger-dotnet-api.herokuapp.com/hanime",
             "jp": "$.sha256"
