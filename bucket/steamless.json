@@ -8,7 +8,7 @@
     "bin": [
         [
             "Steamless.CLI.exe",
-            "Steamless"
+            "steamless-cli"
         ]
     ],
     "shortcuts": [
