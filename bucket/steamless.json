@@ -5,7 +5,12 @@
     "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License",
     "url": "https://github.com/atom0s/Steamless/releases/download/v3.1.0.0/Steamless.v3.1.0.0.-.by.atom0s.zip",
     "hash": "4da2b9519a32da67957449eb55edb8d442395ff548638639e9d62cbaac0da938",
-    "bin": "Steamless.CLI.exe",
+    "bin": [
+        [
+            "Steamless.CLI.exe",
+            "steamless"
+        ]
+    ],
     "shortcuts": [
         [
             "Steamless.exe",
