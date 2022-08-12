@@ -18,7 +18,9 @@
     ],
     "env_set": {
         "PYENV": "$dir\\pyenv-win",
-        "PIP_CACHE_DIR": "$dir\\cache"
+        "PIP_CACHE_DIR": "$dir\\cache\\pip",
+        "PIPENV_CACHE_DIR": "$dir\\cache\\pipenv",
+        "PIPENV_VENV_IN_PROJECT ": "True"
     },
     "persist": [
         "pyenv-win\\version",
