@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.0/Heroic_Setup_2.4.0.exe#/dl.7z",
-            "hash": "sha512:3456c9a00be3e3ff66605275726c6dc6b584ea1bb7b53e98805f4a12f9f5ad61a4f135e2b8de8a97d6e1e908fe96e6fbcd7c69d801aa6dad235a691e2dba8463",
+            "hash": "ce57361b23f95f81fc9e59191da0acc4eb171bcc09890112d6112aad76b585ee",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse"
@@ -27,8 +27,8 @@
             "64bit": {
                 "url": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v$version/Heroic_Setup_$version.exe#/dl.7z",
                 "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s*$base64"
+                    "url": "https://plunger-dotnet-api.herokuapp.com/heroic",
+                    "jp": "$.sha256"
                 }
             }
         }
