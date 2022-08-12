@@ -7,7 +7,7 @@
         "main": "python"
     },
     "url": "https://install.python-poetry.org#/install-poetry.py",
-    "hash": "3e6e8ee8d8dc22c2a5bec5ecfb89a152f59dee77736c1491b3fe7dcc4a99df9f",
+    "hash": "fd16592a208a76f378e11186db492ff283aeb6ef716b5b7455d65eec5424d74d",
     "pre_install": "if(!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" -Value \"[virtualenvs]`nin-project = true\"| Out-Null }",
     "installer": {
         "script": [
