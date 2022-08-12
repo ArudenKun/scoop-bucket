@@ -52,7 +52,8 @@
     },
     "post_install": [
         "python -E -s -m ensurepip -U --default-pip | Out-Null",
-        "Write-Output \"$([char]0x1b)[0m\" # Reset ansi to prevent color leak from installer"
+        "Write-Output \"$([char]0x1b)[0m\" # Reset ansi to prevent color leak from installer",
+        "pip install pipenv"
     ],
     "uninstaller": {
         "script": [
@@ -78,6 +79,7 @@
         "."
     ],
     "env_set": {
+        "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\Cache\\virtualenv",
         "PIP_CACHE_DIR": "$dir\\Cache\\pip",
         "PIPENV_CACHE_DIR": "$dir\\Cache\\pipenv",
         "PIPENV_VENV_IN_PROJECT ": "True"

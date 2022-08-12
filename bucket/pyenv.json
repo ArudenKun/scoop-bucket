@@ -18,6 +18,7 @@
     ],
     "env_set": {
         "PYENV": "$dir\\pyenv-win",
+        "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\cache\\virtualenv",
         "PIP_CACHE_DIR": "$dir\\cache\\pip",
         "PIPENV_CACHE_DIR": "$dir\\cache\\pipenv",
         "PIPENV_VENV_IN_PROJECT ": "True"

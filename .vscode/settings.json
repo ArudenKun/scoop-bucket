@@ -141,6 +141,7 @@
         "Uninst",
         "vcredist",
         "venv",
+        "virtualenv",
         "virtualenvs",
         "vmnetcfg",
         "vmoptions",
