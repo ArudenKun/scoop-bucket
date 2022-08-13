@@ -1,5 +1,5 @@
 {
-    "version": "324094000",
+    "version": "328292589",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Freeware",
     "url": [
@@ -7,7 +7,7 @@
         "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/genshin-impact/icon.ico"
     ],
     "hash": [
-        "1c4cda4b7da2f23d7c6ec55f1174d1941def8cd4473b35bfab88664ecd9a670e",
+        "0beee684a0b2aef213f3ef1ca7a7a704531daca697466e101249ca6efb5df624",
         "fb6d11eef28d352a35de4f373593f59548cad18676b3716bd2c47fdf2424f45d"
     ],
     "pre_install": [
