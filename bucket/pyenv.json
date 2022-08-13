@@ -12,10 +12,11 @@
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\pyenv-win\\version\")) { New-Item \"$dir\\pyenv-win\\version\" | Out-Null }",
-    "env_add_path": [
-        "pyenv-win\\shims",
-        "pyenv-win\\bin"
+    "bin": [
+        "pyenv-win\\bin\\pyenv.bat",
+        "pyenv-win\\bin\\pyenv.ps1"
     ],
+    "env_add_path": "pyenv-win\\shims",
     "env_set": {
         "PYENV": "$dir\\pyenv-win",
         "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\cache\\virtualenv",
