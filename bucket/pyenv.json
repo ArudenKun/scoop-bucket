@@ -24,7 +24,6 @@
         "PIPENV_CACHE_DIR": "$dir\\cache\\pipenv",
         "PIPENV_VENV_IN_PROJECT": "True"
     },
-    "post_install": "pyenv update",
     "persist": [
         "pyenv-win\\version",
         "pyenv-win\\shims",
