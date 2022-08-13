@@ -21,8 +21,9 @@
         "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\cache\\virtualenv",
         "PIP_CACHE_DIR": "$dir\\cache\\pip",
         "PIPENV_CACHE_DIR": "$dir\\cache\\pipenv",
-        "PIPENV_VENV_IN_PROJECT ": "True"
+        "PIPENV_VENV_IN_PROJECT": "True"
     },
+    "post_install": "pyenv update",
     "persist": [
         "pyenv-win\\version",
         "pyenv-win\\shims",
