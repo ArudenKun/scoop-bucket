@@ -6,6 +6,10 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
+    "depends": "custom/ja-netfilter",
+    "suggest": {
+        "Key": "https://3.jetbra.in/"
+    },
     "url": "https://download.jetbrains.com/idea/ideaIU-2022.2.win.zip",
     "hash": "4665867de07121a970ba1da33b99c95f4f887a8ec967a2caa7ccdb073e8f5df6",
     "installer": {
