@@ -7,8 +7,8 @@
     "extract_dir": "ja-netfilter",
     "installer": {
         "script": [
-            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\config-jetbrains\" $dir",
-            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\plugins-jetbrains\" $dir"
+            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\config-jetbrains -Recurse\" $dir",
+            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\plugins-jetbrains -Recurse\" $dir"
         ]
     },
     "post_install": "Remove-Item $dir\\config, $dir\\plugins -Force -Recurse",
