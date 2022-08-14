@@ -7,6 +7,9 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "custom/ja-netfilter",
+    "suggest": {
+        "Key": "https://3.jetbra.in/"
+    },
     "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2022.2.1.exe#/dl.7z",
     "hash": "e7b90808e3038383eb1001a064d969c5ecea68b68d45e2828dfa1d696024230f",
     "installer": {
