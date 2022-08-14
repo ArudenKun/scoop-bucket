@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20220803",
+    "version": "20220814",
     "description": "Install Debian Linux as a WSL Instance",
     "homepage": "https://www.debian.org/",
     "license": "DFSG",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
     "url": [
-        "https://images.linuxcontainers.org/images/debian/bookworm/amd64/default/20220803_05:24/rootfs.tar.xz#/dl.zip",
+        "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20220814_05:24/rootfs.tar.xz#/dl.zip",
         "https://github.com/yuk7/wsldl/releases/latest/download/wsldl.exe"
     ],
     "installer": {
@@ -16,7 +16,7 @@
         ]
     },
     "hash": [
-        "79db6645d37b5c9096e5871490ac74ebcc7703f2d5edc5a3261eecc735fb7779",
+        "5706e1fd6d5fab7a993742ccbf8340aceecab3f4a56c4a2f1e80590fbc108d26",
         "06c0451582f545083778934cf48604080c222bf1f1dfd1b6b90e4019a5306539"
     ],
     "post_install": [
@@ -58,12 +58,12 @@
     "persist": "data",
     "checkver": {
         "url": "https://images.linuxcontainers.org",
-        "re": "bookworm</td><td>amd64</td><td>default</td><td>(?<build>[\\d.]+)_(?<time>.+?)<",
+        "re": "bullseye</td><td>amd64</td><td>default</td><td>(?<build>[\\d.]+)_(?<time>.+?)<",
         "replace": "${build}"
     },
     "autoupdate": {
         "url": [
-            "https://images.linuxcontainers.org/images/debian/bookworm/amd64/default/$version_$matchTime/rootfs.tar.xz#/dl.zip",
+            "https://images.linuxcontainers.org/images/debian/bullseye/amd64/default/$version_$matchTime/rootfs.tar.xz#/dl.zip",
             "https://github.com/yuk7/wsldl/releases/latest/download/wsldl.exe"
         ]
     }
