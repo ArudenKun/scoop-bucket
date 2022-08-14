@@ -23,9 +23,9 @@
         ]
     ],
     "post_install": [
-        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"`n-javaagent:$scoopdir\\apps\\ja-netfilter\\current\\ja-netfilter.jar=jetbrains\"",
-        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"`n--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
-        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"`n--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\""
+        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\ja-netfilter\\current\\ja-netfilter.jar=jetbrains\"",
+        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
+        "Add-Content $dir\\IDE\\bin\\rider64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\""
     ],
     "persist": [
         "IDE\\bin\\idea.properties",
