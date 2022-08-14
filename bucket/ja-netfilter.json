@@ -1,0 +1,15 @@
+{
+    "version": "2022.2.0",
+    "homepage": "https://gitee.com/ja-netfilter/ja-netfilter",
+    "license": "GPL-3.0-only",
+    "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/2022.2.0/ja-netfilter-2022.2.0.zip",
+    "hash": "8a44a3c47e6fe0e050f3a5d24c786213cc1dc465a63d287d94832a6739c54d11",
+    "extract_dir": "ja-netfilter",
+    "checkver": {
+        "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases",
+        "re": "/ja-netfilter/ja-netfilter/tree/([0-9]+(\\.[0-9]+)+)"
+    },
+    "autoupdate": {
+        "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/$version/ja-netfilter-$version.zip"
+    }
+}

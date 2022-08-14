@@ -8,26 +8,16 @@
     },
     "url": "https://download.jetbrains.com/idea/ideaIU-2022.2.win.zip",
     "hash": "4665867de07121a970ba1da33b99c95f4f887a8ec967a2caa7ccdb073e8f5df6",
-    "extract_to": "IDE",
     "installer": {
         "script": "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
     },
-    "architecture": {
-        "64bit": {
-            "bin": [
-                [
-                    "IDE\\bin\\idea64.exe",
-                    "idea"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "IDE\\bin\\idea64.exe",
-                    "JetBrains\\IDEA Ultimate"
-                ]
-            ]
-        }
-    },
+    "extract_to": "IDE",
+    "shortcuts": [
+        [
+            "IDE\\bin\\idea64.exe",
+            "JetBrains\\IDEA Ultimate"
+        ]
+    ],
     "persist": [
         "IDE\\bin\\idea.properties",
         "IDE\\bin\\idea64.exe.vmoptions",
