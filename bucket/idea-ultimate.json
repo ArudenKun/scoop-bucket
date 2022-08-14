@@ -7,15 +7,26 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "custom/ja-netfilter",
-    "suggest": {
-        "Key": "https://3.jetbra.in/"
-    },
+    "notes": "Get key here: https://3.jetbra.in/",
     "url": "https://download.jetbrains.com/idea/ideaIU-2022.2.win.zip",
     "hash": "4665867de07121a970ba1da33b99c95f4f887a8ec967a2caa7ccdb073e8f5df6",
     "installer": {
-        "script": "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
+        "script": [
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
+            "if (!(Test-Path \"$persist_dir\\idea64.exe.vmoptions\")) {",
+            "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\ja-netfilter\\current\\ja-netfilter.jar=jetbrains\"",
+            "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
+            "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\"",
+            "}"
+        ]
     },
     "extract_to": "IDE",
+    "bin": [
+        [
+            "IDE\\bin\\idea64.exe",
+            "idea"
+        ]
+    ],
     "shortcuts": [
         [
             "IDE\\bin\\idea64.exe",
@@ -26,11 +37,6 @@
         "IDE\\bin\\idea.properties",
         "IDE\\bin\\idea64.exe.vmoptions",
         "profile"
-    ],
-    "post_install": [
-        "Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\ja-netfilter\\current\\ja-netfilter.jar=jetbrains\"",
-        "Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
-        "Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\""
     ],
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&platform=zip&type=release",

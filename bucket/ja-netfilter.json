@@ -1,15 +1,22 @@
 {
-    "version": "1126574a2f82debceb72e7f948eb7d4f616ffddf",
-    "homepage": "https://3.jetbra.in/",
-    "license": "N/A",
-    "url": "https://ipfs.io/ipfs/bafybeiazdy6cpftzahp6iv3s5sw6r4g5232z3sxktt6deahli4zz7lvoa4/files/jetbra-1126574a2f82debceb72e7f948eb7d4f616ffddf.zip",
-    "hash": "d705555d2032ef817414a2e53ea1555baacb51f28ede14eb55839a30a76e4bd6",
-    "extract_dir": "jetbra",
+    "version": "2022.2.0",
+    "homepage": "https://gitee.com/ja-netfilter/ja-netfilter",
+    "license": "GPL-3.0-only",
+    "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/2022.2.0/ja-netfilter-2022.2.0.zip",
+    "hash": "8a44a3c47e6fe0e050f3a5d24c786213cc1dc465a63d287d94832a6739c54d11",
+    "extract_dir": "ja-netfilter",
+    "installer": {
+        "script": [
+            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\config-jetbrains\" $dir",
+            "Copy-Item \"$bucketsdir\\custom\\scripts\\jetbrains\\plugins-jetbrains\" $dir"
+        ]
+    },
+    "post_install": "Remove-Item $dir\\config, $dir\\plugins -Force -Recurse",
     "checkver": {
-        "url": "https://ipfs.io/ipfs/bafybeiazdy6cpftzahp6iv3s5sw6r4g5232z3sxktt6deahli4zz7lvoa4",
-        "regex": "files/jetbra-(.+?).zip"
+        "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases",
+        "regex": "/ja-netfilter/ja-netfilter/tree/([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://ipfs.io/ipfs/bafybeiazdy6cpftzahp6iv3s5sw6r4g5232z3sxktt6deahli4zz7lvoa4/files/jetbra-$version.zip"
+        "url": "https://gitee.com/ja-netfilter/ja-netfilter/releases/download/$version/ja-netfilter-$version.zip"
     }
 }
