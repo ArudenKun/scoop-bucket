@@ -44,7 +44,7 @@
         "replace": "${ver}-${build}"
     },
     "autoupdate": {
-        "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2022.2.1.win.zip",
+        "url": "https://download.jetbrains.com/rider/JetBrains.Rider-$matchHead.win.zip",
         "hash": {
             "url": "$url.sha256"
         }
