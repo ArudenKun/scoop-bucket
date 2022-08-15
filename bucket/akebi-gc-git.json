@@ -5,7 +5,7 @@
     "url": "https://nightly.link/Akebi-Group/Akebi-GC/workflows/main/master/Akebi-GC-release.zip",
     "hash": "0beee684a0b2aef213f3ef1ca7a7a704531daca697466e101249ca6efb5df624",
     "installer": {
-        "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\icon.ico\" $dir"
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\raiden.ico\" $dir"
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
