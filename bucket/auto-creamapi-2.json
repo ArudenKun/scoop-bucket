@@ -1,0 +1,26 @@
+{
+    "version": "2.1.7",
+    "description": "Set up any game with Goldberg's emulator easily and automatically.",
+    "homepage": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2",
+    "license": "GPL-3.0-only",
+    "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/releases/download/2.1.7/auto-creamapi-2.1.7.zip",
+    "hash": "d447397f70e77d71a370cedfd4a0b1bb0e36e7e709c06e263bf1d3382bcdd0f9",
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\jeddunk\\icon.ico\" $dir"
+    },
+    "shortcuts": [
+        [
+            "auto-creamapi.exe",
+            "Auto CreamAPI 2",
+            "",
+            "icon.ico"
+        ]
+    ],
+    "checkver": {
+        "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/tags",
+        "regex": "/jeddunk/auto-creamapi-2/src/tag/([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://git.jeddunk.xyz/jeddunk/auto-creamapi-2/releases/download/$version/auto-creamapi-$version.zip"
+    }
+}
