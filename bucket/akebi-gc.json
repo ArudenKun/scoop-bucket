@@ -15,11 +15,6 @@
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" | Out-Null }"
     ],
-    "persist": [
-        "cfg.ini",
-        "cfg.json",
-        "imgui.ini"
-    ],
     "shortcuts": [
         [
             "injector.exe",
@@ -27,6 +22,11 @@
             "",
             "icon.ico"
         ]
+    ],
+    "persist": [
+        "cfg.ini",
+        "cfg.json",
+        "imgui.ini"
     ],
     "checkver": {
         "github": "https://github.com/Akebi-Group/Akebi-GC",
