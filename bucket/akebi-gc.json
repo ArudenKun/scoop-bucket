@@ -4,6 +4,9 @@
     "license": "Apache-2.0",
     "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.8/akebi-gc-v0.8-g2.8-binaries-global.zip",
     "hash": "4cd7f0c430b9a27ad0f7657f93382518b77973bab50465bb873fbac5af551d00",
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\icon.ico\" $dir"
+    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
@@ -14,7 +17,7 @@
             "injector.exe",
             "Akebi-GC",
             "",
-            "$bucketsdir\\custom\\images\\akebi-gc\\icon.ico"
+            "icon.ico"
         ]
     ],
     "persist": [
