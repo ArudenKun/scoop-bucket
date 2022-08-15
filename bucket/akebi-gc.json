@@ -8,7 +8,7 @@
     ],
     "hash": [
         "4cd7f0c430b9a27ad0f7657f93382518b77973bab50465bb873fbac5af551d00",
-        "fcff357bf76abb731fd5b190fc62af99eeac3d297064be835cf974f15c54f0d4"
+        "49b0841216ba360f075253608427904a02d9782470aab311f1f2c22102f47756"
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
@@ -20,7 +20,7 @@
             "injector.exe",
             "Akebi-GC",
             "",
-            "icon.ico"
+            "$bucketsdir\\custom\\images\\akebi-gc\\icon.ico"
         ]
     ],
     "persist": [
