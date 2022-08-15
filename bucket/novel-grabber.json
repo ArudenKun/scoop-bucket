@@ -6,14 +6,8 @@
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": [
-        "https://github.com/Flameish/Novel-Grabber/releases/latest/download/Novel-Grabber.zip",
-        "https://raw.githubusercontent.com/Flameish/Novel-Grabber/master/src/main/resources/images/favicon.png#/icon.ico"
-    ],
-    "hash": [
-        "4fc0e5007bfbd0373694aef32bccf1819b4a4c97cbcb315f21ee3c8aecd9b074",
-        "86550645068ce4c79b50eaa479c4a6b3531fb18551d249b0640bdd35fc65101d"
-    ],
+    "url": "https://github.com/Flameish/Novel-Grabber/releases/latest/download/Novel-Grabber.zip",
+    "hash": "4fc0e5007bfbd0373694aef32bccf1819b4a4c97cbcb315f21ee3c8aecd9b074",
     "pre_install": [
         "if (!(Test-Path \"$dir\\NG-Launcher.bat\" ))",
         "{",
@@ -23,6 +17,9 @@
         "if (!(Test-Path \"$persist_dir\\bin\\library.json\")) { New-Item \"$dir\\Novel-Grabber\\bin\\library.json\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\bin\\log.txt\")) { New-Item \"$dir\\Novel-Grabber\\bin\\log.txt\" | Out-Null }"
     ],
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\novel-grabber\\icon.ico\" $dir"
+    },
     "bin": "Novel-Grabber\\NG-Launcher.bat",
     "shortcuts": [
         [
