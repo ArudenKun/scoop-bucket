@@ -2,14 +2,8 @@
     "version": "0.8",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": [
-        "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.8/akebi-gc-v0.8-g2.8-binaries-global.zip",
-        "https://i.pximg.net/img-master/img/2021/08/28/23/42/58/92333384_p0_master1200.jpg#/icon.ico"
-    ],
-    "hash": [
-        "4cd7f0c430b9a27ad0f7657f93382518b77973bab50465bb873fbac5af551d00",
-        "49b0841216ba360f075253608427904a02d9782470aab311f1f2c22102f47756"
-    ],
+    "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.8/akebi-gc-v0.8-g2.8-binaries-global.zip",
+    "hash": "4cd7f0c430b9a27ad0f7657f93382518b77973bab50465bb873fbac5af551d00",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
