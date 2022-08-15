@@ -8,11 +8,11 @@
     },
     "url": [
         "https://github.com/Flameish/Novel-Grabber/releases/latest/download/Novel-Grabber.zip",
-        "https://github.com/ArudenKun/scoop-bucket-assets/raw/main/images/novel-grabber/icon.ico"
+        "https://raw.githubusercontent.com/Flameish/Novel-Grabber/master/src/main/resources/images/favicon.png#/icon.ico"
     ],
     "hash": [
         "4fc0e5007bfbd0373694aef32bccf1819b4a4c97cbcb315f21ee3c8aecd9b074",
-        "01E8CA185D7FF8BAC2F0C02449A7A25258359871AD91A06EF77F2C7F07ED6A9C"
+        "86550645068ce4c79b50eaa479c4a6b3531fb18551d249b0640bdd35fc65101d"
     ],
     "pre_install": [
         "if (!(Test-Path \"$dir\\NG-Launcher.bat\" ))",
