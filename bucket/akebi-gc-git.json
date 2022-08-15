@@ -4,7 +4,7 @@
     "license": "Apache-2.0",
     "url": [
         "https://nightly.link/Akebi-Group/Akebi-GC/workflows/main/master/Akebi-GC-release.zip",
-        "https://github.com/ArudenKun/scoop-bucket/raw/master/images/akebi-gc/icon.ico"
+        "https://raw.githubusercontent.com/ArudenKun/scoop-bucket/master/images/akebi-gc/icon.ico"
     ],
     "hash": [
         "0beee684a0b2aef213f3ef1ca7a7a704531daca697466e101249ca6efb5df624",
