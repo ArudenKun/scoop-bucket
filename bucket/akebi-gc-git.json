@@ -8,7 +8,7 @@
     ],
     "hash": [
         "0beee684a0b2aef213f3ef1ca7a7a704531daca697466e101249ca6efb5df624",
-        "fb6d11eef28d352a35de4f373593f59548cad18676b3716bd2c47fdf2424f45d"
+        "fcff357bf76abb731fd5b190fc62af99eeac3d297064be835cf974f15c54f0d4"
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
