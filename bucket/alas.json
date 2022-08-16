@@ -14,7 +14,8 @@
     ],
     "persist": "config",
     "checkver": {
-        "regex": "Easy Install V5 \\(v(\\d(\\.\\d)+)\\)"
+        "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases",
+        "regex": "Easy Install V5 \\(v([\\d.]+)\\)"
     },
     "autoupdate": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_$version.7z",
