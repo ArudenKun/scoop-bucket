@@ -1,10 +1,10 @@
 {
-    "version": "3.6.1.0",
+    "version": "3.6.1.2",
     "description": "Automatically finds all installed Steam/Epic games and their respective Steamworks/Epic Online Services DLL locations on the user's computer, automatically parses SteamCMD, Steam Store, and Epic Games Store for those games' DLCs, then provides a very simple graphical interface utilizing the gathered information.",
     "homepage": "https://github.com/pointfeev/CreamInstaller",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/pointfeev/CreamInstaller/releases/download/v3.6.1.0/CreamInstaller.zip",
-    "hash": "aff9bd006cf10a5a6ad2ea5b3424a214e764b78c15e3f27d004e2f7946acff1e",
+    "url": "https://github.com/pointfeev/CreamInstaller/releases/download/v3.6.1.2/CreamInstaller.zip",
+    "hash": "f63dee97676f4f7e4a12dd4095d7699567123113fef68431a8f4a86a20268bc5",
     "shortcuts": [
         [
             "CreamInstaller.exe",
