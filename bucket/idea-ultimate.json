@@ -7,7 +7,7 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "custom/ja-netfilter",
-    "notes": "Get key here: https://3.jetbra.in/",
+    "notes": "Get key here: 'https://3.jetbra.in'",
     "url": "https://download.jetbrains.com/idea/ideaIU-2022.2.1.win.zip",
     "hash": "070f4cace71eaee81ec665d3585e05575ccc71254c4f7bfe36305070f7937a03",
     "installer": {
