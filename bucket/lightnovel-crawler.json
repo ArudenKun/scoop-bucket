@@ -1,10 +1,10 @@
 {
-    "version": "2.32.0",
+    "version": "2.33.0",
     "description": "Generate and download e-books from online sources.",
     "homepage": "https://github.com/dipu-bd/lightnovel-crawler",
     "license": "Apache-2.0",
-    "url": "https://github.com/dipu-bd/lightnovel-crawler/releases/download/v2.32.0/lncrawl.exe",
-    "hash": "94765647425d39c3a8bb2b4949dbca3d18a95e562d642685b8598337da10f9c9",
+    "url": "https://github.com/dipu-bd/lightnovel-crawler/releases/download/v2.33.0/lncrawl.exe",
+    "hash": "bb8e8331923a9277add4a414c60beebc11a152b6c0602244a0c868948ad21cf6",
     "bin": "lncrawl.exe",
     "checkver": "github",
     "autoupdate": {
