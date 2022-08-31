@@ -11,6 +11,7 @@
             "CreamInstaller"
         ]
     ],
+    "persist": "Data",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ArudenKun/CreamInstaller/releases/download/v$version/CreamInstaller.zip"
