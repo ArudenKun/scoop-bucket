@@ -1,0 +1,14 @@
+{
+    "version": "5.0",
+    "homepage": "https://github.com/SilentNightSound/GI-Model-Importer",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/SilentNightSound/GI-Model-Importer/releases/download/V6.0/3dmigoto-GIMI-for-playing-mods.zip",
+    "hash": "070f4cace71eaee81ec665d3585e05575ccc71254c4f7bfe36305070f7937a03",
+    "extract_dir": "3dmigoto",
+    "shortcuts": [
+        [
+            "",
+            ""
+        ]
+    ]
+}
