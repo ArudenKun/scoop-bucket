@@ -1,9 +1,9 @@
 {
-    "version": "348566309",
+    "version": "348565097",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://nightly.link/Akebi-Group/Akebi-GC/actions/artifacts/348566309.zip",
-    "hash": "ac2899e581e5996336b8cf11577eef902d046a1dddcf08c5e8356cad5211369c",
+    "url": "https://nightly.link/Akebi-Group/Akebi-GC/actions/artifacts/348565097.zip",
+    "hash": "f391acd26614466b3c1a31d86624d55ff8a491c013cfba510e6f81655fc9a007",
     "installer": {
         "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\raiden.ico\" $dir"
     },
@@ -27,8 +27,8 @@
     ],
     "post_install": "Remove-Item \"$dir\\cheat-base.lib\"",
     "checkver": {
-        "url": "https://api.github.com/repos/Akebi-Group/Akebi-GC/actions/artifacts",
-        "jp": "$.artifacts[0].id"
+        "url": "https://nightly.link/Akebi-Group/Akebi-GC/workflows/main/master/Akebi-GC-release",
+        "regex": "/artifacts/([0-9]+).zip"
     },
     "autoupdate": {
         "url": "https://nightly.link/Akebi-Group/Akebi-GC/actions/artifacts/$version.zip"
