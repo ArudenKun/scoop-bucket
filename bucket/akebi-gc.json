@@ -1,9 +1,9 @@
 {
-    "version": "0.9",
+    "version": "0.95",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.9/akebi-gc-v0.9-g3.0-binaries-global.zip",
-    "hash": "e4560b1c8567dc9329c756e9384ac28e6e478601beb4aa6a72100e76895c9941",
+    "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.95/akebi-gc-v0.95-g3.0-binaries-global.zip",
+    "hash": "005485531cbd42334305ac5cc9c1484b273e000a4a610d5739b5af31f497f9ce",
     "installer": {
         "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\icon.ico\" $dir"
     },
