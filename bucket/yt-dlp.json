@@ -16,6 +16,7 @@
             "hash": "sha512:a2a718d1157fcbe13bfd719d4b6883727960579d58c221210b3f1d7576454cb0da72a97b1e7a7dcbbcdbbf5e0d94367aba8013603dfeda11a0f4b472af8626d2"
         }
     },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) { New-Item \"$dir\\yt-dlp.conf\" -ItemType File | Out-Null }",
     "bin": "yt-dlp.exe",
     "persist": [
         "yt-dlp.conf",
