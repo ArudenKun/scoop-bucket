@@ -18,9 +18,6 @@
     },
     "bin": "yt-dlp.exe",
     "pre_install": [
-        "$manifest.persist | ForEach-Object {",
-        "    if (-not (Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType file | Out-Null }",
-        "}",
         "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) {",
         "   Add-Content $dir\\yt-dlp.conf -Value '--cache-dir $dir\\cache'",
         "   Add-Content $dir\\yt-dlp.conf -Value '-o ~/Downloads/YouTube/%(title)s.%(ext)s'",
