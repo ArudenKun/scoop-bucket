@@ -19,7 +19,7 @@
     "bin": "yt-dlp.exe",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) {",
-        "   Add-Content $dir\\yt-dlp.conf -Value '--cache-dir $dir\\cache'",
+        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $dir\\cache\"",
         "   Add-Content $dir\\yt-dlp.conf -Value '-o ~/Downloads/YouTube/%(title)s.%(ext)s'",
         "}"
     ],
