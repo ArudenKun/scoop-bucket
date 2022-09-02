@@ -30,9 +30,6 @@
         "pyenv-win\\install_cache",
         "cache"
     ],
-    "post_install": [
-        ""
-    ],
     "checkver": {
         "github": "https://github.com/pyenv-win/pyenv-win"
     },
