@@ -24,9 +24,12 @@
     ],
     "post_install": [
         "$config = Get-Content $dir\\yt-dlp.conf",
-        "if (!$config -imatch \"--cache-dir $dir\\cache\" -and !$config -imatch \"-o ~/Downloads/YouTube/%(title)s.%(ext)s\")",
+        "if (!($config -imatch \"--cache-dir\"))",
         "{",
         "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $dir\\cache\"",
+        "}",
+        "if (!($config -imatch \"-o \"))",
+        "{",
         "   Add-Content $dir\\yt-dlp.conf -Value '-o ~/Downloads/YouTube/%(title)s.%(ext)s'",
         "}"
     ],
