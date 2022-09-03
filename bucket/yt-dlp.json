@@ -26,7 +26,7 @@
         "$config = Get-Content $dir\\yt-dlp.conf",
         "if (!($config -imatch \"--cache-dir\"))",
         "{",
-        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $dir\\cache\"",
+        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir ~/scoop/apps/yt-dlp/current/cache\"",
         "}",
         "if (!($config -imatch \"-o \"))",
         "{",
