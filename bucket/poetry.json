@@ -8,7 +8,12 @@
     },
     "url": "https://install.python-poetry.org#/install-poetry.py",
     "hash": "fd16592a208a76f378e11186db492ff283aeb6ef716b5b7455d65eec5424d74d",
-    "pre_install": "if(!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" -Value \"[virtualenvs]`nin-project = true\"| Out-Null }",
+    "pre_install": [
+        "if(!(Test-Path \"$persist_dir\\config.toml\"))",
+        "{",
+        "   New-Item \"$dir\\config.toml\" -Value \"[virtualenvs]`nin-project = true`nprefer-active-python = true\"| Out-Null }",
+        "}"
+    ],
     "installer": {
         "script": [
             "$env:POETRY_HOME=\"$dir\"",
