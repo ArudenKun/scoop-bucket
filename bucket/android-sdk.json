@@ -27,7 +27,7 @@
         "    attrib \"$(appdir adb $global)\\current\\platform-tools\" +R /L",
         "}",
         "$jdk = \"$(appdir temurin8-jdk)\\current\"",
-        "$current = '$jdk' -replace '\\', '/'",
+        "$current = (Split-Path \"$jdk\" | Join-Path -ChildPath 'current') -replace '\\', '/'",
         "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace '%JAVA_HOME:\"=%', \"$current\"",
         "&\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'"
     ],
