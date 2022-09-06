@@ -13,6 +13,10 @@
         ]
     ],
     "persist": "config",
+    "post_install": [
+        "",
+        ""
+    ],
     "checkver": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases",
         "regex": "Easy Install V5 \\(v([\\d.]+)\\)"
