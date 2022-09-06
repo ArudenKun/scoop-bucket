@@ -26,9 +26,13 @@
         "    cmd /c mklink /j \"$dir\\platform-tools\" \"$(appdir adb $global)\\current\\platform-tools\" | out-null",
         "    attrib \"$(appdir adb $global)\\current\\platform-tools\" +R /L",
         "}",
+        "scoop reset temurin8-jdk",
+        "&\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'",
+        "scoop reset temurin17-jdk"
+    ],
+    "##": [
         "$current = (Split-Path \"$(appdir temurin8-jdk)\\current\" | Join-Path -ChildPath 'current') -replace '\\', '/'",
-        "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace '%JAVA_HOME:\"=%', \"$current\"",
-        "&\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'"
+        "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace '%JAVA_HOME:\"=%', \"$current\""
     ],
     "env_add_path": "tools\\bin",
     "env_set": {
