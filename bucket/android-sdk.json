@@ -28,8 +28,8 @@
         "}",
         "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",
         "$CONT = Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\"",
-        "$CONT = $CONT -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",
-        "Set-Content -LiteralPath \"$dir\\tools\\bin\\sdkmanager.bat\" -Value \"$CONT\" -Force",
+        "$CONST_NEW = $CONT -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",
+        "$CONST_NEW | Set-Content \"$dir\\tools\\bin\\sdkmanager.bat\"",
         "&\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'"
     ],
     "env_add_path": "tools\\bin",
