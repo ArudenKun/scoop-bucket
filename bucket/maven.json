@@ -11,9 +11,10 @@
     "extract_dir": "apache-maven-3.8.6",
     "env_add_path": "bin",
     "env_set": {
-        "M2_HOME": "$dir\\.m2"
+        "M2": "$dir\\m2"
     },
     "persist": [
+        "m2",
         "conf",
         "lib\\ext"
     ],
