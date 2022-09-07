@@ -35,6 +35,7 @@
     "env_add_path": "tools\\bin",
     "env_set": {
         "ANDROID_HOME": "$dir",
+        "ANDROID_USER_HOME": "$dir\\home",
         "PROGUARD_HOME": "$dir\\tools\\proguard"
     },
     "persist": [
