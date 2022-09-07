@@ -26,7 +26,7 @@
         "regex": "\\/releases\\/tag\\/(?:v|V)?([\\d.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/portapps/android-studio-portable/releases/download/$version/android-studio-portable-win64-$version-setup.exe",
+        "url": "https://github.com/ArudenKun/android-studio-portable/releases/download/$version/android-studio-portable-win64-$version-setup.exe",
         "hash": {
             "url": "$baseurl/checksums.txt"
         }
