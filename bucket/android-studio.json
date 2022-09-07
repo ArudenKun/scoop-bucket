@@ -16,20 +16,24 @@
     "hash": "78575a5b779d66630b757a32df0a26b8c052995623d649ed31787fb64eef14b1",
     "installer": {
         "script": [
-            "Move-Item -Path \"$dir\\android-studio\\*\" -Destination \"$dir\" -Force",
-            "Remove-Item \"$dir\\android-studio\" -Force",
-            "& \"$bucketsdir\\custom\\scripts\\jetbrains\\android-studio-portable.ps1\" $dir $persist_dir"
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
         ]
     },
+    "extract_to": "IDE",
     "shortcuts": [
         [
-            "bin\\studio64.exe",
+            "IDE\\bin\\studio64.exe",
             "Android Studio"
         ]
     ],
+    "env_set": {
+        "ANDROID_HOME": "$dir\\sdk",
+        "ANDROID_USER_HOME": "$dir\\profile"
+    },
     "persist": [
+        "IDE\\bin\\idea.properties",
         "profile",
-        "bin\\idea.properties"
+        "sdk"
     ],
     "checkver": "android-studio-([\\d.]+)-windows\\.zip",
     "autoupdate": {
