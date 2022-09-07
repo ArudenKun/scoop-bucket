@@ -16,10 +16,10 @@
     "hash": "78575a5b779d66630b757a32df0a26b8c052995623d649ed31787fb64eef14b1",
     "installer": {
         "script": [
+            "Rename-Item -Path \"$dir\\android-studio\" -NewName 'IDE' -Force",
             "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
         ]
     },
-    "extract_to": "IDE",
     "shortcuts": [
         [
             "IDE\\bin\\studio64.exe",
