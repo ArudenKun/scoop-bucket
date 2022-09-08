@@ -22,12 +22,11 @@
     ],
     "env_set": {
         "ANDROID_HOME": "$dir\\sdk",
-        "ANDROID_SDK_ROOT": "$dir\\sdk",
-        "ANDROID_USER_HOME": "$dir\\profile\\.android",
-        "ANDROID_SDK_HOME": "$dir\\profile\\.android"
+        "ANDROID_USER_HOME": "$dir\\profile\\.android"
     },
     "persist": [
         "IDE\\bin\\idea.properties",
+        "IDE\\bin\\studio64.exe.vmoptions",
         "profile",
         "sdk"
     ],
