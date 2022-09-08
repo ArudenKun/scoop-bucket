@@ -28,15 +28,18 @@
         "ANDROID_SDK_HOME": "$dir\\profile"
     },
     "post_install": [
-        "New-Item -Path \"$dir\\sdk\\build-tools\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\emulator\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\bextras\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\licenses\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\patcher\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\platforms\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\sources\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\system-images\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\tools\" -ItemType Directory"
+        "if(!(Test-Path \"$persist_dir\\sdk\\*\"))",
+        "{",
+        "   New-Item -Path \"$dir\\sdk\\build-tools\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\emulator\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\bextras\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\licenses\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\patcher\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\platforms\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\sources\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\system-images\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\sdk\\tools\" -ItemType Directory",
+        "}"
     ],
     "persist": [
         "IDE\\bin\\idea.properties",

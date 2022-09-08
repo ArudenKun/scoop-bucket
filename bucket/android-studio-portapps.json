@@ -22,15 +22,18 @@
     ],
     "pre_install": "if(!(Test-Path \"$persist_dir\\android-studio-portable.yml\")) { New-Item \"$dir\\android-studio-portable.yml\" | Out-Null }",
     "post_install": [
-        "New-Item -Path \"$dir\\sdk\\build-tools\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\emulator\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\bextras\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\licenses\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\patcher\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\platforms\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\sources\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\system-images\" -ItemType Directory",
-        "New-Item -Path \"$dir\\sdk\\tools\" -ItemType Directory"
+        "if(!(Test-Path \"$persist_dir\\data\\sdk\\*\"))",
+        "{",
+        "   New-Item -Path \"$dir\\data\\sdk\\build-tools\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\emulator\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\bextras\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\licenses\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\patcher\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\platforms\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\sources\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\system-images\" -ItemType Directory",
+        "   New-Item -Path \"$dir\\data\\sdk\\tools\" -ItemType Directory",
+        "}"
     ],
     "checkver": {
         "url": "https://github.com/ArudenKun/android-studio-portable/releases",
