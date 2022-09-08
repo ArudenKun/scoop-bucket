@@ -11,7 +11,9 @@
     "innosetup": true,
     "installer": {
         "script": [
-            "if(!(Test-Path \"$persist_dir\\data\\sdk\")) { New-Item \"$dir\\data\\sdk\" -ItemType Directory | Out-Null "
+            "wget -P \"$dir\\data\\sdk\" https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
+            "Expand-Archive \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -DestinationPath . -Force",
+            "Remove-Item \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -Force"
         ]
     },
     "persist": [
