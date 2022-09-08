@@ -24,9 +24,11 @@
     ],
     "env_set": {
         "GOROOT": "$dir",
-        "GOPATH": "$dir\\modules"
+        "GOPATH": "$dir\\data\\modules",
+        "GOCACHE": "$dir\\data\\go-build",
+        "GOENV": "$dir\\data\\env"
     },
-    "persist": "modules",
+    "persist": "data",
     "checkver": {
         "url": "https://golang.org/dl/",
         "regex": "go([\\d.]+)\\.windows-"

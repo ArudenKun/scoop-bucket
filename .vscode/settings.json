@@ -69,6 +69,8 @@
         "Fullname",
         "fullversion",
         "Genshin",
+        "GOCACHE",
+        "GOENV",
         "gofmt",
         "GOPATH",
         "GOROOT",
