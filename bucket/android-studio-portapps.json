@@ -9,13 +9,6 @@
     "url": "https://github.com/ArudenKun/android-studio-portable/releases/download/2021.2.1.16-18/android-studio-portable-win64-2021.2.1.16-18-setup.exe",
     "hash": "071a4d23e1be62542f669252c465734d0c41935a189e5a85980cf30d2c8060c1",
     "innosetup": true,
-    "installer": {
-        "script": [
-            "wget -P \"$dir\\data\\sdk\" https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
-            "Expand-Archive \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -DestinationPath . -Force",
-            "Remove-Item \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -Force"
-        ]
-    },
     "persist": [
         "data",
         "android-studio-portable.yml"
@@ -27,8 +20,14 @@
             "Android Studio"
         ]
     ],
-    "pre_install": [
-        "if(!(Test-Path \"$persist_dir\\android-studio-portable.yml\")) { New-Item \"$dir\\android-studio-portable.yml\" | Out-Null }"
+    "pre_install": "if(!(Test-Path \"$persist_dir\\android-studio-portable.yml\")) { New-Item \"$dir\\android-studio-portable.yml\" | Out-Null }",
+    "post_install": [
+        "if(!(Test-Path \"$persist_dir\\data\\sdk\"))",
+        "{",
+        "   wget -P \"$dir\\data\\sdk\" https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
+        "   Expand-Archive \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -DestinationPath . -Force",
+        "   Remove-Item \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -Force",
+        "}"
     ],
     "checkver": {
         "url": "https://github.com/ArudenKun/android-studio-portable/releases",
