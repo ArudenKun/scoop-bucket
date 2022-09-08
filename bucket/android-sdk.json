@@ -25,7 +25,9 @@
         "if (Test-Path \"$(appdir adb $global)\") {",
         "    cmd /c mklink /j \"$dir\\platform-tools\" \"$(appdir adb $global)\\current\\platform-tools\" | out-null",
         "    attrib \"$(appdir adb $global)\\current\\platform-tools\" +R /L",
-        "}",
+        "}"
+    ],
+    "##": [
         "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",
         "$CONT = Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\"",
         "$CONST_NEW = $CONT -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",

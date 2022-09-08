@@ -6,7 +6,6 @@
         "identifier": "Freeware",
         "url": "https://developer.android.com/studio/terms.html"
     },
-    "depends": "custom/android-sdk",
     "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.2.1.16/android-studio-2021.2.1.16-windows.zip",
     "hash": "78575a5b779d66630b757a32df0a26b8c052995623d649ed31787fb64eef14b1",
     "installer": {
@@ -21,6 +20,12 @@
             "Android Studio"
         ]
     ],
+    "env_set": {
+        "ANDROID_HOME": "$dir\\sdk",
+        "ANDROID_SDK_ROOT": "$dir\\sdk",
+        "ANDROID_USER_HOME": "$dir\\profile\\.android",
+        "ANDROID_SDK_HOME": "$dir\\profile\\.android"
+    },
     "persist": [
         "IDE\\bin\\idea.properties",
         "profile",
