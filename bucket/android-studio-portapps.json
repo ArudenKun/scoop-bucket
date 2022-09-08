@@ -24,9 +24,9 @@
     "post_install": [
         "if(!(Test-Path \"$persist_dir\\data\\sdk\"))",
         "{",
-        "   wget -P \"$dir\\data\\sdk\" https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
-        "   7z x \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\"",
-        "   Remove-Item \"$dir\\data\\sdk\\platform-tools-latest-windows.zip\" -Force",
+        "   wget -P \"$persist_dir\\data\\sdk\" https://dl.google.com/android/repository/platform-tools-latest-windows.zip",
+        "   Expand-Archive \"$persist_dir\\data\\sdk\\platform-tools-latest-windows.zip\"",
+        "   Remove-Item \"$persist_dir\\data\\sdk\\platform-tools-latest-windows.zip\" -Force",
         "}"
     ],
     "checkver": {
