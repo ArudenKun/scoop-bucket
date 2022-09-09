@@ -22,8 +22,9 @@
     ],
     "env_set": {
         "ANDROID_HOME": "$dir\\sdk",
+        "ANDROID_USER_HOME": "$dir\\profile\\.android",
         "ANDROID_SDK_ROOT": "$dir\\sdk",
-        "ANDROID_SDK_HOME": "$dir\\profile\\.android"
+        "ANDROID_SDK_HOME": "$dir\\profile"
     },
     "post_install": [
         "if(!(Test-Path \"$persist_dir\\sdk\\*\"))",
