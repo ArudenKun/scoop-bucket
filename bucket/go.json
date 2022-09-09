@@ -27,6 +27,7 @@
         "GOENV": "$dir\\data\\env"
     },
     "post_install": [
+        "go env -w GOBIN=\"$dir\\global-bin\"",
         "go env -w GOPATH=\"$dir\\data\\modules\"",
         "go env -w GOCACHE=\"$dir\\data\\go-build\""
     ],

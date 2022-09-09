@@ -69,6 +69,7 @@
         "Fullname",
         "fullversion",
         "Genshin",
+        "GOBIN",
         "GOCACHE",
         "GOENV",
         "gofmt",
