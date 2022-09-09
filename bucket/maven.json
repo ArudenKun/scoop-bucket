@@ -10,11 +10,7 @@
     "hash": "sha512:f92dbd90060c5fd422349f844ea904a0918c9c9392f3277543ce2bfb0aab941950bb4174d9b6e2ea84cd48d2940111b83ffcc2e3acf5a5b2004277105fd22be9",
     "extract_dir": "apache-maven-3.8.6",
     "env_add_path": "bin",
-    "env_set": {
-        "M2": "$dir\\m2"
-    },
     "persist": [
-        "m2",
         "conf",
         "lib\\ext"
     ],
