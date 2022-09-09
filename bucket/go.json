@@ -24,10 +24,12 @@
     ],
     "env_set": {
         "GOROOT": "$dir",
-        "GOPATH": "$dir\\data\\modules",
-        "GOCACHE": "$dir\\data\\go-build",
         "GOENV": "$dir\\data\\env"
     },
+    "post_install": [
+        "go env -w GOPATH=\"$dir\\data\\modules\"",
+        "go env -w GOCACHE=\"$dir\\data\\go-build\""
+    ],
     "persist": "data",
     "checkver": {
         "url": "https://golang.org/dl/",
