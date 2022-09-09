@@ -11,6 +11,7 @@
         "NUGET_HTTP_CACHE_PATH": "$dir\\data\\v3-cache",
         "NUGET_PLUGINS_CACHE_PATH": "$dir\\data\\plugins-cache"
     },
+    "persist": "data",
     "checkver": {
         "url": "https://dist.nuget.org/index.json",
         "jsonpath": "$..versions[?(@.displayName == 'nuget.exe - recommended latest')].version"
