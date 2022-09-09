@@ -17,7 +17,7 @@
         "$settings = Get-Content $dir\\conf\\settings.xml",
         "if (!($settings -imatch \"<localRepository>\"`\"$dir\\data\\repository`\"\"</localRepository>\"))",
         "{",
-        "   $settings[54] = \"`n  <localRepository>\"`\"$dir\\data\\repository`\"\"</localRepository>`n\"",
+        "   $settings[54] = \"`\"`n  <localRepository>\"`\"$dir\\data\\repository`\"\"</localRepository>`n`\"\"",
         "   Set-Content $dir\\conf\\settings.xml -Value $settings",
         "}"
     ],
