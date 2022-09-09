@@ -11,7 +11,7 @@
     "extract_dir": "apache-maven-3.8.6",
     "installer": {
         "script": [
-            "& \"$bucketsdir\\custom\\scripts\\maven\\repository.ps1\" $dir\\conf\\settings.xml"
+            "& \"$bucketsdir\\custom\\scripts\\maven\\repository.ps1\" $dir\\conf\\settings.xml $dir"
         ]
     },
     "env_add_path": "bin",
