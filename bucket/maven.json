@@ -11,14 +11,14 @@
     "extract_dir": "apache-maven-3.8.6",
     "env_add_path": "bin",
     "env_set": {
-        "MAVEN_HOME": "$dir",
-        "MAVEN_REPOSITORY": "$dir\\data\\repository"
+        "MAVEN_HOME": "$dir"
     },
     "post_install": [
         "$settings = Get-Content $dir\\conf\\settings.xml",
         "if (!($settings -imatch \"<localRepository>\"`\"$dir\\data\\repository`\"\"</localRepository>\"))",
         "{",
-        "   $settings[54] = \"`n  <localRepository>`\"$dir\\data\\repository`\"</localRepository>`n\"",
+        "   $settings[54] = \"`n  <localRepository>\"`\"$dir\\data\\repository`\"\"</localRepository>`n\"",
+        "   Set-Content $dir\\conf\\settings.xml -Value $settings",
         "}"
     ],
     "persist": [
