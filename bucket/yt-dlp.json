@@ -17,21 +17,19 @@
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) { New-Item \"$dir\\yt-dlp.conf\" -ItemType File | Out-Null }",
-    "installer": {
-        "script": [
-            "$current = (Split-Path \"$dir\" | Join-Path -ChildPath 'current') -replace '\\', '/'",
-            "$config = Get-Content \"$dir\\yt-dlp.conf\"",
-            "if (!($config -imatch \"--cache-dir\"))",
-            "{",
-            "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $current/cache\"",
-            "}",
-            "if (!($config -imatch \"-o \"))",
-            "{",
-            "   Add-Content $dir\\yt-dlp.conf -Value '-o ~/Downloads/YouTube/%(title)s.%(ext)s'",
-            "}"
-        ]
-    },
     "bin": "yt-dlp.exe",
+    "post_install": [
+        "$current = (Split-Path \"$dir\") -replace '\\', '/'",
+        "$config = Get-Content \"$dir\\yt-dlp.conf\"",
+        "if (!($config -imatch \"--cache-dir\"))",
+        "{",
+        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $current/current/cache\"",
+        "}",
+        "if (!($config -imatch \"-o \"))",
+        "{",
+        "   Add-Content $dir\\yt-dlp.conf -Value '-o ~/Downloads/YouTube/%(title)s.%(ext)s'",
+        "}"
+    ],
     "persist": [
         "yt-dlp.conf",
         "cache"
