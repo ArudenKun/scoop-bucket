@@ -19,11 +19,10 @@
     "pre_install": "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) { New-Item \"$dir\\yt-dlp.conf\" -ItemType File | Out-Null }",
     "bin": "yt-dlp.exe",
     "post_install": [
-        "$current = (Split-Path \"$dir\") -replace '\\', '/'",
         "$config = Get-Content \"$dir\\yt-dlp.conf\"",
         "if (!($config -imatch \"--cache-dir\"))",
         "{",
-        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir $current/current/cache\"",
+        "   Add-Content $dir\\yt-dlp.conf -Value \"--cache-dir `\"$dir\\cache`\"\"",
         "}",
         "if (!($config -imatch \"-o \"))",
         "{",
