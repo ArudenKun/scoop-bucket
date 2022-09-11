@@ -4,6 +4,7 @@
     "license": "Proprietary",
     "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2014.1.2.zip#/Firmware",
     "hash": "md5:522d3c4caf11d9874dbd830907f1f36a",
+    "post_install": "Rename-Item \"$dir\\Firmware\" \"Firmware $version.zip\"",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
     },
