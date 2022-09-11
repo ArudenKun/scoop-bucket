@@ -74,6 +74,7 @@
         "Fullname",
         "fullversion",
         "Genshin",
+        "gitk",
         "GOBIN",
         "GOCACHE",
         "GOENV",
