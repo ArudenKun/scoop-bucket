@@ -2,7 +2,7 @@
     "version": "14.1.2",
     "homepage": "https://darthsternie.net/switch-firmwares/",
     "license": "Proprietary",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2014.1.2.zip",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2014.1.2.zip#/Firmware",
     "hash": "md5:522d3c4caf11d9874dbd830907f1f36a",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
