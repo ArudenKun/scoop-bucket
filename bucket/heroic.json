@@ -16,11 +16,9 @@
     "shortcuts": [
         [
             "Heroic.exe",
-            "Heroic",
-            "--user-data-dir=\"$dir\\data\""
+            "Heroic"
         ]
     ],
-    "persist": "data",
     "checkver": {
         "github": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher"
     },
