@@ -12,10 +12,9 @@
             "Alas"
         ]
     ],
-    "persist": "config",
-    "post_install": [
-        "",
-        ""
+    "persist": [
+        "config",
+        "toolkit"
     ],
     "checkver": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases",
