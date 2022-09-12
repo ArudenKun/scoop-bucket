@@ -26,7 +26,7 @@
         "New-Item -Path \"$regpath\\shell\\Open\\command\" -Value \"`\"$dir\\Unity Hub.exe`\" `\"%1`\"\" -Force| Out-Null",
         "if (!(Test-Path \"$persist_dir\\data\\secondaryInstallPath.json\"))",
         "{",
-        "   New-Item \"$dir\\data\\secondaryInstallPath.json\" -Value \"`\"$dir\\Apps`\"\" | Out-Null",
+        "   New-Item \"$dir\\data\\secondaryInstallPath.json\" -Value \"`\"$dir\\Editor`\"\" | Out-Null",
         "}"
     ],
     "uninstaller": {
