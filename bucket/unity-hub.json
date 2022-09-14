@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
-            "hash": "91f37f19b3878024c9dbdf351b68572fc45950979947c8072bd6f40ea6442636",
+            "hash": "024739302d9294d9db769ff2516e59e7661b9d8eddea921169b416d320071a6b",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
