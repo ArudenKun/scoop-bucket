@@ -1,5 +1,5 @@
 {
-    "version": "2021.3.1.16",
+    "version": "20211231231.3.1.16",
     "description": "The official IDE for Android development, which includes everything you need to build Android apps.",
     "homepage": "https://developer.android.com/studio/",
     "license": {
@@ -48,10 +48,6 @@
     ],
     "checkver": "android-studio-([\\d.]+)-windows\\.zip",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip"
-            }
-        }
+        "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip"
     }
 }
