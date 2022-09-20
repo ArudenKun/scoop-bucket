@@ -1,12 +1,12 @@
 {
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Elegant music app to play & manage music library, lyrics and playlists (with YouTube support).",
     "homepage": "https://github.com/harmonoid/harmonoid",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.3.1/harmonoid-windows-exe.zip",
-            "hash": "4f7146881865caa3e64ad53c89d0962081b1f776c388d956ebfce06023f2a16d"
+            "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.3.2/harmonoid-windows-exe.zip",
+            "hash": "df3a86b82c3cf4dbe568de14d6aea57bab89ba9ae0961d32e767934877c34ff3"
         }
     },
     "extract_dir": "harmonoid-windows-exe",
