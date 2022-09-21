@@ -52,6 +52,10 @@
     ],
     "checkver": "android-studio-([\\d.]+)-windows\\.zip",
     "autoupdate": {
-        "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip"
+        "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip",
+        "hash": {
+            "url": "https://developer.android.com/studio",
+            "regex": "$sha256 android-studio-$version-windows.zip"
+        }
     }
 }
