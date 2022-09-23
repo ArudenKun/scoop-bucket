@@ -1,9 +1,9 @@
 {
-    "version": "368973526",
+    "version": "373059504",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://nightly.link/Akebi-Group/Akebi-GC/actions/artifacts/368973526.zip",
-    "hash": "5a2dfa10a85bcd9c1ca2c8c6e968f41bb80651aa830e9165cbf40ef88295ba71",
+    "url": "https://nightly.link/Akebi-Group/Akebi-GC/actions/artifacts/373059504.zip",
+    "hash": "9de9a8f0f2822c8ef2b559121cfd5e3106b68fe28c7957be1da73ee285b7f215",
     "installer": {
         "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\raiden.ico\" $dir"
     },
