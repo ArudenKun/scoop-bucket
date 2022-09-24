@@ -1,0 +1,20 @@
+{
+    "version": "4.17.0.0",
+    "homepage": "https://github.com/x360ce/x360ce",
+    "license": "Unknown",
+    "url": "https://github.com/x360ce/x360ce/releases/download/4.17.0.0/x360ce.zip",
+    "hash": "908babf5e35f2c31922744e1bf78990f9c1edbc5f7c1ce950812e920e60da1e9",
+    "shortcuts": [
+        [
+            "x360ce.exe",
+            "x360ce"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/x360ce/x360ce/releases",
+        "regex": "/tree/(4[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/x360ce/x360ce/releases/download/$version/x360ce.zip"
+    }
+}
