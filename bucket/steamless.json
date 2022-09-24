@@ -4,7 +4,7 @@
     "homepage": "https://github.com/atom0s/Steamless",
     "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License",
     "url": "https://github.com/atom0s/Steamless/releases/download/v3.1.0.2/Steamless.v3.1.0.2.-.by.atom0s.zip",
-    "hash": "3e030b86678b5f03b0d452cee8be00524538d84d4860613cc18c0971babbcc6a",
+    "hash": "2e6d4200648577d1b594be565fa26990f698884f161bd16e09686c937bd25cff",
     "bin": [
         [
             "Steamless.CLI.exe",
@@ -19,10 +19,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip",
-        "hash": {
-            "url": "https://plunger-dotnet-api.herokuapp.com/steamless",
-            "jp": "$.sha256"
-        }
+        "url": "https://github.com/atom0s/Steamless/releases/download/v$version/Steamless.v$version.-.by.atom0s.zip"
     }
 }
