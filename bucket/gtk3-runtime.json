@@ -1,6 +1,7 @@
 {
-    "version": "3.24.31-2022-11101-04",
+    "version": "3.24.1131-2022-01-04",
     "homepage": "https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer",
+    "description": "GTK+ for Windows Runtime Environment Installer (fork from http://gtk-win.sourceforge.net)",
     "license": "GPL-2.0-or-later",
     "url": "https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases/download/2022-01-04/gtk3-runtime-3.24.31-2022-01-04-ts-win64.exe#/dl.7z",
     "hash": "d05e1488ca0e6ffaabb579bbeb82113c099152ca4260ebc63084b0dd174d4558",
