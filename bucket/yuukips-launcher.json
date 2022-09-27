@@ -1,0 +1,18 @@
+{
+    "version": "nightly",
+    "homepage": "https://github.com/akbaryahya/YuukiPS-Launcher",
+    "license": "AGPL-3.0",
+    "url": "https://github.com/akbaryahya/YuukiPS-Launcher/releases/latest/download/YuukiPS.zip",
+    "hash": "fc85bf3041e81f69b8e393d3f5e45488f59087a8c34cf45ee0850553a19e54b9",
+    "shortcuts": [
+        [
+            "YuukiPS.exe",
+            "YuukiPS"
+        ]
+    ],
+    "persist": [
+        "data",
+        "mod"
+    ],
+    "checkver": "github"
+}
