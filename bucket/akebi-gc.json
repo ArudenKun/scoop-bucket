@@ -4,9 +4,6 @@
     "license": "Apache-2.0",
     "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v1.0.0/akebi-gc-v1.0.0-global.zip",
     "hash": "685e538394dfa0e9e848796afe312ce48f2e1860c0b3e0ba756e3aa0a4c7f666",
-    "installer": {
-        "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\icon.ico\" $dir"
-    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
@@ -15,9 +12,7 @@
     "shortcuts": [
         [
             "injector.exe",
-            "Akebi-GC",
-            "",
-            "icon.ico"
+            "Akebi-GC"
         ]
     ],
     "persist": [
