@@ -4,9 +4,6 @@
     "license": "Apache-2.0",
     "url": "https://nightly.link/Taiga74164/Akebi-GC/actions/artifacts/379958922.zip",
     "hash": "37d7a8b0e9215da0e17dce1ff2c6c7016cd2d179b3172a3219b131078b490318",
-    "installer": {
-        "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\raiden.ico\" $dir"
-    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
@@ -15,9 +12,7 @@
     "shortcuts": [
         [
             "injector.exe",
-            "Akebi-GC",
-            "",
-            "raiden.ico"
+            "Akebi-GC"
         ]
     ],
     "persist": [
