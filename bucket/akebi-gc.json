@@ -1,9 +1,9 @@
 {
-    "version": "0.95",
+    "version": "1.0.0",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v0.95/akebi-gc-v0.95-g3.0-binaries-global.zip",
-    "hash": "005485531cbd42334305ac5cc9c1484b273e000a4a610d5739b5af31f497f9ce",
+    "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v1.0.0/akebi-gc-v1.0.0-global.zip",
+    "hash": "685e538394dfa0e9e848796afe312ce48f2e1860c0b3e0ba756e3aa0a4c7f666",
     "installer": {
         "script": "Copy-Item \"$bucketsdir\\custom\\images\\akebi-gc\\icon.ico\" $dir"
     },
@@ -26,10 +26,9 @@
         "imgui.ini"
     ],
     "checkver": {
-        "github": "https://github.com/Akebi-Group/Akebi-GC",
-        "regex": "akebi-gc-v([\\d.]+)-g([\\d.]+)-binaries-global.zip"
+        "github": "https://github.com/Taiga74164/Akebi-GC"
     },
     "autoupdate": {
-        "url": "https://github.com/Akebi-Group/Akebi-GC/releases/download/v$match1/akebi-gc-v$match1-g$match2-binaries-global.zip"
+        "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v$version/akebi-gc-v$version-global.zip"
     }
 }
