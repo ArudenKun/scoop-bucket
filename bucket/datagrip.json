@@ -1,5 +1,5 @@
 {
-    "version": "2022.2.4-222.4167.25",
+    "version": "2022.2.5-222.4345.5",
     "description": "Cross-Platform IDE for Databases & SQL by JetBrains.",
     "homepage": "https://www.jetbrains.com/datagrip/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "depends": "custom/ja-netfilter",
     "notes": "Get key here: 'https://3.jetbra.in'",
-    "url": "https://download.jetbrains.com/datagrip/datagrip-2022.2.4.win.zip",
-    "hash": "d18b2ffeda97d118622d02a714e72694f9a3a76f49f6c4f31588f2982a4b0632",
+    "url": "https://download.jetbrains.com/datagrip/datagrip-2022.2.5.win.zip",
+    "hash": "17541e98f1b49d2bd00dcc4a4fcaffab7c8ebb1616accc965dc6331a98b94854",
     "extract_to": "IDE",
     "installer": {
         "script": [
