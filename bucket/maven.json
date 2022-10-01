@@ -15,6 +15,9 @@
         ]
     },
     "env_add_path": "bin",
+    "env_set": {
+        "MAVEN_HOME": "$dir"
+    },
     "persist": [
         "data",
         "conf",
