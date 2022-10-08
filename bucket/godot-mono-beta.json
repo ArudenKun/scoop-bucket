@@ -14,10 +14,10 @@
         }
     },
     "pre_install": [
-        "(Get-ChildItem \"$dir\\Godot_*\\Godot_*.exe\" | Rename-Item -NewName \"godot-mono-beta.exe\");",
-        "(Get-ChildItem \"$dir\\Godot_*\\*\" | Move-Item -Destination \"$dir\");",
+        "Get-ChildItem \"$dir\\Godot_*.exe\" | Rename-Item -NewName \"$dir\\godot.exe\"",
+        "Get-ChildItem \"$dir\\Godot_*\\*\" | Move-Item -Destination \"$dir\"",
         "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
-        "Remove-Item \"$dir\\Godot_*\""
+        "Remove-Item \"$dir\\Godot_*.cmd\""
     ],
     "bin": "godot-mono-beta.exe",
     "shortcuts": [
