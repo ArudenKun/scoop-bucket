@@ -6,11 +6,13 @@
     "architecture": {
         "64bit": {
             "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/mono/Godot_v4.0-beta2_mono_win64.zip",
-            "hash": "sha512:e0f0b46a22ce83b3ebf91094eb54bae686a110c24495b84354866bfda306c2ec190fc2e94bd1bf95b4ab91e2d911b35b72ea97ac0d58dc8b255502024b15885a"
+            "hash": "sha512:e0f0b46a22ce83b3ebf91094eb54bae686a110c24495b84354866bfda306c2ec190fc2e94bd1bf95b4ab91e2d911b35b72ea97ac0d58dc8b255502024b15885a",
+            "extract_dir": "Godot_v4.0-beta2_mono_win64"
         },
         "32bit": {
             "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/mono/Godot_v4.0-beta2_mono_win32.zip",
-            "hash": "sha512:da5e3ff6f2c5d933189e50f30de421bd319d8d5885b3a9e8c30246a4f40f605c6d8a52731e15ff956a02e12c76557a0cd38557abfd93c4be1fe7770e1d90d589"
+            "hash": "sha512:da5e3ff6f2c5d933189e50f30de421bd319d8d5885b3a9e8c30246a4f40f605c6d8a52731e15ff956a02e12c76557a0cd38557abfd93c4be1fe7770e1d90d589",
+            "extract_dir": "Godot_v4.0-beta2_mono_win64"
         }
     },
     "pre_install": [
@@ -35,12 +37,14 @@
         "architecture": {
             "64bit": {
                 "url": "https://downloads.tuxfamily.org/godotengine/$matchVer/beta$matchBeta/mono/Godot_v$version_mono_win64.zip",
+                "extract_dir": "Godot_v$version_mono_win64",
                 "hash": {
                     "url": "$baseurl/SHA512-SUMS.txt"
                 }
             },
             "32bit": {
                 "url": "https://downloads.tuxfamily.org/godotengine/$matchVer/beta$matchBeta/mono/Godot_v$version_mono_win32.zip",
+                "extract_dir": "Godot_v$version_mono_win64",
                 "hash": {
                     "url": "$baseurl/SHA512-SUMS.txt"
                 }
