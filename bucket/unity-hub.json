@@ -23,11 +23,7 @@
         "$regpath = \"HKCU:\\SOFTWARE\\Classes\\unityhub\"",
         "New-Item -Path $regpath -Value \"URL:unityhub\" -Force | Out-Null",
         "New-ItemProperty -Path $regpath -Name \"URL Protocol\" -PropertyType String -Force | Out-Null",
-        "New-Item -Path \"$regpath\\shell\\Open\\command\" -Value \"`\"$dir\\Unity Hub.exe`\" `\"%1`\"\" -Force| Out-Null",
-        "if (!(Test-Path \"$persist_dir\\data\\secondaryInstallPath.json\"))",
-        "{",
-        "   New-Item \"$dir\\data\\secondaryInstallPath.json\" -Value \"`\"$dir\\Editor`\"\" | Out-Null",
-        "}"
+        "New-Item -Path \"$regpath\\shell\\Open\\command\" -Value \"`\"$dir\\Unity Hub.exe --user-data-dir=$dir\\data`\" `\"%1`\"\" -Force| Out-Null"
     ],
     "uninstaller": {
         "script": [
