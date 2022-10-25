@@ -1,10 +1,10 @@
 {
-    "version": "0.3.7",
+    "version": "0.3.8",
     "description": "碧蓝航线脚本 Azur Lane automation bot (CN/EN/JP/TW) | 无缝委托科研，全自动大世界",
     "homepage": "https://github.com/LmeSzinc/AzurLaneAutoScript",
     "license": "GPL-3.0 License",
-    "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_0.3.7.7z",
-    "hash": "79d8f2bf177888c039b9fd992b3fbf0cdbb63db93793c0d557bb3a12f0639f62",
+    "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_0.3.8.7z",
+    "hash": "d7e36b76428ef4a0f2ebce5372c41c97a2010966219b39bf2b6eec7a67d145f1",
     "extract_dir": "AzurLaneAutoScript",
     "shortcuts": [
         [
