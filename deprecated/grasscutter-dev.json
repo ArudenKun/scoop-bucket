@@ -25,7 +25,5 @@
     },
     "autoupdate": {
         "url": "https://nightly.link/Grasscutters/Grasscutter/workflows/build/development/Grasscutter.zip"
-    },
-    "##": "/Grasscutters/Grasscutter/commit/(?<commit>[a-fA-F\\d]{7})",
-    "_comment": "Commit Check"
+    }
 }
