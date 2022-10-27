@@ -1,10 +1,10 @@
 {
-    "version": "91.0.4516.95",
+    "version": "91.0.4516.102",
     "homepage": "https://portableapps.com/apps/internet/opera-gx-portable",
     "description": "Gaming counterpart of Opera web browser",
     "license": "",
-    "url": "https://portableapps.com/redirect/?a=OperaGXPortable&s=s&d=pa&f=OperaGXPortable_91.0.4516.95.paf.exe",
-    "hash": "85d9d6c6a89567d0dc077077fcce4275054505244a5d8a80afa03105e4c954f7",
+    "url": "https://portableapps.com/redirect/?a=OperaGXPortable&s=s&d=pa&f=OperaGXPortable_91.0.4516.102.paf.exe",
+    "hash": "ea307fe87d2592874c1d9f26a0f091366d008d580ce92c6672448ea8da2fcdf5",
     "bin": "OperaGXPortable.exe",
     "shortcuts": [
         [
