@@ -1,9 +1,9 @@
 {
-    "version": "1.0.5",
+    "version": "1.1.0",
     "homepage": "https://github.com/Akebi-Group/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v1.0.5/akebi-gc-v1.0.5-global.zip",
-    "hash": "adfa6430b033b6825e0db95e942af4650942420661f15944cc7f436206a5fd8d",
+    "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v1.1.0/akebi-gc-v1.1.0-global.zip",
+    "hash": "4876c519e5f768c89529d9cb60f639dc7ef7b1abfc2c215c30fb1092768229a1",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
