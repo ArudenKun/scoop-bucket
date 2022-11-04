@@ -1,5 +1,5 @@
 {
-    "version": "422278276",
+    "version": "423384827",
     "description": "DockerGC is a container that run Grasscutter (anime game) with just a single command.",
     "homepage": "https://github.com/akbaryahya/DockerGS",
     "license": "AGPL-3.0",
@@ -7,7 +7,7 @@
         "Java": "JDK 17"
     },
     "url": "https://nightly.link/akbaryahya/DockerGS/workflows/DockerGS_GC_Alpine_3.1/main/DockerGS-GC.zip",
-    "hash": "0fe31d3fd8c25ff5cbbe683066740886409a4c12cf78ae5130fa3a4c85d0f326",
+    "hash": "d2d22884b9e08bd8ed32784c76e26c91f97a7551d36e2d7bb996e29c01e54394",
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -Value ''| Out-Null }",
     "persist": [
         "data",
