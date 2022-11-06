@@ -1,10 +1,10 @@
 {
-    "version": "3.5.3.223",
+    "version": "3.5.3.227",
     "homepage": "https://github.com/huanghongxun/HMCL",
     "description": "A powered Minecraft launcher that supports a lot of features.",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/huanghongxun/HMCL/releases/download/v3.5.3.223/HMCL-3.5.3.223.exe#/hmcl.exe",
-    "hash": "sha1:3d7417b5058c8c7a10b29dfd2161660c1512f8e7",
+    "url": "https://github.com/huanghongxun/HMCL/releases/download/v3.5.3.227/HMCL-3.5.3.227.exe#/hmcl.exe",
+    "hash": "sha1:0853ccc50737169d471379498722be96df1e29aa",
     "shortcuts": [
         [
             "HMCL.exe",
