@@ -1,0 +1,17 @@
+{
+    "version": "a95348e011",
+    "description": "Yuuki Grasscutter Resources",
+    "homepage": "https://gitlab.com/yukiz/GrasscutterResources/-/tree/3.2",
+    "license": "None",
+    "url": "https://gitlab.com/yukiz/GrasscutterResources/-/archive/3.2/GrasscutterResources-3.2.zip#/resources",
+    "hash": "d2d22884b9e08bd8ed32784c76e26c91f97a7551d36e2d7bb996e29c01e54394",
+    "post_install": [
+        "Rename-Item $dir\\resources resources.zip"
+    ],
+    "checkver": {
+        "regex": "<span class=\"gl-button-text\">.+?</span>"
+    },
+    "autoupdate": {
+        "url": "https://gitlab.com/yukiz/GrasscutterResources/-/archive/3.2/GrasscutterResources-3.2.zip#/resources"
+    }
+}
