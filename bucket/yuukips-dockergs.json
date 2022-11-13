@@ -15,7 +15,8 @@
     ],
     "installer": {
         "script": [
-            "Start-Process -FilePath \"$dir\\dockergs.bat -handbook\" -NoNewWindow -Wait",
+            "\"$dir\\dockergs.bat -handbook\"",
+            "Wait-Process -Name java",
             "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
             "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
             "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
