@@ -14,7 +14,14 @@
         "Set-Content \"$dir\\dockergs.bat\" 'java -jar \"%~dp0grasscutter.jar\" %1' -Encoding Ascii"
     ],
     "installer": {
-        "script": "\"$dir\\dockergs.bat -handbook\" | Out-Null"
+        "script": [
+            "\"$dir\\dockergs.bat -handbook\" | Out-Null",
+            "$id = (Get-Process -Name java).Id",
+            "Wait-Process -Id $id",
+            "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
+            "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
+            "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
+        ]
     },
     "bin": "dockergs.bat",
     "persist": [
@@ -25,12 +32,9 @@
         "config.json"
     ],
     "post_install": [
-        "$dockergs = Get-Process -Name java -ErrorAction SilentlyContinue",
-        "if (!$dockergs) {",
         "   $config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
         "   $config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
-        "   $config | ConvertTo-Json | Set-Content \"$dir\\config.json\"",
-        "}"
+        "   $config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
         "url": "https://api.github.com/repos/akbaryahya/DockerGS/actions/artifacts",
