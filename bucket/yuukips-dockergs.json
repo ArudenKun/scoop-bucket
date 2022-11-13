@@ -19,7 +19,7 @@
     ],
     "post_install": [
         "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
-        "$config.folderStructure.resources = $(appdir yuukips-resource)\\current\\resources.zip",
+        "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
         "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
