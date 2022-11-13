@@ -20,7 +20,7 @@
     ],
     "post_install": [
         "dockergs.bat",
-        "Start-Sleep -s 1",
+        "Start-Sleep -s 2",
         "Stop-Process -Name \"java\" -Force",
         "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
         "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
