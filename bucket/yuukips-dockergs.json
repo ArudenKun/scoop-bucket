@@ -9,9 +9,7 @@
     ],
     "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/434349984.zip",
     "hash": "fa9ab1de2e4bf285919ef13c0c9e3a58792404a9693895c268d2dbad6487d635",
-    "installer": {
-        "script": "Copy-Item \"$bucketsdir\\custom\\scripts\\yuukips\\config.json\" $dir"
-    },
+    "pre_install": "Copy-Item \"$bucketsdir\\custom\\scripts\\yuukips\\config.json\" $dir",
     "persist": [
         "cache",
         "data",
