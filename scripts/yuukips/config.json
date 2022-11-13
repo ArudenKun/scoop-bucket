@@ -65,8 +65,8 @@
             "accessPort": 0,
             "APICloud": "https://ps.yuuki.me/",
             "encryption": {
-                "useEncryption": true,
-                "useInRouting": true,
+                "useEncryption": false,
+                "useInRouting": false,
                 "keystore": "./keystore.p12",
                 "keystorePassword": "123456"
             },
