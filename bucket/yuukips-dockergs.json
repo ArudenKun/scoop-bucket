@@ -16,7 +16,6 @@
     "installer": {
         "script": [
             "Start-Process -FilePath \"$dir\\dockergs.bat -handbook\" -NoNewWindow -Wait",
-            "$id = (Get-Process -Name java).Id",
             "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
             "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
             "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
@@ -29,11 +28,6 @@
         "logs",
         "plugins",
         "config.json"
-    ],
-    "post_install": [
-        "   $config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
-        "   $config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
-        "   $config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
         "url": "https://api.github.com/repos/akbaryahya/DockerGS/actions/artifacts",
