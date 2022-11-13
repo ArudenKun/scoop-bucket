@@ -14,12 +14,7 @@
         "Set-Content \"$dir\\dockergs.bat\" 'java -jar \"%~dp0grasscutter.jar\" %1' -Encoding Ascii"
     ],
     "installer": {
-        "script": [
-            "if (!(Test-Path \"$persist_dir\\config.json\")) ",
-            "{",
-            "   \"$dir\\dockergs.bat -handbook\" | Out-Null",
-            "}"
-        ]
+        "script": "\"$dir\\dockergs.bat -handbook\" | Out-Null"
     },
     "bin": "dockergs.bat",
     "persist": [
