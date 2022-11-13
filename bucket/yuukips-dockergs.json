@@ -17,14 +17,7 @@
         "script": [
             "if (!(Test-Path \"$persist_dir\\config.json\")) ",
             "{",
-            "   \"$dir\\\" | Out-Null",
-            "   $dockergs = Get-Process -Name java -ErrorAction SilentlyContinue",
-            "   if (!$dockergs)",
-            "   {",
-            "       $config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
-            "       $config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
-            "       $config | ConvertTo-Json | Set-Content \"$dir\\config.json\"",
-            "   }",
+            "   \"$dir\\dockergs.bat -handbook\" | Out-Null",
             "}"
         ]
     },
@@ -35,6 +28,11 @@
         "logs",
         "plugins",
         "config.json"
+    ],
+    "post_install": [
+        "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
+        "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
+        "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
         "url": "https://api.github.com/repos/akbaryahya/DockerGS/actions/artifacts",
