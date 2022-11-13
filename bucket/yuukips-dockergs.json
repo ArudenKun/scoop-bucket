@@ -10,7 +10,7 @@
     "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/434349984.zip",
     "hash": "fa9ab1de2e4bf285919ef13c0c9e3a58792404a9693895c268d2dbad6487d635",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -Value '{}' | Out-Null }",
         "Set-Content \"$dir\\dockergs.bat\" 'java -jar \"%~dp0grasscutter.jar\" %1' -Encoding Ascii"
     ],
     "installer": {
