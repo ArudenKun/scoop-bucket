@@ -1,0 +1,21 @@
+{
+  "folderStructure": {
+    "resources": "./GrasscutterResources-3.2.zip",
+    "data": "./data/",
+    "packets": "./packets/",
+    "keys": "./keys/",
+    "scripts": "resources:Scripts/",
+    "plugins": "./plugins/",
+    "VERSION": "./ver"
+  },
+  "databaseInfo": {
+    "server": {
+      "connectionUri": "mongodb+srv://alden:6exqTgyK6p8WvKuP@plunger.4eax1.mongodb.net/api?authMechanism\u003dSCRAM-SHA-1",
+      "collection": "dockergs"
+    },
+    "game": {
+      "connectionUri": "mongodb+srv://alden:6exqTgyK6p8WvKuP@plunger.4eax1.mongodb.net/api?authMechanism\u003dSCRAM-SHA-1",
+      "collection": "dockergs"
+    }
+  }
+}
