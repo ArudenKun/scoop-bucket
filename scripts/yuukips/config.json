@@ -1,6 +1,6 @@
 {
   "folderStructure": {
-    "resources": "./GrasscutterResources-3.2.zip",
+    "resources": "./resources",
     "data": "./data/",
     "packets": "./packets/",
     "keys": "./keys/",
