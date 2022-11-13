@@ -14,7 +14,7 @@
         "script": [
             "if (!(Test-Path \"$persist_dir\\config.json\")) ",
             "{",
-            "   New-Item -ItemType File \"$dir\\config.json\" | Out-Null",
+            "   New-Item -ItemType File \"$dir\\config.json\" -Value '{}'| Out-Null",
             "   \"$dir\\dockergs.bat\" | Out-Null",
             "}"
         ]
