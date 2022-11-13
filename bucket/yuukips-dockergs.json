@@ -31,8 +31,7 @@
     ],
     "post_install": [
         "$dockergs = Get-Process -Name java -ErrorAction SilentlyContinue",
-        "if ($dockergs) {",
-        "   Start-Sleep -Seconds 3",
+        "if (!$dockergs) {",
         "   $config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
         "   $config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
         "   $config | ConvertTo-Json | Set-Content \"$dir\\config.json\"",
