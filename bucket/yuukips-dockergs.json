@@ -10,9 +10,19 @@
     "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/434349984.zip",
     "hash": "fa9ab1de2e4bf285919ef13c0c9e3a58792404a9693895c268d2dbad6487d635",
     "pre_install": [
-        "Copy-Item \"$bucketsdir\\custom\\scripts\\yuukips\\config.json\" $dir",
         "Set-Content \"$dir\\dockergs.bat\" 'java -jar \"%~dp0grasscutter.jar\"' -Encoding Ascii"
     ],
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$persist_dir\\config.json\")) ",
+            "{",
+            "   dockergs | Out-Null",
+            "   $config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
+            "   $config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
+            "   $config | ConvertTo-Json | Set-Content \"$dir\\config.json\"",
+            "}"
+        ]
+    },
     "bin": "dockergs.bat",
     "persist": [
         "cache",
@@ -20,13 +30,6 @@
         "logs",
         "plugins",
         "config.json"
-    ],
-    "post_install": [
-        "dockergs",
-        "Stop-Process -Name \"java\" -Force",
-        "$config = Get-Content \"$dir\\config.json\" | ConvertFrom-Json",
-        "$config.folderStructure.resources = \"$(appdir yuukips-resource)\\current\\resources.zip\"",
-        "$config | ConvertTo-Json | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
         "url": "https://api.github.com/repos/akbaryahya/DockerGS/actions/artifacts",
