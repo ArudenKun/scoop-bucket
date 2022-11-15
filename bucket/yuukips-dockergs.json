@@ -1,5 +1,5 @@
 {
-    "version": "435517999",
+    "version": "436115635",
     "description": "DockerGS is a container that run Grasscutter (anime game) with just a single command.",
     "homepage": "https://github.com/akbaryahya/DockerGS",
     "license": "AGPL-3.0",
@@ -7,8 +7,8 @@
         "temurin17-jdk",
         "yuukips-resource"
     ],
-    "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/435517999.zip",
-    "hash": "23426214771456a9ffaa79d9b581ad962cf34cc7e1dcc16fb9f8ccf8f6dcd3bd",
+    "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/436115635.zip",
+    "hash": "6aa8bdff0ae7c4f7c6b7ad2aa3e500d059cad66479814f96a5707dec48bb5aba",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.json\"))",
         "{",
