@@ -1,9 +1,9 @@
 {
-    "version": "22020900",
+    "version": "21082800",
     "homepage": "https://github.com/yuk7/wsldl",
     "license": "MIT",
-    "url": "https://github.com/yuk7/wsldl/releases/download/22020900/wsldl.exe",
-    "hash": "06c0451582f545083778934cf48604080c222bf1f1dfd1b6b90e4019a5306539",
+    "url": "https://github.com/yuk7/wsldl/releases/download/21082800/wsldl.exe",
+    "hash": "7c5357e2d2bf4edc3b199ae48b3662a2181b3e7613f6271b5de9d3712a3bab1f",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/yuk7/wsldl/releases/download/$version/wsldl.exe"
