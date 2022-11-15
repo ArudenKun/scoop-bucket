@@ -30,8 +30,8 @@
         "$config | ConvertTo-Json -Depth 10 | Set-Content \"$dir\\config.json\""
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/akbaryahya/DockerGS/actions/artifacts",
-        "jp": "$.artifacts[0].id"
+        "url": "https://nightly.link/akbaryahya/DockerGS/workflows/DockerGS_GC_Alpine_3.2/main/DockerGS-GC",
+        "regex": "(\\d+).zip"
     },
     "autoupdate": {
         "url": "https://nightly.link/akbaryahya/DockerGS/actions/artifacts/$version.zip"
