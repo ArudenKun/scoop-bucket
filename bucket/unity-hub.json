@@ -47,8 +47,10 @@
         "regex": "class=\"active\">([\\d.]+)</a>"
     },
     "autoupdate": {
-        "64bit": {
-            "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+            }
         }
     }
 }
