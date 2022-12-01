@@ -10,6 +10,7 @@
             "Godot Manager"
         ]
     ],
+    "post_install": "New-Item -Force -Path \"$dir\" -Name 'sc' -Value '{}' | Out-Null",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/eumario/godot-manager/releases/download/v$version/godotmanager-windows-v$version.zip"
