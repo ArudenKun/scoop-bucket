@@ -4,7 +4,7 @@
     "license": "MIT",
     "url": "https://github.com/eumario/godot-manager/releases/download/v0.2.1/godotmanager-windows-v0.2.1.zip",
     "hash": "bf6d14fa5d1ba05e067fd760c1374d79668d991e8dc06e887416967fc33b6455",
-    "pre_install": "New-Item -Force -Path \"$dir\" -Name 'sc' -Value '{}' | Out-Null",
+    "pre_install": "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
     "shortcuts": [
         [
             "GodotManager.exe",
