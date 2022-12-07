@@ -3,6 +3,7 @@
     "homepage": "https://git.crepe.moe/taiga74164/Akebi-GC",
     "license": "Apache-2.0",
     "url": "https://crepe.moe/c/WTv4TOcq.zip",
+    "hash": "2aab5b7dc940f2e4aaf2759e0c0e3f39e2e82d84d3c14c0460f1340a6e9ea989",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
