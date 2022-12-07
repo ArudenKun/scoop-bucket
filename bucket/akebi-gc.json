@@ -1,8 +1,8 @@
 {
     "version": "1.1.1",
-    "homepage": "https://github.com/Akebi-Group/Akebi-GC",
+    "homepage": "https://git.crepe.moe/taiga74164/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v1.1.1/akebi-gc-v1.1.1-global.zip",
+    "url": "https://crepe.moe/c/WTv4TOcq.zip",
     "hash": "da527ee56b68993293e0079da84090e6e354f8ed5a7e0be7acf97e86fce1adab",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
@@ -19,11 +19,5 @@
         "cfg.ini",
         "cfg.json",
         "imgui.ini"
-    ],
-    "checkver": {
-        "github": "https://github.com/Taiga74164/Akebi-GC"
-    },
-    "autoupdate": {
-        "url": "https://github.com/Taiga74164/Akebi-GC/releases/download/v$version/akebi-gc-v$version-global.zip"
-    }
+    ]
 }
