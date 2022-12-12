@@ -10,6 +10,7 @@
         }
     },
     "bin": "pnpm.exe",
+    "env_add_path": "$dir\\data\\global-bin",
     "env_set": {
         "PNPM_HOME": "$dir\\data",
         "NPM_CONFIG_CACHE": "$dir\\data\\npm-cache"
