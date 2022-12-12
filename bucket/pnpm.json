@@ -3,7 +3,6 @@
     "description": "A fast and disk space efficient Node package manager.",
     "homepage": "https://pnpm.io/",
     "license": "MIT",
-    "depends": "custom/volta",
     "architecture": {
         "64bit": {
             "url": "https://github.com/pnpm/pnpm/releases/download/v7.18.2/pnpm-win-x64.exe#/pnpm.exe",
@@ -11,14 +10,9 @@
         }
     },
     "bin": "pnpm.exe",
-    "post_install": [
-        "pnpm config set store-dir $dir\\data\\store",
-        "pnpm config set cache-dir $dir\\data\\cache",
-        "pnpm config set state-dir $dir\\data\\state",
-        "pnpm config set global-dir $dir\\data\\global",
-        "pnpm config set global-bin-dir $dir\\data\\global-bin"
-    ],
-    "env_add_path": "data\\global-bin",
+    "env_set": {
+        "PNPM_HOME": "$dir\\data"
+    },
     "persist": "data",
     "checkver": {
         "script": [
