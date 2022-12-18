@@ -13,7 +13,12 @@
             "hash": "c79451cbede45592f72a9751804ccc70fb26266664c4dac05b5d2b0c1da40c5d"
         }
     },
-    "bin": "code.cmd",
+    "bin": [
+        [
+            "vscode-portable.exe",
+            "code"
+        ]
+    ],
     "shortcuts": [
         [
             "vscode-portable.exe",
