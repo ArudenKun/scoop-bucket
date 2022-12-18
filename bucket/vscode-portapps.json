@@ -13,12 +13,10 @@
             "hash": "c79451cbede45592f72a9751804ccc70fb26266664c4dac05b5d2b0c1da40c5d"
         }
     },
-    "bin": [
-        [
-            "vscode-portable.exe",
-            "code"
-        ]
-    ],
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\scripts\\microsoft\\vscode\\code.cmd\" $dir -Force"
+    },
+    "bin": "code.cmd",
     "shortcuts": [
         [
             "vscode-portable.exe",
