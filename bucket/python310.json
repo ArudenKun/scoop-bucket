@@ -94,6 +94,10 @@
             "idle310"
         ]
     ],
+    "env_add_path": [
+        "Scripts",
+        "."
+    ],
     "env_set": {
         "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\Cache\\virtualenv",
         "PIP_CACHE_DIR": "$dir\\Cache\\pip",
