@@ -64,8 +64,7 @@
     },
     "post_install": [
         "python -E -s -m ensurepip -U --default-pip | Out-Null",
-        "Write-Output \"`e[0m\" # Reset ansi to prevent color leak from installer",
-        "pip install pipenv"
+        "Write-Output \"`e[0m\" # Reset ansi to prevent color leak from installer"
     ],
     "uninstaller": {
         "script": [
@@ -82,7 +81,7 @@
         ],
         [
             "python.exe",
-            "python39"
+            "python310"
         ],
         "Lib\\idlelib\\idle.bat",
         [
@@ -91,12 +90,8 @@
         ],
         [
             "Lib\\idlelib\\idle.bat",
-            "idle39"
+            "idle310"
         ]
-    ],
-    "env_add_path": [
-        "Scripts",
-        "."
     ],
     "env_set": {
         "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\Cache\\virtualenv",
