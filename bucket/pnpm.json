@@ -9,22 +9,17 @@
             "hash": "95793b4459511d0dbe9b1f19ebc478ee819d58c2e98713ceeec513eb2db187b8"
         }
     },
-    "installer": {
-        "script": [
-            "$env:PNPM_CONFIG_HOME=\"$dir\\data\\config\""
-        ]
-    },
     "bin": "pnpm.exe",
     "env_add_path": "data\\bin",
     "env_set": {
-        "PNPM_CONFIG_HOME": "$dir\\data\\config"
+        "PNPM_HOME": "$dir\\data"
     },
     "post_install": [
-        "pnpm config set store-dir \"$dir\\data\\store\" --global",
-        "pnpm config set state-dir \"$dir\\data\\state\" --global",
-        "pnpm config set cache-dir \"$dir\\data\\cache\" --global",
-        "pnpm config set global-dir \"$dir\\data\\global\" --global",
-        "pnpm config set global-bin-dir \"$dir\\data\\bin\" --global"
+        "pnpm config set store-dir \"$dir\\data\\store\"",
+        "pnpm config set state-dir \"$dir\\data\\state\"",
+        "pnpm config set cache-dir \"$dir\\data\\cache\"",
+        "pnpm config set global-dir \"$dir\\data\\global\"",
+        "pnpm config set global-bin-dir \"$dir\\data\\bin\""
     ],
     "persist": "data",
     "checkver": {
