@@ -1,21 +1,19 @@
 {
-    "version": "7.24.2",
+    "version": "7.24.3",
     "description": "A fast and disk space efficient Node package manager.",
     "homepage": "https://pnpm.io/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pnpm/pnpm/releases/download/v7.24.2/pnpm-win-x64.exe#/pnpm.exe",
-            "hash": "9b9c0949892d085cea034c11e5a510fd5b3a8da754262a9abd505958f108f86c"
+            "url": "https://github.com/pnpm/pnpm/releases/download/v7.24.3/pnpm-win-x64.exe#/pnpm.exe",
+            "hash": "95793b4459511d0dbe9b1f19ebc478ee819d58c2e98713ceeec513eb2db187b8"
         }
     },
     "bin": "pnpm.exe",
     "env_add_path": "data\\bin",
-    "env_set": {
-        "PNPM_HOME": "$dir\\data"
-    },
     "post_install": [
         "pnpm config set store-dir \"$dir\\data\\store\" --global",
+        "pnpm config set state-dir \"$dir\\data\\state\" --global",
         "pnpm config set cache-dir \"$dir\\data\\cache\" --global",
         "pnpm config set global-dir \"$dir\\data\\global\" --global",
         "pnpm config set global-bin-dir \"$dir\\data\\bin\" --global"
