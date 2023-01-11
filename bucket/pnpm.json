@@ -12,10 +12,8 @@
     "bin": "pnpm.exe",
     "env_add_path": "data\\global-bin",
     "env_set": {
-        "PNPM_HOME": "$dir\\data",
-        "NPM_CONFIG_CACHE": "$dir\\data\\npm-cache"
+        "PNPM_HOME": "$dir\\data"
     },
-    "post_install": "pnpm env use --global lts",
     "persist": "data",
     "checkver": {
         "script": [
