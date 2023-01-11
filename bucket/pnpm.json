@@ -12,7 +12,7 @@
     "bin": "pnpm.exe",
     "env_add_path": "data",
     "env_set": {
-        "PNPM_HOME": "$dir\\data"
+        "PNPM_HOME": "$dir\\data\\bin"
     },
     "post_install": [
         "pnpm config set store-dir \"$dir\\data\\store\" --global",
