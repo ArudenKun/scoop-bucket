@@ -9,6 +9,11 @@
             "hash": "95793b4459511d0dbe9b1f19ebc478ee819d58c2e98713ceeec513eb2db187b8"
         }
     },
+    "installer": {
+        "script": [
+            "$env:PNPM_CONFIG_HOME=\"$dir\\data\\config\""
+        ]
+    },
     "bin": "pnpm.exe",
     "env_add_path": "data\\bin",
     "env_set": {
