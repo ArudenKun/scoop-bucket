@@ -1,0 +1,17 @@
+{
+    "version": "nightly",
+    "homepage": "https://flatredball.com/",
+    "license": "MIT",
+    "url": [
+        "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
+        "http://flatredball.com/wp-content/uploads/2016/01/Icon.png"
+    ],
+    "shortcuts": [
+        [
+            "Xna 4 Tools",
+            "GlueFormsCore.exe",
+            "",
+            "Icon.png"
+        ]
+    ]
+}
