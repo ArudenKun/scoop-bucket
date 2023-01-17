@@ -2,16 +2,16 @@
     "version": "nightly",
     "homepage": "https://flatredball.com/",
     "license": "MIT",
-    "url": [
-        "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
-        "http://flatredball.com/wp-content/uploads/2016/01/Icon.png"
-    ],
+    "url": "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\flatredball\\icon.ico\" $dir"
+    },
     "shortcuts": [
         [
             "Xna 4 Tools\\GlueFormsCore.exe",
             "FlatRedBall",
             "",
-            "Icon.png"
+            "icon.ico"
         ]
     ]
 }
