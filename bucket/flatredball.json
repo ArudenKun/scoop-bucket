@@ -8,8 +8,8 @@
     ],
     "shortcuts": [
         [
-            "Xna 4 Tools",
-            "GlueFormsCore.exe",
+            "Xna 4 Tools\\GlueFormsCore.exe",
+            "FlatRedBall",
             "",
             "Icon.png"
         ]
