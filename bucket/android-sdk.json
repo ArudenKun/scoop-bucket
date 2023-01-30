@@ -12,7 +12,12 @@
     "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
     "installer": {
         "script": [
-            "Move-Item \"$dir\\cmdline-tools\\*\" \"$dir\\cmdline-tools\\latest\""
+            "$source = \"$dir\\cmdline-tools\"",
+            "$target = \"$dir\\cmdline-tools\\latest\"",
+            "Get-ChildItem $source -Recurse | ForEach-Object {",
+            "   $newPath = $_.FullName -replace [regex]::Escape($source),$target",
+            "   Move-Item $_ -Destination $newPath -Force",
+            "}"
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
