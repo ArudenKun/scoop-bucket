@@ -7,7 +7,8 @@
         "url": "https://developer.android.com/studio/terms.html"
     },
     "depends": [
-        "android-sdk"
+        "android-sdk",
+        "gradle-bin"
     ],
     "architecture": {
         "64bit": {
