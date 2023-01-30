@@ -4,7 +4,6 @@
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
     "depends": [
-        "android-sdk",
         "java/temurin8-jdk"
     ],
     "suggest": {
