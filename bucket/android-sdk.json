@@ -13,7 +13,10 @@
         "script": [
             "$source = \"$dir\\cmdline-tools\"",
             "$target = \"$dir\\cmdline-tools\\latest\"",
-            "Move-Item $source\\* $target -Exclude $target -Force"
+            "Get-ChildItem $source -Recurse | ForEach-Object {",
+            "   $newPath = $target -replace $_.name",
+            "   Move-Item $_.FullName -Destination $newPath -Force",
+            "}"
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
