@@ -41,7 +41,15 @@
     "post_install": [
         "if (Test-Path \"$(appdir adb $global)\") {",
         "    New-Item \"$dir\\platform-tools\" -ItemType Junction -Target \"$(appdir adb $global)\\current\\platform-tools\" | Out-Null",
-        "}"
+        "}",
+        "$build_tools_url = 'https://developer.android.com/studio/releases/build-tools'",
+        "$build_tools_content = $(Invoke-WebRequest $build_tools_url).Content",
+        "$build_tools_match = (Select-String 'Build Tools, Revision ([A-Za-z0-9]+(\\.[A-Za-z0-9]+)+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
+        "$platform_url = 'https://developer.android.com/studio/releases/platforms#latest'",
+        "$platform_content = $(Invoke-WebRequest $platform_url).Content",
+        "$platform_match = (Select-String 'API level ([0-9]+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
+        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"build-tools;$build_tools_match\"",
+        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platform_match\""
     ],
     "##": [
         "$build_tools_url = 'https://developer.android.com/studio/releases/build-tools'",
