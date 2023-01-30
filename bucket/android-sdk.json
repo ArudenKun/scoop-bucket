@@ -12,7 +12,8 @@
     "extract_to": "cmdline-tools",
     "installer": {
         "script": [
-            "Rename-Item \"$dir\\cmdline-tools\\cmdline-tools\" \"latest\""
+            "Rename-Item \"$dir\\cmdline-tools\\cmdline-tools\" \"latest\"",
+            "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace 'set JAVA_EXE=java.exe', \"set JAVA_EXE`\"$(appdir temurin8-jdk)\\current\\java.exe`\"\""
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
