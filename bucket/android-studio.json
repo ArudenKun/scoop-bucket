@@ -6,6 +6,9 @@
         "identifier": "Freeware",
         "url": "https://developer.android.com/studio/terms.html"
     },
+    "depends": [
+        "android-sdk"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.1.1.19/android-studio-2022.1.1.19-windows.zip",
@@ -24,11 +27,6 @@
             "Android Studio"
         ]
     ],
-    "env_set": {
-        "ANDROID_HOME": "$dir\\sdk",
-        "ANDROID_USER_HOME": "$dir\\profile\\.android",
-        "ANDROID_SDK_HOME": "$dir\\profile"
-    },
     "post_install": [
         "if(!(Test-Path \"$persist_dir\\sdk\\*\"))",
         "{",

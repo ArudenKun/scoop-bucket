@@ -3,10 +3,12 @@
     "description": "Google's mobile app SDK for crafting high-quality native interfaces on iOS and Android",
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
+    "depends": [
+        "android-sdk",
+        "java/temurin8-jdk"
+    ],
     "suggest": {
-        "Visual Studio Code with Flutter Extension": "vscode",
-        "Android Studio": "android-sdk",
-        "Java JDK": "Temurin Java JDK"
+        "Visual Studio Code with Flutter Extension": "vscode"
     },
     "url": [
         "https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.0-stable.zip",
