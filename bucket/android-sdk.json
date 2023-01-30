@@ -48,8 +48,8 @@
         "$platform_url = 'https://developer.android.com/studio/releases/platforms'",
         "$platform_content = $(Invoke-WebRequest $platform_url).Content",
         "$platform_match = (Select-String 'API level ([0-9]+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" 'build-tools;\"$build_tools_match\"'",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" 'platforms;android-\"$platform_match\"'"
+        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"build-tools;$build_tools_match\"",
+        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platform_match\""
     ],
     "checkver": "commandlinetools-win-(\\d+)",
     "autoupdate": {
