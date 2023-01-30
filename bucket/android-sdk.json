@@ -12,7 +12,7 @@
     "extract_to": "cmdline-tools",
     "installer": {
         "script": [
-            "Rename-Item \"$dir\\cmdline-tools\" \"latest\""
+            "Rename-Item \"$dir\\cmdline-tools\\cmdline-tools\" \"latest\""
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
