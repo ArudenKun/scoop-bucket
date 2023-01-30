@@ -13,7 +13,6 @@
         "script": [
             "$source = \"$dir\\cmdline-tools\"",
             "$target = \"./latest\"",
-            "New-Item $target -ItemType Directory",
             "Move-Item $source\\* $target -Exclude $target -Force"
         ]
     },
