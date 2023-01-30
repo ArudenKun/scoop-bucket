@@ -9,15 +9,10 @@
     "depends": "adb",
     "url": "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip",
     "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
-    "extract_to": "temp",
+    "extract_to": "cmdline-tools",
     "installer": {
         "script": [
-            "$source = \"$dir\\temp\"",
-            "$target = \"$dir\\cmdline-tools\\latest\"",
-            "Get-ChildItem $source -Recurse | ForEach-Object {",
-            "   $newPath = $_.FullName -replace [regex]::Escape($source),$target",
-            "   Move-Item $_ -Destination $newPath -Exclude $target -Force",
-            "}"
+            "Rename-Item \"$dir\\cmdline-tools\" \"latest\""
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
