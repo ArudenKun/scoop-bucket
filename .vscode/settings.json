@@ -47,6 +47,7 @@
         "chromechecker",
         "Classpath",
         "cmdline",
+        "commandlinetools",
         "cosi",
         "creamapi",
         "DATACOLLECTION",
