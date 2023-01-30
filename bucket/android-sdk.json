@@ -12,7 +12,7 @@
     "installer": {
         "script": [
             "$source = \"$dir\\cmdline-tools\"",
-            "$target = \"./latest\"",
+            "$target = \"$dir\\cmdline-tools\\latest\"",
             "Move-Item $source\\* $target -Exclude $target -Force"
         ]
     },
