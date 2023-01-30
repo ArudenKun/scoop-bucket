@@ -13,7 +13,9 @@
     "installer": {
         "script": [
             "Rename-Item \"$dir\\cmdline-tools\\cmdline-tools\" \"latest\"",
-            "(Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\") -replace 'set JAVA_EXE=java.exe', \"set JAVA_EXE=`\"$(appdir temurin8-jdk)\\current\\java.exe`\"\""
+            "$CONT = Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\"",
+            "$CONST_NEW = $CONT -replace '%JAVA_HOME:\"=%', \"`\"$(appdir temurin8-jdk)\\current`\"\"",
+            "$CONST_NEW | Set-Content \"$dir\\tools\\bin\\sdkmanager.bat\""
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
