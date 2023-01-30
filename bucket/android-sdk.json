@@ -11,9 +11,14 @@
     "url": "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip",
     "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
 
-    "env_add_path": "cmdline-tools\\bin",
+    "env_add_path": "cmdline-tools\\latest\\bin",
     "env_set": {
         "ANDROID_HOME": "$dir"
+    },
+    "installer": {
+        "script": [
+            "Move-Item \"$dir\\cmdline-tools\\*\" \"$dir\\cmdline-tools\\latest\""
+        ]
     },
     "persist": [
         ".knownPackages",
