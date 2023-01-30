@@ -13,7 +13,6 @@
     "installer": {
         "script": [
             "Rename-Item \"$dir\\cmdline-tools\\cmdline-tools\" \"latest\"",
-            "(Get-Content \"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\") -replace 'set JAVA_EXE=java.exe', \"set JAVA_EXE=`\"$(appdir temurin8-jdk)\\current\\java.exe`\"\"",
             "$BATCH_FILE = Get-Content \"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\"",
             "$BATCH_FILE_NEW = $BATCH_FILE -replace 'set JAVA_EXE=java.exe', \"set JAVA_EXE=`\"$(appdir temurin8-jdk)\\current\\java.exe`\"\"",
             "$BATCH_FILE_NEW | Set-Content \"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\""
