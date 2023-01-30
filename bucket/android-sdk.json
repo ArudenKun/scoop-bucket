@@ -13,7 +13,7 @@
         "script": [
             "$source = \"$dir\\cmdline-tools\"",
             "$target = \"$dir\\cmdline-tools\\latest\"",
-            "Move-Item $source\\* $dest -Exclude $dest -Force"
+            "Move-Item $source\\* $target -Exclude $target -Force"
         ]
     },
     "env_add_path": "cmdline-tools\\latest\\bin",
