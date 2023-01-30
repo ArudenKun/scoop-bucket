@@ -16,7 +16,8 @@
             "$target = \"$dir\\cmdline-tools\\latest\"",
             "New-Item $target -ItemType Directory",
             "Get-ChildItem $source -Recurse | ForEach-Object {",
-            "   Move-Item $_ -Destination $target -Force",
+            "   $newPath = $_.FullName -replace [regex]::Escape($source),$target",
+            "   Move-Item $_ -Destination $newPath -Force | Out-Null",
             "}"
         ]
     },
