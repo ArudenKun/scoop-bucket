@@ -17,7 +17,7 @@
             "New-Item $target -ItemType Directory",
             "Get-ChildItem $source -Recurse | ForEach-Object {",
             "   $newPath = $_.FullName -replace [regex]::Escape($source),$target",
-            "   Move-Item $_ -Destination $newPath -Force",
+            "   Move-Item $_ -Destination $newPath -Force | Out-Null",
             "}"
         ]
     },
