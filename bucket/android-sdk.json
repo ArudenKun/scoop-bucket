@@ -8,7 +8,7 @@
     },
     "depends": [
         "adb",
-        "temurin8-jdk"
+        "java/temurin8-jdk"
     ],
     "url": "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip",
     "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
