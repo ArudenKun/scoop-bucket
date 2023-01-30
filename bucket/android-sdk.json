@@ -9,17 +9,8 @@
     "depends": "adb",
     "url": "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip",
     "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
-    "installer": {
-        "script": [
-            "$source = \"$dir\\cmdline-tools\"",
-            "$target = \"$dir\\cmdline-tools\\latest\"",
-            "New-Item $target -ItemType Directory",
-            "Try {",
-            "   Move-Item $source\\* $target -Exclude $target -Force",
-            "}",
-            "Catch {}"
-        ]
-    },
+    "extract_dir": "cmdline-tools",
+    "extract_to": "cmdline-tools\\latest",
     "env_add_path": "cmdline-tools\\latest\\bin",
     "env_set": {
         "ANDROID_HOME": "$dir"
