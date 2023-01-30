@@ -27,20 +27,6 @@
             "Android Studio"
         ]
     ],
-    "post_install": [
-        "if(!(Test-Path \"$persist_dir\\sdk\\*\"))",
-        "{",
-        "   New-Item -Path \"$dir\\sdk\\build-tools\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\emulator\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\bextras\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\licenses\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\patcher\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\platforms\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\sources\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\system-images\" -ItemType Directory | Out-Null",
-        "   New-Item -Path \"$dir\\sdk\\tools\" -ItemType Directory | Out-Null",
-        "}"
-    ],
     "persist": [
         "IDE\\bin\\idea.properties",
         "IDE\\bin\\studio64.exe.vmoptions",
