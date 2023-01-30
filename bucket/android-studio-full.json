@@ -1,0 +1,64 @@
+{
+    "version": "2022.1.1.19",
+    "description": "The official IDE for Android development, which includes everything you need to build Android apps.",
+    "homepage": "https://developer.android.com/studio/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://developer.android.com/studio/terms.html"
+    },
+    "depends": "gradle-bin",
+    "architecture": {
+        "64bit": {
+            "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.1.1.19/android-studio-2022.1.1.19-windows.zip",
+            "hash": "12eaad3efce8bdc54024f0c7efc37e4cb29139f855862c49fd0653030a1619af"
+        }
+    },
+    "installer": {
+        "script": [
+            "Rename-Item -Path \"$dir\\android-studio\" -NewName 'IDE' -Force",
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
+        ]
+    },
+    "shortcuts": [
+        [
+            "IDE\\bin\\studio64.exe",
+            "Android Studio"
+        ]
+    ],
+    "env_set": {
+        "ANDROID_HOME": "$dir\\sdk",
+        "ANDROID_USER_HOME": "$dir\\profile\\.android"
+    },
+    "post_install": [
+        "if(!(Test-Path \"$persist_dir\\sdk\\*\"))",
+        "{",
+        "   New-Item -Path \"$dir\\sdk\\build-tools\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\emulator\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\bextras\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\licenses\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\patcher\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\platforms\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\sources\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\system-images\" -ItemType Directory | Out-Null",
+        "   New-Item -Path \"$dir\\sdk\\tools\" -ItemType Directory | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "IDE\\bin\\studio64.exe.vmoptions",
+        "profile",
+        "sdk"
+    ],
+    "checkver": "android-studio-([\\d.]+)-windows\\.zip",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip",
+                "hash": {
+                    "url": "https://developer.android.com/studio",
+                    "regex": "$sha256 android-studio-$version-windows.zip"
+                }
+            }
+        }
+    }
+}
