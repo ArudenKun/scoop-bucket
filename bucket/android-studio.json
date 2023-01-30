@@ -31,8 +31,7 @@
     "persist": [
         "IDE\\bin\\idea.properties",
         "IDE\\bin\\studio64.exe.vmoptions",
-        "profile",
-        "sdk"
+        "profile"
     ],
     "checkver": "android-studio-([\\d.]+)-windows\\.zip",
     "autoupdate": {
