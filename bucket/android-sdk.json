@@ -58,9 +58,9 @@
         "Info \"Downloading build-tools $build_tools_match\"",
         "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"build-tools;$build_tools_match\"",
         "Info 'Searching for latest platforms version'",
-        "$platforms_url = 'https://developer.android.com/studio/releases/build-tools'",
+        "$platforms_url = 'https://apilevels.com/'",
         "$platforms_content = $(Invoke-WebRequest $platforms_url).Content",
-        "$platforms_match = (Select-String 'Android.+?\\(API level ([0-9]+)\\)' -InputObject $platforms_content).Matches.Groups[1].Value",
+        "$platforms_match = (Select-String 'Level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
         "Info \"Downloading platforms $platforms_match\"",
         "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
     ],
