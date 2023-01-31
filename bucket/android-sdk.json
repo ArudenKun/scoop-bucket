@@ -28,6 +28,11 @@
         "tools\\mksdcard.exe",
         "tools\\monitor.bat"
     ],
+    "env_add_path": "tools\\bin",
+    "env_set": {
+        "ANDROID_HOME": "$dir",
+        "PROGUARD_HOME": "$dir\\tools\\proguard"
+    },
     "post_install": [
         "if (Test-Path \"$(appdir adb $global)\") {",
         "    cmd /c mklink /j \"$dir\\platform-tools\" \"$(appdir adb $global)\\current\\platform-tools\" | out-null",
@@ -44,15 +49,11 @@
         "}",
         "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\"",
         "if (!(Test-Path \"$persist_dir\\cmdline-tools\\*\")) {",
-        "   Info Installing cmdline-tools;latest",
+        "   Info 'Installing cmdline-tools;latest'",
         "   &\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'",
         "}"
     ],
-    "env_add_path": "tools\\bin",
-    "env_set": {
-        "ANDROID_HOME": "$dir",
-        "PROGUARD_HOME": "$dir\\tools\\proguard"
-    },
+
     "persist": [
         ".knownPackages",
         "build-tools",
