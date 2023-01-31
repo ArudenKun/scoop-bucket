@@ -42,11 +42,11 @@
         "   New-Item \"$dir\\licenses\\intel-android-extra-license\" -Value \"`nd975f751698a77b662f1254ddbeed3901e976f5a\" | Out-Null",
         "   New-Item \"$dir\\licenses\\mips-android-sysimage-license\" -Value \"`ne9acab5b5fbb560a72cfaecce8946896ff6aab9d\" | Out-Null",
         "}",
+        "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\"",
         "if (!(Test-Path \"$persist_dir\\cmdline-tools\\*\")) {",
         "   Info Installing cmdline-tools;latest",
         "   &\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'",
-        "}",
-        "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\""
+        "}"
     ],
     "env_add_path": "tools\\bin",
     "env_set": {
