@@ -28,6 +28,9 @@
             "Android Studio"
         ]
     ],
+    "env_set": {
+        "ANDROID_USER_HOME": "$dir\\profile\\.android"
+    },
     "persist": [
         "IDE\\bin\\idea.properties",
         "IDE\\bin\\studio64.exe.vmoptions",

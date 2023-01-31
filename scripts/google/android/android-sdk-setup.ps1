@@ -81,7 +81,7 @@ function get-platforms {
     }
 
     $platforms
-}
+}    
 
 # Check if sdkmanager exists and in path. Program cannot continue without it
 Get-Command "sdkmanager" -ErrorAction SilentlyContinue -ErrorVariable err | Out-Null

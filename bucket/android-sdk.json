@@ -52,7 +52,7 @@
         "$platforms_content = $(Invoke-WebRequest $platforms_url).Content",
         "$platforms_match = (Select-String 'Level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
         "Info \"Downloading platforms $platforms_match\"",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
+        "& \"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
     ],
     "persist": [
         ".knownPackages",
