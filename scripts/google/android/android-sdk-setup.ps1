@@ -67,20 +67,21 @@ function get-latest-buildtools {
 }
 
 # Gets available platforms from sdkmanager
-function get-platforms {
+function get-latest-platforms {
     param (
         [Object]$sdkmanager_output
     )
 
-    $platforms = @()
+    $latest_platforms = ""
+
     ForEach ($line in $sdkmanager_output) {
-        $match = [regex]::Match($line.Trim(), "^(platforms;android-\d+).*")
-        if ($match.Success -eq $true) {
-            $platforms += $match.Groups[1].Value
+        $platform = [regex]::Match($line.Trim(), "platforms;android-(^\d{2}$)")
+        if ($platform.Success -eq $true) {
+            $latest_platforms = $platform.Groups[1].Value
         }
     }
 
-    $platforms
+    $latest_platforms
 }
 
 # Check internet conenction first and only continue on success
@@ -106,13 +107,7 @@ $sdkout = sdkmanager.bat --list
 
 $installed_items = get-installed $sdkout
 $latest_buildtools = get-latest-buildtools $sdkout
-# Get the platforms and sort them by API Level (which is the number in eg. platforms;android-21)
-$platforms = (get-platforms $sdkout) | Sort-Object -Property @{
-    Expression = {
-        $x = $_[($_.IndexOf("-") + 1)..$_.length] -Join ""
-        [int]$x
-    }
-} | Get-Unique
+$latest_platforms = get-latest-platforms $sdkout
 
 $platform_installed
 foreach ($item in $installed_items) {
@@ -143,9 +138,8 @@ if ($buildtools_installed -eq $false) {
 
 # No platform SDK detected, so we install one from the available ones
 if ($platform_installed -eq $false) {
-    $latest = $platforms[$platfomrs.Length + 1]
-    Write-Host "No platform detected. Installing the latest version... ($latest)" -ForegroundColor Yellow
-    sdkmanager.bat $latest
+    Write-Host "No platform detected. Installing the latest version... ($latest_platforms)" -ForegroundColor Yellow
+    sdkmanager.bat $latest_platforms
 }
 
 # Done. We should be able to develop for Android now.
