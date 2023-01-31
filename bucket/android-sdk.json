@@ -51,6 +51,9 @@
         "   New-Item \"$dir\\licenses\\intel-android-extra-license\" -Value \"`nd975f751698a77b662f1254ddbeed3901e976f5a\" | Out-Null",
         "   New-Item \"$dir\\licenses\\mips-android-sysimage-license\" -Value \"`ne9acab5b5fbb560a72cfaecce8946896ff6aab9d\" | Out-Null",
         "}",
+        "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\""
+    ],
+    "##": [
         "Info 'Searching for latest build-tools version'",
         "$build_tools_url = 'https://developer.android.com/studio/releases/build-tools'",
         "$build_tools_content = $(Invoke-WebRequest $build_tools_url).Content",
