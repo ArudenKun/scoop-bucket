@@ -67,22 +67,21 @@ function get-latest-buildtools {
 }
 
 # Gets available platforms from sdkmanager
-function get-latest-platforms {
+function get-platforms {
     param (
         [Object]$sdkmanager_output
     )
 
-    $latest_platforms = ""
-
+    $platforms = @()
     ForEach ($line in $sdkmanager_output) {
-        $platform = [regex]::Match($line.Trim(), "platforms;android-(^\d{2}$)")
-        if ($platform.Success -eq $true) {
-            $latest_platforms = $platform.Groups[1].Value
+        $match = [regex]::Match($line.Trim(), "^(platforms;android-\d+{2}).*")
+        if ($match.Success -eq $true) {
+            $platforms += $match.Groups[1].Value
         }
     }
-
-    $latest_platforms
+    $platforms
 }
+
 
 # Check internet conenction first and only continue on success
 $connection = Test-NetConnection
@@ -107,7 +106,12 @@ $sdkout = sdkmanager.bat --list
 
 $installed_items = get-installed $sdkout
 $latest_buildtools = get-latest-buildtools $sdkout
-$latest_platforms = get-latest-platforms $sdkout
+$platforms = (get-platforms $sdkout) | Sort-Object -Property @{
+    Expression = {
+        $x = $_[($_.IndexOf("-") + 1)..$_.length] -Join ""
+        [int]$x
+    }
+} | Get-Unique
 
 $platform_installed
 foreach ($item in $installed_items) {
@@ -133,13 +137,16 @@ foreach ($item in $installed_items) {
 # No build-tools detected, so we install them
 if ($buildtools_installed -eq $false) {
     Write-Host "No build-tools detected. Installing the latest version... ($latest_buildtools)" -ForegroundColor Yellow
-    sdkmanager.bat "$latest_buildtools"
+    # sdkmanager.bat "$latest_buildtools"
+    Write-Host $latest_buildtools
 }
 
 # No platform SDK detected, so we install one from the available ones
 if ($platform_installed -eq $false) {
+    $latest_platforms = $platforms[$platforms.length + 1]
     Write-Host "No platform detected. Installing the latest version... ($latest_platforms)" -ForegroundColor Yellow
-    sdkmanager.bat $latest_platforms
+    # sdkmanager.bat $latest_platforms
+    Write-Host $latest_platforms
 }
 
 # Done. We should be able to develop for Android now.
