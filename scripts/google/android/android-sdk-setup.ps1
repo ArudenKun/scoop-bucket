@@ -147,6 +147,10 @@ if ($platform_installed -eq $false) {
     Write-Host "No platform detected. Installing the latest version... ($latest_platforms)" -ForegroundColor Yellow
     # sdkmanager.bat $latest_platforms
     Write-Host $latest_platforms
+
+    foreach ($item in $platforms) {
+        Write-Host $item
+    }
 }
 
 # Done. We should be able to develop for Android now.
