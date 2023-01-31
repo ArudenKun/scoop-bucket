@@ -1,15 +1,5 @@
 Info "Setting up sdk"
 
-$sdkout = sdkmanager.bat --list
-$installed_items = get-installed $sdkout
-$latest_buildtools = get-latest-buildtools $sdkout
-$buildtools_installed = ($installed_items | ForEach-Object {$_.Contains("build-tools;")}).Contains($true)
-
-if ($buildtools_installed -eq $false) {
-    Write-Host "No build-tools detected. Installing the latest version... ($latest_buildtools)" -ForegroundColor Yellow
-    sdkmanager.bat "$latest_buildtools"
-}
-
 function get-installed {
     param (
         [Object]$sdkmanager_output
@@ -53,4 +43,15 @@ function get-latest-buildtools {
     }
 
     $latest_buildtools
+}
+
+
+$sdkout = sdkmanager.bat --list
+$installed_items = get-installed $sdkout
+$latest_buildtools = get-latest-buildtools $sdkout
+$buildtools_installed = ($installed_items | ForEach-Object {$_.Contains("build-tools;")}).Contains($true)
+
+if ($buildtools_installed -eq $false) {
+    Write-Host "No build-tools detected. Installing the latest version... ($latest_buildtools)" -ForegroundColor Yellow
+    sdkmanager.bat "$latest_buildtools"
 }
