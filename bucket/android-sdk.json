@@ -60,19 +60,9 @@
         "Info 'Searching for latest platforms version'",
         "$platforms_url = 'https://developer.android.com/studio/releases/build-tools'",
         "$platforms_content = $(Invoke-WebRequest $platforms_url).Content",
-        "$platforms_match = (Select-String 'API level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
-        "Info \"Downloading build-tools $platforms_match\"",
+        "$platforms_match = (Select-String 'Android.+?\\(API level ([0-9]+)\\)' -InputObject $platforms_content).Matches.Groups[1].Value",
+        "Info \"Downloading platforms $platforms_match\"",
         "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
-    ],
-    "##": [
-        "$build_tools_url = 'https://developer.android.com/studio/releases/build-tools'",
-        "$build_tools_content = $(Invoke-WebRequest $build_tools_url).Content",
-        "$build_tools_match = (Select-String 'Build Tools, Revision ([A-Za-z0-9]+(\\.[A-Za-z0-9]+)+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
-        "$platform_url = 'https://developer.android.com/studio/releases/platforms#latest'",
-        "$platform_content = $(Invoke-WebRequest $platform_url).Content",
-        "$platform_match = (Select-String 'API level ([0-9]+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"build-tools;$build_tools_match\"",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platform_match\""
     ],
     "checkver": "commandlinetools-win-(\\d+)",
     "autoupdate": {
