@@ -1,6 +1,13 @@
-Write-Host "Setting up sdk"
+Info "Setting up sdk"
 
-function get-installed {
+Info "Checking if cmdline-tools are setup correctly"
+Get-Command "sdkmanager" -ErrorAction SilentlyContinue -ErrorVariable err | Out-Null
+if ($err.Count -eq $true) {
+    Write-Host "Could not find 'sdkmanager' in PATH" -ForegroundColor Red
+    exit 2
+}
+
+function Get-Installed {
     param (
         [Object]$sdkmanager_output
     )
@@ -16,10 +23,10 @@ function get-installed {
             }
         }
 
-        if ($line.ToLower().Contains("Installed packages")) {
+        if ($line.ToLower().Contains("installed packages")) {
             $flag_start = 1
         }
-        elseif ($line.ToLower().Contains("Available packages")) {
+        elseif ($line.ToLower().Contains("available packages")) {
             $flag_start = 0
             break
         }
@@ -28,7 +35,7 @@ function get-installed {
     $installed_items
 }
 
-function get-latest-buildtools {
+function Get-Latest-Buildtools {
     param (
         [Object]$sdkmanager_output
     )
@@ -47,8 +54,8 @@ function get-latest-buildtools {
 
 
 $sdkout = sdkmanager.bat --list
-$installed_items = get-installed $sdkout
-$latest_buildtools = get-latest-buildtools $sdkout
+$installed_items = Get-Installed $sdkout
+$latest_buildtools = Get-Latest-Buildtools $sdkout
 $buildtools_installed = ($installed_items | ForEach-Object {$_.Contains("build-tools;")}).Contains($true)
 
 if ($buildtools_installed -eq $false) {
