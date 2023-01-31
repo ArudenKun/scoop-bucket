@@ -114,18 +114,6 @@ $platforms = (get-platforms $sdkout) | Sort-Object -Property @{
     }
 } | Get-Unique
 
-# Check if we have at least one valid platform
-# $platform_installed = $installed_items | ForEach-Object {
-#     if ($_.Contains("platforms;")) {
-#         $true
-#     }
-# }
-# TODO: Maybe in the future suggest installing the latest version
-# $buildtools_installed = $installed_items | ForEach-Object {
-#     if ([string]$_.Contains("build-tools;")) {
-#         $true
-#     }
-# }
 $platform_installed
 foreach ($item in $installed_items) {
     if ($item.Contains("platforms;")) {
@@ -155,37 +143,9 @@ if ($buildtools_installed -eq $false) {
 
 # No platform SDK detected, so we install one from the available ones
 if ($platform_installed -eq $false) {
-    Write-Host "Available platforms:"
-
-    $i = 1
-    Write-Host (($platforms | ForEach-Object { $platform = $platforms[$i - 1]; "[$i] $platform"; $i++ }) -Join "`n")
-
-    Write-Host "For a list of platforms and what they mean, see: https://developer.android.com/about/dashboards/" -ForegroundColor Yellow
-    $i--
-    Write-Host "No platform detected. Please select a platform to install [Default: $i]: " -ForegroundColor Yellow -NoNewline
-
-    # Prompts the user to give a valid number and not try to break the program
-    do {
-        try {
-            $numOk = $true
-            $value = Read-host
-            if ($value) {
-                $api_level = [int]$value
-            } else {
-                $api_level = 22
-                break
-            }
-        } catch {
-            $numOK = $false
-            Write-Host $"Invalid number format, please try again: " -NoNewline
-        }
-    }
-    until (($api_level -ge 1 -and $api_level -lt $platforms.Length) -and $numOK)
-
-    $platform = $platforms[$api_level - 1]
-    Write-Host "Platform $platform selected. Installing..."
-
-    sdkmanager.bat $platform
+    $latest = $platforms[$platfomrs.Length + 1]
+    Write-Host "No platform detected. Installing the latest version... ($latest)" -ForegroundColor Yellow
+    sdkmanager.bat $latest
 }
 
 # Done. We should be able to develop for Android now.
