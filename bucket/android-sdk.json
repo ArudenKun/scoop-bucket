@@ -6,9 +6,19 @@
         "identifier": "Freeware",
         "url": "https://developer.android.com/studio/terms.html"
     },
-    "depends": "adb",
+    "depends": [
+        "adb",
+        "java/temurin8-jdk"
+    ],
     "url": "https://dl.google.com/android/repository/sdk-tools-windows-4333796.zip",
     "hash": "7e81d69c303e47a4f0e748a6352d85cd0c8fd90a5a95ae4e076b5e5f960d3c7a",
+    "installer": {
+        "script": [
+            "$batch_file = Get-Content \"$dir\\tools\\bin\\sdkmanager.bat\"",
+            "$batch_file_new = $batch_file -replace 'set JAVA_EXE=java.exe', \"set JAVA_EXE=`\"$(appdir temurin8-jdk)\\current\\java.exe`\"\"",
+            "$batch_file_new | Set-Content \"$dir\\tools\\bin\\sdkmanager.bat\""
+        ]
+    },
     "bin": [
         "tools\\proguard\\bin\\proguard.bat",
         "tools\\proguard\\bin\\proguardgui.bat",
@@ -23,7 +33,20 @@
         "    cmd /c mklink /j \"$dir\\platform-tools\" \"$(appdir adb $global)\\current\\platform-tools\" | out-null",
         "    attrib \"$(appdir adb $global)\\current\\platform-tools\" +R /L",
         "}",
-        "&\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'"
+        "if (!(Test-Path \"$persist_dir\\licenses\\*\")) {",
+        "   New-Item \"$dir\\licenses\\android-sdk-license\" -Value \"`n24333f8a63b6825ea9c5514f83c2829b004d1fee\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\android-googletv-license\" -Value \"`n601085b94cd77f0b54ff86406957099ebe79c4d6\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\android-sdk-arm-dbt-license\" -Value \"`n859f317696f67ef3d7f30a50a5560e7834b43903\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\android-sdk-preview-license\" -Value \"`n84831b9409646a918e30573bab4c9c91346d8abd\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\google-gdk-license\" -Value \"`n33b6a2b64607f11b759f320ef9dff4ae5c47d97a\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\intel-android-extra-license\" -Value \"`nd975f751698a77b662f1254ddbeed3901e976f5a\" | Out-Null",
+        "   New-Item \"$dir\\licenses\\mips-android-sysimage-license\" -Value \"`ne9acab5b5fbb560a72cfaecce8946896ff6aab9d\" | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\cmdline-tools\\*\")) {",
+        "   Info Installing cmdline-tools;latest",
+        "   &\"$dir\\tools\\bin\\sdkmanager.bat\" '--install' '\"cmdline-tools;latest\"'",
+        "}",
+        "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\""
     ],
     "env_add_path": "tools\\bin",
     "env_set": {

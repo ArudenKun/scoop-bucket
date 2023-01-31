@@ -1,4 +1,4 @@
-Info "Checking if PATHS are setup correctly"
+Info "Checking if sdkmanager is in PATH"
 Get-Command "sdkmanager" -ErrorAction SilentlyContinue -ErrorVariable err | Out-Null
 if ($err.Count -eq $true) {
     Write-Host "Could not find 'sdkmanager' in PATH" -ForegroundColor Red
@@ -6,7 +6,6 @@ if ($err.Count -eq $true) {
 }
 
 Info "Setting up sdk"
-
 function Get-Installed {
     param (
         [Object]$sdkmanager_output
