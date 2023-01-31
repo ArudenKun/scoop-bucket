@@ -38,8 +38,7 @@ function get-installed {
 
         if ($line.ToLower().Contains("installed packages")) {
             $flag_start = 1
-        }
-        elseif ($line.ToLower().Contains("available packages")) {
+        } elseif ($line.ToLower().Contains("available packages")) {
             $flag_start = 0
             break
         }
@@ -116,11 +115,17 @@ $platforms = (get-platforms $sdkout) | Sort-Object -Property @{
 } | Get-Unique
 
 # Check if we have at least one valid platform
-$platform_installed = ($installed_items | % {$_.Contains("platforms;")}).Contains($true)
-# Check if we have at least one valid version of buildtools
+$platform_installed = $installed_items | ForEach-Object {
+    if ($_.Contains("platforms;")) {
+        return $true
+    }
+}
 # TODO: Maybe in the future suggest installing the latest version
-$buildtools_installed = ($installed_items | % {$_.Contains("build-tools;")}).Contains($true)
-
+$buildtools_installed = $installed_items | ForEach-Object {
+    if ($_.Contains("build-tools;")) {
+        return $true
+    }
+}
 
 # No build-tools detected, so we install them
 if ($buildtools_installed -eq $false) {
@@ -133,7 +138,7 @@ if ($platform_installed -eq $false) {
     Write-Host "Available platforms:"
 
     $i = 1
-    Write-Host (($platforms | % {$platform = $platforms[$i - 1]; "[$i] $platform"; $i++}) -Join "`n")
+    Write-Host (($platforms | % { $platform = $platforms[$i - 1]; "[$i] $platform"; $i++ }) -Join "`n")
 
     Write-Host "For a list of platforms and what they mean, see: https://developer.android.com/about/dashboards/" -ForegroundColor Yellow
     $i--
@@ -146,13 +151,11 @@ if ($platform_installed -eq $false) {
             $value = Read-host
             if ($value) {
                 $api_level = [int]$value
-            }
-            else {
+            } else {
                 $api_level = 22
                 break
             }
-        }
-        catch {
+        } catch {
             $numOK = $false
             Write-Host $"Invalid number format, please try again: " -NoNewline
         }
