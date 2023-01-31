@@ -74,7 +74,7 @@ function get-platforms {
 
     $platforms = @()
     ForEach ($line in $sdkmanager_output) {
-        $match = [regex]::Match($line.Trim(), "^(platforms;android-\d+{2}).*")
+        $match = [regex]::Match($line.Trim(), "^(platforms;android-\d+{2}$).*")
         if ($match.Success -eq $true) {
             $platforms += $match.Groups[1].Value
         }
