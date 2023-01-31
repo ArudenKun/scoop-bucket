@@ -55,7 +55,7 @@ function Get-Latest-Buildtools {
 $sdkout = sdkmanager.bat --list
 $installed_items = Get-Installed $sdkout
 $latest_buildtools = Get-Latest-Buildtools $sdkout
-$buildtools_installed = ($installed_items | ForEach-Object {$_.Contains("build-tools;")}).Contains($true)
+$buildtools_installed = ($installed_items | % {$_.Contains("build-tools;")}).Contains($true)
 
 if ($buildtools_installed -eq $false) {
     Write-Host "No build-tools detected. Installing the latest version... ($latest_buildtools)" -ForegroundColor Yellow
