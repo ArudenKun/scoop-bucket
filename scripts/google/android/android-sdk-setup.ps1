@@ -1,4 +1,4 @@
-Info "Setting up sdk"
+Write-Host "Setting up sdk"
 
 function get-installed {
     param (
