@@ -86,7 +86,7 @@ function get-platforms {
 # Check if sdkmanager exists and in path. Program cannot continue without it
 Get-Command "sdkmanager" -ErrorAction SilentlyContinue -ErrorVariable err | Out-Null
 if ($err.Count -eq $true) {
-    Write-Host "Could not find 'sdkmanager' in PATH. Make sure you have android-sdk installed." -ForegroundColor Red
+    Write-Host "Could not find 'sdkmanager' in PATH" -ForegroundColor Red
     exit 2
 }
 
