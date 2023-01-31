@@ -25,19 +25,6 @@
     "env_set": {
         "ANDROID_HOME": "$dir"
     },
-    "persist": [
-        ".knownPackages",
-        "build-tools",
-        "emulator",
-        "extras",
-        "licenses",
-        "ndk",
-        "patcher",
-        "platforms",
-        "skiaparser",
-        "sources",
-        "system-images"
-    ],
     "post_install": [
         "if (Test-Path \"$(appdir adb $global)\") {",
         "    New-Item \"$dir\\platform-tools\" -ItemType Junction -Target \"$(appdir adb $global)\\current\\platform-tools\" | Out-Null",
@@ -66,6 +53,19 @@
         "$platforms_match = (Select-String 'Level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
         "Info \"Downloading platforms $platforms_match\"",
         "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
+    ],
+    "persist": [
+        ".knownPackages",
+        "build-tools",
+        "emulator",
+        "extras",
+        "licenses",
+        "ndk",
+        "patcher",
+        "platforms",
+        "skiaparser",
+        "sources",
+        "system-images"
     ],
     "checkver": "commandlinetools-win-(\\d+)",
     "autoupdate": {
