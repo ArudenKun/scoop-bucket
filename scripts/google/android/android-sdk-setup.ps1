@@ -143,7 +143,7 @@ if ($buildtools_installed -eq $false) {
 
 # No platform SDK detected, so we install one from the available ones
 if ($platform_installed -eq $false) {
-    $latest_platforms = $platforms[$platforms.length + 1]
+    $latest_platforms = $platforms[-1]
     Write-Host "No platform detected. Installing the latest version... ($latest_platforms)" -ForegroundColor Yellow
     # sdkmanager.bat $latest_platforms
     Write-Host $latest_platforms
