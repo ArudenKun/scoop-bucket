@@ -99,11 +99,12 @@ if ($err.Count -eq $true) {
     exit 2
 }
 
+
+Write-Host "Starting Setup" -ForegroundColor Green
+
 # Runs sdkmanager with the --list argument to see what is installed on the system
 # and what needs to be installed.
 $sdkout = sdkmanager.bat --list
-
-
 $installed_items = get-installed $sdkout
 $latest_buildtools = get-latest-buildtools $sdkout
 $platforms = (get-platforms $sdkout) | Sort-Object -Property @{
@@ -137,7 +138,7 @@ foreach ($item in $installed_items) {
 # No build-tools detected, so we install them
 if ($buildtools_installed -eq $false) {
     Write-Host "No build-tools detected. Installing the latest version... ($latest_buildtools)" -ForegroundColor Yellow
-    # sdkmanager.bat "$latest_buildtools"
+    sdkmanager.bat "$latest_buildtools"
     Write-Host $latest_buildtools
 }
 
@@ -145,9 +146,8 @@ if ($buildtools_installed -eq $false) {
 if ($platform_installed -eq $false) {
     $latest_platforms = $platforms[-1]
     Write-Host "No platform detected. Installing the latest version... ($latest_platforms)" -ForegroundColor Yellow
-    # sdkmanager.bat $latest_platforms
-    Write-Host $latest_platforms
+    sdkmanager.bat $latest_platforms
 }
 
 # Done. We should be able to develop for Android now.
-Write-Host "All required dependencies for Android Development are installed." -ForegroundColor Green
+Write-Host "Setup Complete" -ForegroundColor Green
