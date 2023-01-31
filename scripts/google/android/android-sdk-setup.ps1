@@ -115,15 +115,35 @@ $platforms = (get-platforms $sdkout) | Sort-Object -Property @{
 } | Get-Unique
 
 # Check if we have at least one valid platform
-$platform_installed = $installed_items | ForEach-Object {
-    if ($_.Contains("platforms;")) {
-        return $true
+# $platform_installed = $installed_items | ForEach-Object {
+#     if ($_.Contains("platforms;")) {
+#         $true
+#     }
+# }
+# TODO: Maybe in the future suggest installing the latest version
+# $buildtools_installed = $installed_items | ForEach-Object {
+#     if ([string]$_.Contains("build-tools;")) {
+#         $true
+#     }
+# }
+$platform_installed
+foreach ($item in $installed_items) {
+    if ($item.Contains("platforms;")) {
+        $platform_installed = $true
+        break
+    } else {
+        $platform_installed = $false
+        break
     }
 }
-# TODO: Maybe in the future suggest installing the latest version
-$buildtools_installed = $installed_items | ForEach-Object {
-    if ($_.Contains("build-tools;")) {
-        return $true
+$buildtools_installed
+foreach ($item in $installed_items) {
+    if ($item.Contains("build-tools;")) {
+        $buildtools_installed = $true
+        break
+    } else {
+        $buildtools_installed = $false
+        break
     }
 }
 
@@ -138,7 +158,7 @@ if ($platform_installed -eq $false) {
     Write-Host "Available platforms:"
 
     $i = 1
-    Write-Host (($platforms | % { $platform = $platforms[$i - 1]; "[$i] $platform"; $i++ }) -Join "`n")
+    Write-Host (($platforms | ForEach-Object { $platform = $platforms[$i - 1]; "[$i] $platform"; $i++ }) -Join "`n")
 
     Write-Host "For a list of platforms and what they mean, see: https://developer.android.com/about/dashboards/" -ForegroundColor Yellow
     $i--
