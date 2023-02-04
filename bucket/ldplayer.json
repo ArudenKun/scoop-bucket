@@ -32,10 +32,6 @@
         "regex": "version:\"(9[\\d.]+)\""
     },
     "autoupdate": {
-        "url": "https://encdn.ldmnq.com/download/package/LDPlayer_$matchHead.exe#/dl.7z",
-        "hash": {
-            "url": "https://plunger-dotnet-api.herokuapp.com/ldplayer",
-            "jp": "$.sha256"
-        }
+        "url": "https://encdn.ldmnq.com/download/package/LDPlayer_$matchHead.exe#/dl.7z"
     }
 }

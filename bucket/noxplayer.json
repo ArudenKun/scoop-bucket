@@ -17,10 +17,6 @@
         "regex": "Version (\\d(\\.\\d)+)"
     },
     "autoupdate": {
-        "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z",
-        "hash": {
-            "url": "https://plunger-dotnet-api.herokuapp.com/noxplayer",
-            "regex": "$sha256"
-        }
+        "url": "https://www.bignox.com/en/download/fullPackage#/dl.7z"
     }
 }

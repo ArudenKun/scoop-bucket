@@ -8,10 +8,6 @@
     "bin": "hanime.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe#/hanime.exe",
-        "hash": {
-            "url": "https://plunger-dotnet-api.herokuapp.com/hanime",
-            "jp": "$.sha256"
-        }
+        "url": "https://github.com/IchBinLeoon/hanime/releases/download/v$version/hanime_windows_v$version.exe#/hanime.exe"
     }
 }
