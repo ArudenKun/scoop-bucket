@@ -1,8 +1,8 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "homepage": "https://git.crepe.moe/taiga74164/Akebi-GC",
     "license": "Apache-2.0",
-    "url": "https://cdn.discordapp.com/attachments/1065452338426417233/1066461194380132392/Acrepi-v1.0.3.zip",
+    "url": "https://cdn.discordapp.com/attachments/1065452338426417233/1073042399837835294/Acrepi-v1.0.4.zip",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cfg.ini\")) { New-Item \"$dir\\cfg.ini\" | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\cfg.json\")) { New-Item \"$dir\\cfg.json\" | Out-Null }",
