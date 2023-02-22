@@ -12,7 +12,7 @@
     ],
     "extract_dir": "XDM",
     "installer": {
-        "script": "Set-Content \"$dir\\XDM.bat\" '@start java-runtime\\bin\\javaw.exe -jar \"%~dp0JDownloader.jar\"' -Encoding Ascii"
+        "script": "Set-Content \"$dir\\XDM.bat\" '@start java-runtime\\bin\\javaw.exe -jar \"%~dp0xdman.jar\"' -Encoding Ascii"
     },
     "bin": "XDM.bat",
     "shortcuts": [
