@@ -6,6 +6,8 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
+    "depends": "custom/jetcrack",
+    "notes": "Activate Here: 'https://jetbrains.sussy.tech'",
     "url": "https://download.jetbrains.com/python/pycharm-professional-2022.3.2.exe#/dl.7z",
     "hash": "dea8447f1d7e94545804e5275d9e5c178b7aed1eca9a55228b4af5f3bcb3c37d",
     "extract_to": "IDE",
@@ -15,7 +17,7 @@
             "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse",
             "Set-Content \"$dir\\run_pycharm.bat\" \"start `\"`\" `\"$dir\\IDE\\bin\\pycharm64.exe`\"\" -Encoding ascii | Out-Null",
             "if (!(Test-Path \"$persist_dir\\IDE\\bin\\pycharm64.exe.vmoptions\")) {",
-            "   Add-Content $dir\\IDE\\bin\\pycharm64.exe.vmoptions -Value \"-javaagent:$(appdir ja-netfilter)\\current\\ja-netfilter.jar=jetbrains\"",
+            "   Add-Content $dir\\IDE\\bin\\pycharm64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\jetcrack\\current\\jetcrack.jar\"",
             "   Add-Content $dir\\IDE\\bin\\pycharm64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
             "   Add-Content $dir\\IDE\\bin\\pycharm64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\"",
             "}"
