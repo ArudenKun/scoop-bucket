@@ -20,6 +20,7 @@
             "}"
         ]
     },
+    "extract_to": "IDE",
     "bin": [
         [
             "IDE\\bin\\datagrip64.exe",
