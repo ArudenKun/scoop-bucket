@@ -14,10 +14,11 @@
         }
     },
     "pre_install": [
-        "Move-Item \"$dir\\Godot*\\*\" \"$dir\"",
+        "Move-Item \"$dir\\Godot_*\\*\" \"$dir\"",
         "Remove-Item \"$dir\\Godot_*_console.*\"",
         "Get-ChildItem \"$dir\\Godot_*.exe\" | Rename-Item -NewName \"$dir\\godot-mono.exe\"",
-        "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null"
+        "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
+        "Remove-Item \"$dir\\Godot_*\""
     ],
     "bin": "godot-mono.exe",
     "shortcuts": [
