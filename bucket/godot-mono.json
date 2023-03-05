@@ -13,20 +13,21 @@
             "hash": "sha512:a3f0006ccc9bccf42dc48f2b7c16413678b163d5a865f4200a231368c1133c3a95e7f19e178b9e795dacafacf1fa470db20a622e98a623e7ef1a1c2adc85e53b"
         }
     },
-    "extract_dir": "\"Godot_v$version-stable_mono_win64\"",
     "pre_install": [
+        "Move-Item \"$dir\\Godot*\\*\" \"$dir\"",
+        "Remove-Item \"$dir\\Godot_*_console.*\"",
         "Get-ChildItem \"$dir\\Godot_*.exe\" | Rename-Item -NewName \"$dir\\godot-mono.exe\"",
-        "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
-        "Remove-Item \"$dir\\Godot_*.cmd\""
+        "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null"
     ],
     "bin": "godot-mono.exe",
     "shortcuts": [
         [
             "godot-mono.exe",
-            "Godot Engine (Mono)"
+            "Godot Engine 4 (Mono)"
         ]
     ],
     "persist": "editor_data",
+    "post_install": "",
     "checkver": {
         "github": "https://github.com/godotengine/godot"
     },
