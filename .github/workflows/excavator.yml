@@ -3,15 +3,17 @@ on:
   schedule:
     # run every 12 hours
     - cron: '0 */12 * * *'
-#       - cron: '0 22 * * *' # 6:00 AM Philippine Time
+    # run every 4 hours
+    # - cron: '20 */4 * * *'
 name: Excavator
 jobs:
   excavate:
     name: Excavate
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@main
-    - name: Excavate
-      uses: ScoopInstaller/GithubActions@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@main
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: 1
