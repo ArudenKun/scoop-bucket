@@ -87,6 +87,7 @@
         "gitk",
         "GOBIN",
         "GOCACHE",
+        "godotpcktool",
         "GOENV",
         "gofmt",
         "googletv",

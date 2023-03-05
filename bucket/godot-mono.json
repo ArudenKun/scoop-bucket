@@ -23,7 +23,7 @@
     "shortcuts": [
         [
             "godot-mono.exe",
-            "Godot Engine 4 (Mono)"
+            "Godot Engine (Mono)"
         ]
     ],
     "persist": "editor_data",
