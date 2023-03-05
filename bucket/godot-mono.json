@@ -27,7 +27,6 @@
         ]
     ],
     "persist": "editor_data",
-    "post_install": "",
     "checkver": {
         "github": "https://github.com/godotengine/godot"
     },
