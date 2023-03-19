@@ -6,11 +6,8 @@
         "identifier": "Freeware",
         "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
-    "url": "https://github.com/cheat-engine/cheat-engine/releases/download/7.5/CheatEngine75.exe#/CheatEngine.exe",
-    "hash": "e2e15826b69778e381f25ac8f2b109a377b23f7cf79b5f482e81f4d28c30f95e",
-    "installer": {
-        "script": "Expand-InnoArchive (Join-Path $dir CheatEngine.exe) -Removal"
-    },
+    "url": "https://c6.kemono.party/data/79/25/79258df49f79dec1dfa12b73e86e4e3878728d8ec409963a6c07a1a20c3a928a.bin#/CheatEngine.exe",
+    "innosetup": true,
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -44,11 +41,5 @@
                 ]
             ]
         }
-    },
-    "checkver": {
-        "github": "https://github.com/cheat-engine/cheat-engine"
-    },
-    "autoupdate": {
-        "url": "https://github.com/cheat-engine/cheat-engine/releases/download/$version/CheatEngine$cleanVersion.exe#/CheatEngine.exe"
     }
 }
