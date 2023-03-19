@@ -8,7 +8,9 @@
     },
     "url": "https://github.com/cheat-engine/cheat-engine/releases/download/7.5/CheatEngine75.exe",
     "hash": "e2e15826b69778e381f25ac8f2b109a377b23f7cf79b5f482e81f4d28c30f95e",
-    "innosetup": true,
+    "installer": {
+        "script": "Expand-InnoArchive (Join-Path $dir CheatEngine.exe) -Removal"
+    },
     "architecture": {
         "64bit": {
             "shortcuts": [
