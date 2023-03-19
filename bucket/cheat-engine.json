@@ -6,7 +6,7 @@
         "identifier": "Freeware",
         "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
-    "url": "https://github.com/cheat-engine/cheat-engine/releases/download/7.5/CheatEngine75.exe",
+    "url": "https://github.com/cheat-engine/cheat-engine/releases/download/7.5/CheatEngine75.exe#/CheatEngine.exe",
     "hash": "e2e15826b69778e381f25ac8f2b109a377b23f7cf79b5f482e81f4d28c30f95e",
     "installer": {
         "script": "Expand-InnoArchive (Join-Path $dir CheatEngine.exe) -Removal"
@@ -49,6 +49,6 @@
         "github": "https://github.com/cheat-engine/cheat-engine"
     },
     "autoupdate": {
-        "url": "https://github.com/cheat-engine/cheat-engine/releases/download/$version/CheatEngine$cleanVersion.exe"
+        "url": "https://github.com/cheat-engine/cheat-engine/releases/download/$version/CheatEngine$cleanVersion.exe#/CheatEngine.exe"
     }
 }
