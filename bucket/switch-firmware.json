@@ -1,10 +1,10 @@
 {
-    "version": "16.0.0",
+    "version": "16.0.1",
     "homepage": "https://darthsternie.net/switch-firmwares/",
     "description": "released Global (Non-China) Firmware for the Nintendo Switch",
     "license": "Unlicense",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2016.0.0.zip",
-    "hash": "md5:9feda64cab86f851f1630979ae33a6d5",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2016.0.1.zip",
+    "hash": "md5:cb287286188dc3072352af2bb4830911",
     "extract_to": "Firmware",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
