@@ -40,12 +40,12 @@
     ],
     "env_set": {
         "VOLTA_HOME": "$dir\\appdata",
-        "NPM_CONFIG_CACHE": "$dir\\npm-cache"
+        "NPM_CONFIG_CACHE": "$dir\\cache"
     },
     "env_add_path": "appdata\\bin",
     "persist": [
         "appdata",
-        "npm-cache"
+        "cache"
     ],
     "checkver": {
         "github": "https://github.com/volta-cli/volta"
