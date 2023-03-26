@@ -10,14 +10,19 @@
             "hash": "d3daffc37975210117e8c82cf491ca52b446a7969a56f54c1cb444588d1caab6"
         }
     },
-    "bin": "fnm.exe",
+    "bin": [
+        [
+            "fnm.exe",
+            "fnm",
+            "--fnm-dir \"$dir\""
+        ]
+    ],
     "env_set": {
-        "FNM_DIR": "$dir",
-        "NPM_CONFIG_CACHE": "$dir\\npm-cache"
+        "NPM_CONFIG_CACHE": "$dir\\cache"
     },
     "persist": [
         "nodejs",
-        "npm-cache"
+        "cache"
     ],
     "checkver": "github",
     "autoupdate": {
