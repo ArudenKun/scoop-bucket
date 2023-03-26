@@ -41,6 +41,11 @@
         ],
         "settings.txt"
     ],
+    "post_install": [
+        "nvm install latest",
+        "nvm install lts",
+        "nvm use lts"
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/coreybutler/nvm-windows/releases/download/$version/nvm-noinstall.zip",
