@@ -10,9 +10,7 @@
     "json.schemas": [
         {
             "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-            "fileMatch": [
-                "bucket/*.json"
-            ]
+            "fileMatch": ["bucket/*.json"]
         }
     ],
     "json.schemaDownload.enable": true,
@@ -140,10 +138,12 @@
         "msix",
         "multimarkdown",
         "multiplatform",
+        "narch",
         "netfilter",
         "Npcap",
         "npmrc",
         "nprefer",
+        "nproxy",
         "objectweb",
         "OPTOUT",
         "oraclejdk",
