@@ -157,6 +157,7 @@
         "PLUGINDIR",
         "PLUGINSDIR",
         "pnpm",
+        "pocketbase",
         "popd",
         "Portapps",
         "PPGUI",
