@@ -1,5 +1,5 @@
 {
-    "version": "3.7.8",
+    "version": "3.7.9",
     "description": "Google's mobile app SDK for crafting high-quality native interfaces on iOS and Android",
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
@@ -7,8 +7,8 @@
     "suggest": {
         "Visual Studio Code with Flutter Extension": "vscode"
     },
-    "url": "https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.8-stable.zip",
-    "hash": "d8d68004229c13ac763ed6023389ef8e2d49db26b059e4834402e21c1b4610c9",
+    "url": "https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.9-stable.zip",
+    "hash": "4581276e1280cc78b84caec5b3093c686c02974b941f29460fca16b7fdc97eed",
     "extract_dir": "flutter",
     "post_install": [
         "Write-Host 'Some licenses need to be accepted before developing. It is recommended to do by running ''flutter doctor --android-licenses''.' -ForegroundColor Yellow",
