@@ -1,9 +1,9 @@
 {
-    "version": "1.69.17",
+    "version": "1.69.19",
     "homepage": "https://github.com/neon-nyan/Collapse",
     "license": "MIT",
-    "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v1.69.17/CL-1.69.17_Portable.7z",
-    "hash": "acf4a20a796271dc3238798372228bc7beb90ae531999a4e77eb5657b15e76f9",
+    "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v1.69.19/CL-1.69.19_Portable.7z",
+    "hash": "c69a94ed70adb2a65ffbe15d021e22d4eaf5f9ac419c7d656f821636ac193b1a",
     "shortcuts": [
         [
             "CollapseLauncher.exe",
