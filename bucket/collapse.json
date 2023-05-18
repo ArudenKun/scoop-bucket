@@ -11,8 +11,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/neon-nyan/Collapse/releases",
-        "regex": "CL-v([\\d.]+)"
+        "url": "https://github.com/neon-nyan/Collapse/tags",
+        "regex": "/archive/refs/tags/CL-v([\\d.]+).zip"
     },
     "autoupdate": {
         "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v$version/CL-$version_Portable.7z"
