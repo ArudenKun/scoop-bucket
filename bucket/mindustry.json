@@ -1,5 +1,5 @@
 {
-    "version": "144.2",
+    "version": "144.3",
     "description": "A sandbox tower-defense game",
     "homepage": "https://mindustrygame.github.io/",
     "license": "GPL-3.0-only",
@@ -7,11 +7,11 @@
         "Java Runtime Environment": "java/adoptopenjdk-hotspot-jre"
     },
     "url": [
-        "https://github.com/Anuken/Mindustry/releases/download/v144.2/Mindustry.jar",
+        "https://github.com/Anuken/Mindustry/releases/download/v144.3/Mindustry.jar",
         "https://raw.githubusercontent.com/Anuken/Mindustry/master/core/assets/icons/icon.ico"
     ],
     "hash": [
-        "17e4d96c6f281cb49e0a9cbafe8bfd87b1ee342e03d89c2a2e0f2e96efd12792",
+        "281151c799df7837b67850178f1b3bc3fab4a4e60e75b7bc31362e9cadbb3946",
         "a82b6fbd05475a759281fedb26bfd34e8ad5bc041328476ff09f795f3ae36ee5"
     ],
     "pre_install": "Set-Content -Path \"$dir\\mindustry.bat\" -Value \"@start javaw -jar Mindustry.jar\"",
