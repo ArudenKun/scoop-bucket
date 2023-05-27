@@ -11,10 +11,7 @@
             "Alas"
         ]
     ],
-    "persist": [
-        "config",
-        "toolkit"
-    ],
+    "persist": "config",
     "##": [
         "Easy Install V5 \\(v([\\d.]+)\\)",
         "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_$version.7z"
