@@ -9,6 +9,7 @@
             "hash": "37864231aecfc6ae40030303d03a9a47861ae314c142ed237fa90397b321cf80"
         }
     },
+    "depends": "nodejs-lts",
     "bin": "pnpm.exe",
     "env_add_path": "data\\bin",
     "post_install": [
