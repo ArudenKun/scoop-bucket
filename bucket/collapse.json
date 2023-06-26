@@ -1,20 +1,17 @@
 {
-    "version": "1.70.10",
+    "version": "nightly",
     "homepage": "https://github.com/neon-nyan/Collapse",
     "license": "MIT",
     "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v1.70.10/CL-1.70.10_Portable.7z",
-    "hash": "8e5467be75e3ff108b44a345a9b3df0ba42a6c290d66548c8cd11263b6c8cf36",
     "shortcuts": [
         [
             "CollapseLauncher.exe",
             "Collapse"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/neon-nyan/Collapse/tags",
-        "regex": "/archive/refs/tags/CL-v([\\d.]+).zip"
-    },
-    "autoupdate": {
-        "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v$version/CL-$version_Portable.7z"
-    }
+    "notes": [
+        "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v$version/CL-$version_Portable.7z",
+        "url: https://github.com/neon-nyan/Collapse/tags",
+        "regex: /archive/refs/tags/CL-v([\\d.]+).zip"
+    ]
 }
