@@ -23,7 +23,8 @@
     ],
     "persist": [
         "data",
-        ".xmcl"
+        ".xmcl",
+        ".minecraft"
     ],
     "checkver": {
         "github": "https://github.com/Voxelum/x-minecraft-launcher"
