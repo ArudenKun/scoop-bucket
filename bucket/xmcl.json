@@ -17,7 +17,7 @@
     "shortcuts": [
         [
             "X Minecraft Launcher.exe",
-            "",
+            "X Minecraft Launcher",
             "--user-data-dir=\"$dir\\data\""
         ]
     ],
