@@ -21,7 +21,10 @@
             "--user-data-dir=\"$dir\\data\""
         ]
     ],
-    "persist": "data",
+    "persist": [
+        "data",
+        ".xmcl"
+    ],
     "checkver": {
         "github": "https://github.com/Voxelum/x-minecraft-launcher"
     },
