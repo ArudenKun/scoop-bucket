@@ -13,11 +13,11 @@
             "hash": "303fc065502689d60b183a2b8f7ad9cb43f5e5b40dd43a3f451d4ca1905b855d"
         }
     },
-    "bin": "xmcl.exe",
+    "bin": "X Minecraft Launcher.exe",
     "shortcuts": [
         [
-            "xmcl.exe",
-            "XMCL",
+            "X Minecraft Launcher.exe",
+            "",
             "--user-data-dir=\"$dir\\data\""
         ]
     ],
