@@ -10,7 +10,9 @@
     "json.schemas": [
         {
             "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-            "fileMatch": ["bucket/*.json"]
+            "fileMatch": [
+                "bucket/*.json"
+            ]
         }
     ],
     "json.schemaDownload.enable": true,
@@ -76,6 +78,7 @@
         "exesha",
         "faviconlogo",
         "ferdi",
+        "Ferdium",
         "flatredball",
         "fname",
         "Fosscord",
@@ -131,6 +134,7 @@
         "LMDE",
         "LMDEWSL",
         "lncrawl",
+        "Luma",
         "mindustry",
         "Minecraft",
         "mklink",
