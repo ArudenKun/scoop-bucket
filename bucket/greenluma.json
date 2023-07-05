@@ -1,10 +1,10 @@
 {
-    "version": "2.3.9",
+    "version": "1.3.9",
     "description": "An app made in python to manage GreenLuma 2023 AppList",
     "homepage": "https://github.com/BlueAmulet/GreenLuma-2023-Manager",
     "license": "MIT",
     "url": "https://github.com/BlueAmulet/GreenLuma-2023-Manager/releases/download/v1.3.9/GreenLuma.2020.Manager.zip",
-    "hash": "7fb60ebf76deb4b539a408e8848e7eff65787d9b56b06af66d21e58b56921fff",
+    "hash": "648af047d78c041eb532661eb3cc4e79c32448497bfe275e137d9934e99c9585",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/BlueAmulet/GreenLuma-2023-Manager/releases/download/v1.3.9/GreenLuma.2020.Manager.zip"
