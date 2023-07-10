@@ -12,8 +12,5 @@
     },
     "autoupdate": {
         "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster"
-    },
-    "##": [
-        "Test"
-    ]
+    }
 }
