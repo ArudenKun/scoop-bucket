@@ -1,12 +1,12 @@
 {
-    "version": "2.7.1",
+    "version": "2.9.0",
     "description": "Heroic Games Launcher is a native GOG and Epic Games launcher.",
     "homepage": "https://heroicgameslauncher.com/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.7.1/Heroic-2.7.1-Setup.exe#/dl.7z",
-            "hash": "sha512:87d5d23cfd662daaa3e612c6f5db789fafe1ae5bca4347d717d35db2e2dcd0db7d273b2510b979bb5b329aed588109787dae49962838888f4dd3c10458d8e4ee",
+            "url": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.9.0/Heroic-2.9.0-Setup.exe#/dl.7z",
+            "hash": "sha512:9c6355c0fef687cec90f78a066550922497cfe4744ed10742f713359e5c0ac93712466c7bb1fce13f67f3e7e45b8474f4a018e492c118a522286657728dcea79",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse"
