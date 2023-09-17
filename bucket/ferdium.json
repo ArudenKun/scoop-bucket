@@ -9,11 +9,11 @@
             "hash": "17d99f188981c21f20961a8760e9b0eabe01d203955101b3902ed367430a537f"
         },
         "32bit": {
-            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.4.1/Ferdium-win-Portable-6.4.1-ia32.exe#/dl.7z",
+            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.4.1/Ferdium-win-Portable-6.4.1-ia32.exe#/Ferdium.exe",
             "hash": "9c12dadab0f317213d59dd4534f95feb51c4cbdcb6fac426132ca84ebab6ef34"
         },
         "arm64": {
-            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.4.1/Ferdium-win-Portable-6.4.1-arm64.exe#/dl.7z",
+            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.4.1/Ferdium-win-Portable-6.4.1-arm64.exe#/Ferdium.exe",
             "hash": "fc764fea434b344a62f9d3539f13fc7a3d000b4be42acd02482354761db22673"
         }
     },
@@ -37,10 +37,6 @@
             "arm64": {
                 "url": "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-win-Portable-$version-arm64.exe#/Ferdium.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "$basename\\s+sha512:\\s+$base64"
         }
     }
 }
