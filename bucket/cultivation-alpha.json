@@ -11,6 +11,7 @@
             "Cultivation"
         ]
     ],
+    "persist": "mods",
     "checkver": {
         "url": "https://github.com/Grasscutters/Cultivation/tags",
         "regex": "/archive/refs/tags/v(?<alpha>[\\d.]+)-alpha.zip",
