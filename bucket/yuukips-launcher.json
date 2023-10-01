@@ -9,11 +9,6 @@
             "YuukiPS"
         ]
     ],
-    "post_install": [
-        "if (Test-Path \"$(appdir acrepi $global)\") {",
-        "    New-Item \"$dir\\mod\\AkebiGC\" -ItemType Junction -Target \"$(appdir acrepi $global)\\current\" | Out-Null",
-        "}"
-    ],
     "persist": [
         "data",
         "mod"
