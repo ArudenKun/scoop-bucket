@@ -1,10 +1,10 @@
 {
-    "version": "2.2.1",
+    "version": "2.2.2",
     "description": "A cli tool to browse and play korean drama, chinese drama",
     "homepage": "https://github.com/CoolnsX/dra-cla",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/CoolnsX/dra-cla/raw/main/dra-cla",
-    "hash": "5890479d7ae7d323bd7628f382a66916a1faa2cf8e077b47a4412d23b8212714",
+    "hash": "f265b0d6ac8bfab6a4e899e7042692121ee0a0281e92f2285e9bd63130feced0",
     "depends": "aria2",
     "suggest": {
         "mpv": [
