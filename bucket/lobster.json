@@ -1,10 +1,10 @@
 {
-    "version": "4.1.1",
+    "version": "4.2.0",
     "description": "mmm lobster",
     "homepage": "https://github.com/CoolnsX/dra-cla",
     "license": "GPL-2.0-only",
     "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster",
-    "hash": "9ffdaf8c334e7b519a77aae10984726c9fa477eca6b26812d97bc5dcb27f9188",
+    "hash": "bd355e55cd026993baf661bee0ab0d3821a3bcd297b08b2d81c2d3c380d7e572",
     "bin": "lobster",
     "checkver": {
         "url": "https://raw.githubusercontent.com/justchokingaround/lobster/main/lobster.sh",
