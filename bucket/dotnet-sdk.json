@@ -1,5 +1,5 @@
 {
-    "version": "7.0.200",
+    "version": "8.0.100",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "homepage": "https://www.microsoft.com/net/",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/7.0.200/dotnet-sdk-7.0.200-win-x64.zip",
-            "hash": "sha512:f1a480dfa63d9a1912726374e67612a08bdfa438b10f5c70b7dc21b9251e8a8984c42b9a901d0f429e62e81a8f16cd8d0000f409e9f52eac5536e365895885f0"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/8.0.100/dotnet-sdk-8.0.100-win-x64.zip",
+            "hash": "sha512:69ee73c56c78c94c186c0fd1b06ce1a7325979f7680857dc1a05d516feb9f0ffe990c2c0441caed1de98a0d0ae3923cc3e04525f91d96306d611e481a24f9fb4"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/7.0.200/dotnet-sdk-7.0.200-win-x86.zip",
-            "hash": "sha512:2850a888135efae77a8f46736202626881ac0330a599e2980e361379caa08eef13469960e689529adc7b1dce8d64884fc73ae026d39d6629f336362a457006e2"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/8.0.100/dotnet-sdk-8.0.100-win-x86.zip",
+            "hash": "sha512:06ec86cdd68a6320bff9a22b2d2ece2f1f33a99f2c521d239451261d56b39071471dda2cccdf91ed5e96a935c7210da55db5e4c76e863cb1b744138bf7378f52"
         },
         "arm64": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/7.0.200/dotnet-sdk-7.0.200-win-arm64.zip",
-            "hash": "sha512:6f58fde3219dc86420e3d2eb012bd62733a96e140ce5c8d3af4dd5d18c2f1eca5f73f92fadf62252c15a9ae1c8e860b8a0719b4396918760ecaf6d7be2cc8c91"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/8.0.100/dotnet-sdk-8.0.100-win-arm64.zip",
+            "hash": "sha512:c888b046b71027dbdce116d85e3e2624df4f4073071d73032bafbed5afcf15843f9112518f360a11c0491c5802cf93a62cf217858ae3cce84d797e89eb75d1cd"
         }
     },
     "env_add_path": ".",
