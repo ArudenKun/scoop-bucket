@@ -7,14 +7,13 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "custom/jetcrack",
-    "notes": "Activate Here: 'https://jetbrains.sussy.tech'",
     "url": "https://download.jetbrains.com/idea/ideaIU-2023.2.5.win.zip",
     "hash": "f1261496ee4ce670bc609b080c2fe0cd843640c5b656b90d4f06be48bfdc4b20",
     "installer": {
         "script": [
             "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
             "if (!(Test-Path \"$persist_dir\\IDE\\bin\\idea64.exe.vmoptions\")) {",
-            "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\jetcrack\\current\\jetcrack.jar\"",
+            "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"-javaagent:$scoopdir\\apps\\ja-netfilter\\current\\ja-netfilter.jar=jetbrains\"",
             "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\"",
             "   Add-Content $dir\\IDE\\bin\\idea64.exe.vmoptions -Value \"--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED\"",
             "}"
