@@ -1,12 +1,12 @@
 {
-    "version": "1.10.9",
+    "version": "1.10.11",
     "description": "A frontend for legendary, the open source Epic Games Launcher alternative.",
     "homepage": "https://github.com/Dummerle/Rare",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Dummerle/Rare/releases/download/1.10.9/Rare-1.10.9.msi",
-            "hash": "39c41864df87fab348e0f296dc86063736d496dfed4087c4c7add40cbc9e4682"
+            "url": "https://github.com/Dummerle/Rare/releases/download/1.10.11/Rare-1.10.11.msi",
+            "hash": "6c4585e8d4b32556a63573e09d24dec1e8d0a815e03dde3b2c988d83052861c0"
         }
     },
     "bin": "Rare.exe",
