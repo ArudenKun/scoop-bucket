@@ -11,7 +11,11 @@
         },
         "32bit": {
             "url": "https://www.python.org/ftp/python/3.11.7/python-3.11.7.exe#/setup.exe",
-            "hash": "88705c0dfb1d432fbec5d9d2799cf0cd90758acbcf34195bd0580718195189bc"
+            "hash": "md5:8a52f3859989f0b1313f4baaa6936410"
+        },
+        "arm64": {
+            "url": "https://www.python.org/ftp/python/3.11.7/python-3.11.7-arm64.exe#/setup.exe",
+            "hash": "md5:216803e75bf3944c183873adf135c459"
         }
     },
     "pre_install": [
@@ -58,16 +62,17 @@
     },
     "post_install": [
         "python -E -s -m ensurepip -U --default-pip | Out-Null",
-        "Write-Output \"$([char]0x1b)[0m\" # Reset ansi to prevent color leak from installer",
-        "pip install pipenv"
+        "Write-Output \"$([char]0x1b)[0m\" # Reset ansi to prevent color leak from installer"
     ],
-    "uninstaller": {
-        "script": [
-            "if ($global) {",
-            "    $pathext = (env 'PATHEXT' $true) -replace ';.PYW?', ''",
-            "    env 'PATHEXT' $true \"$pathext\"",
-            "}"
-        ]
+    "env_add_path": [
+        "Scripts",
+        "."
+    ],
+    "env_set": {
+        "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\Cache\\virtualenv",
+        "PIP_CACHE_DIR": "$dir\\Cache\\pip",
+        "PIPENV_CACHE_DIR": "$dir\\Cache\\pipenv",
+        "PIPENV_VENV_IN_PROJECT": "True"
     },
     "bin": [
         [
@@ -88,21 +93,19 @@
             "idle311"
         ]
     ],
-    "env_add_path": [
-        "Scripts",
-        "."
-    ],
-    "env_set": {
-        "VIRTUALENV_OVERRIDE_APP_DATA": "$dir\\Cache\\virtualenv",
-        "PIP_CACHE_DIR": "$dir\\Cache\\pip",
-        "PIPENV_CACHE_DIR": "$dir\\Cache\\pipenv",
-        "PIPENV_VENV_IN_PROJECT": "True"
-    },
     "persist": [
         "Scripts",
         "Cache",
         "Lib\\site-packages"
     ],
+    "uninstaller": {
+        "script": [
+            "if ($global) {",
+            "    $pathext = (env 'PATHEXT' $true) -replace ';.PYW?', ''",
+            "    env 'PATHEXT' $true \"$pathext\"",
+            "}"
+        ]
+    },
     "checkver": {
         "url": "https://www.python.org/downloads/windows/",
         "regex": "python-(3\\.11\\.[\\d.]+)-"
@@ -114,6 +117,9 @@
             },
             "32bit": {
                 "url": "https://www.python.org/ftp/python/$version/python-$version.exe#/setup.exe"
+            },
+            "arm64": {
+                "url": "https://www.python.org/ftp/python/$version/python-$version-arm64.exe#/setup.exe"
             }
         },
         "hash": {
