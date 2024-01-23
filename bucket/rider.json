@@ -1,5 +1,5 @@
 {
-    "version": "2023.3.2-233.13135.100",
+    "version": "2023.3.3-233.14015.60",
     "description": "Cross-Platform IDE for .NET by JetBrains.",
     "homepage": "https://www.jetbrains.com/rider/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "custom/jetcrack",
-    "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2023.3.2.win.zip",
-    "hash": "a3d1ecfa446064bb6b39aa7d21afda6045198a537aaa74bf16643edd3e1d0fb8",
+    "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2023.3.3.win.zip",
+    "hash": "0a9d05ae18a486912734ca0faa638b65c6cee9596ad937e22d481310a1d60255",
     "installer": {
         "script": [
             "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
