@@ -20,7 +20,7 @@
     ],
     "bin": [
         [
-            "java -Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\" -jar \"%~dp0Suwayomi-Server.jar\"'",
+            "suwayomi-server-console.bat",
             "suwayomi-server"
         ]
     ],
