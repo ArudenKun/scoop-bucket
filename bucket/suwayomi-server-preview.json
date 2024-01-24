@@ -1,0 +1,46 @@
+{
+    "version": "0.7.0-r1472",
+    "description": "A manga reader compatible with Tachiyomi extensions and backups",
+    "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
+    "license": {
+        "identifier": "MPL-2.0",
+        "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
+    },
+    "url": [
+        "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v0.7.0-r1472/Suwayomi-Server-v0.7.0-r1472.jar",
+        "https://github.com/Suwayomi/Suwayomi-Server/blob/master/server/src/main/resources/icon/faviconlogo.ico"
+    ],
+    "hash": [
+        "293e371e54f25e46e85c08903f62bc821132fdf64c00836e020a60fc282ef61e",
+        "50cb043b4c0764aeb9c370bbd2f687ebfa15960bbf303ab20b67459e8729ae87"
+    ],
+    "pre_install": [
+        "Set-Content \"$dir\\suwayomi-server-console.bat\" '@start /b java.exe -Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\" -jar \"%~dp0Suwayomi-Server.jar\"' -Encoding Ascii",
+        "Set-Content \"$dir\\suwayomi-server.bat\" '@start /b javaw.exe -Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\" -jar \"%~dp0Suwayomi-Server.jar\"' -Encoding Ascii"
+    ],
+    "bin": [
+        [
+            "java -Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\" -jar \"%~dp0Suwayomi-Server.jar\"'",
+            "suwayomi-server"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "suwayomi-server-console.bat",
+            "Suwayomi Server",
+            "",
+            "faviconlogo.ico"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/Suwayomi/Suwayomi-Server-preview",
+        "regex": "v([\\d.]+-r[\\d]+)"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version.jar#/Suwayomi-Server.jar",
+            "https://github.com/Suwayomi/Suwayomi-Server/blob/master/server/src/main/resources/icon/faviconlogo.ico"
+        ]
+    }
+}
