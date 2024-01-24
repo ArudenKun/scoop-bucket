@@ -8,11 +8,11 @@
     },
     "url": [
         "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v0.7.0-r1472/Suwayomi-Server-v0.7.0-r1472.jar#/Suwayomi-Server.jar",
-        "https://github.com/Suwayomi/Suwayomi-Server/blob/master/server/src/main/resources/icon/faviconlogo.ico"
+        "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
     ],
     "hash": [
         "293e371e54f25e46e85c08903f62bc821132fdf64c00836e020a60fc282ef61e",
-        "50cb043b4c0764aeb9c370bbd2f687ebfa15960bbf303ab20b67459e8729ae87"
+        "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
     ],
     "pre_install": [
         "Set-Content \"$dir\\suwayomi-server-console.bat\" '@start /b java.exe -Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\" -jar \"%~dp0Suwayomi-Server.jar\"' -Encoding Ascii",
@@ -40,7 +40,7 @@
     "autoupdate": {
         "url": [
             "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version.jar#/Suwayomi-Server.jar",
-            "https://github.com/Suwayomi/Suwayomi-Server/blob/master/server/src/main/resources/icon/faviconlogo.ico"
+            "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
         ]
     }
 }
