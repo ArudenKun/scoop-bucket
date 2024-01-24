@@ -15,7 +15,7 @@
         "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
     ],
     "pre_install": [
-        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start java -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar Mindustry.jar\"",
+        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start java -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii",
         "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start javaw -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii"
     ],
     "shortcuts": [
