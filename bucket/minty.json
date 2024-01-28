@@ -1,0 +1,18 @@
+{
+    "version": "4.3.0.2",
+    "description": "Certain anime game cheat",
+    "homepage": "https://github.com/kindawindytoday/Minty-Releases",
+    "license": "Unknown",
+    "url": "https://github.com/kindawindytoday/Minty-Releases/releases/download/4.3.0.2/minty.zip",
+    "hash": "d39676d51022384a69988d65cda4c6206821aea2f624c0d11f1e09980618d877",
+    "shortcuts": [
+        [
+            "Launcher.exe",
+            "Minty"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/kindawindytoday/Minty-Releases/releases/download/$version/minty.zip"
+    }
+}
