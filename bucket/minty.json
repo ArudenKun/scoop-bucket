@@ -6,8 +6,8 @@
     "url": "https://github.com/kindawindytoday/Minty-Releases/releases/download/4.3.0.2/minty.zip",
     "hash": "d39676d51022384a69988d65cda4c6206821aea2f624c0d11f1e09980618d877",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\minty.json\")) { New-Item \"$dir\\minty.json\" | Out-Null }"
+        "if (!(Test-Path \"$persist_dir\\minty.json\")) { New-Item \"$dir\\minty.json\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" | Out-Null }"
     ],
     "shortcuts": [
         [
@@ -16,8 +16,8 @@
         ]
     ],
     "persist": [
-        "imgui.ini",
-        "minty.json"
+        "minty.json",
+        "imgui.ini"
     ],
     "checkver": "github",
     "autoupdate": {
