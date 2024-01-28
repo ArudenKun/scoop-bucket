@@ -11,6 +11,10 @@
             "Minty"
         ]
     ],
+    "persist": [
+        "imgui.ini",
+        "minty.json"
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/kindawindytoday/Minty-Releases/releases/download/$version/minty.zip"
