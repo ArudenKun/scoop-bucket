@@ -26,26 +26,25 @@
             "        Remove-Item \"$dir\\$original\" -Force",
             "    }",
             "}",
-            "UpdateExeFile 'volta-shim.exe' 'node.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'npm.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'npx.exe'",
-            "UpdateExeFile 'volta.exe' 'volta.exe' -Removal",
-            "UpdateExeFile 'volta-migrate.exe' 'volta-migrate.exe' -Removal",
-            "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal"
+            "@('node', 'npm', 'npx', 'pnpm', 'yarn') | ForEach-Object {",
+            "    UpdateExeFile 'volta-shim.exe' \"$_.exe\"",
+            "    $content = \"@echo off`n`\"%~dpn0.exe`\" %*\"",
+            "    Set-Content \"$persist_dir\\appdata\\bin\\$_.cmd\" $content -Encoding ascii",
+            "}",
+            "@('volta', 'volta-migrate', 'volta-shim') | ForEach-Object {",
+            "    UpdateExeFile \"$_.exe\" \"$_.exe\" -Removal",
+            "}"
         ]
     },
+    "env_add_path": "appdata\\bin",
+    "env_set": {
+        "VOLTA_HOME": "$dir\\appdata"
+    },
     "post_install": [
-        "volta install node@latest",
         "volta install node@lts"
     ],
-    "env_set": {
-        "VOLTA_HOME": "$dir\\appdata",
-        "NPM_CONFIG_CACHE": "$dir\\cache"
-    },
-    "env_add_path": "appdata\\bin",
     "persist": [
-        "appdata",
-        "cache"
+        "appdata"
     ],
     "checkver": {
         "github": "https://github.com/volta-cli/volta"
