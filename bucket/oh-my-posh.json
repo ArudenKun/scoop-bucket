@@ -38,8 +38,7 @@
     },
     "extract_to": "themes",
     "env_set": {
-        "POSH_THEMES_PATH": "$dir\\themes",
-        "XDG_CACHE_HOME": "$dir"
+        "POSH_THEMES_PATH": "$dir\\themes"
     },
     "bin": "oh-my-posh.exe",
     "checkver": {
