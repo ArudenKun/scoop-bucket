@@ -38,14 +38,13 @@
     },
     "env_add_path": "appdata\\bin",
     "env_set": {
-        "VOLTA_HOME": "$dir\\appdata"
+        "VOLTA_HOME": "$dir\\appdata",
+        "NPM_CONFIG_CACHE": "$dir\\appdata\\npm-cache"
     },
     "post_install": [
         "volta install node@lts"
     ],
-    "persist": [
-        "appdata"
-    ],
+    "persist": "appdata",
     "checkver": {
         "github": "https://github.com/volta-cli/volta"
     },
