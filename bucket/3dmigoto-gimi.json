@@ -1,0 +1,18 @@
+{
+    "version": "7.0",
+    "description": "Tools and instructions for importing custom models into a certain anime game",
+    "homepage": "https://github.com/SilentNightSound/GI-Model-Importer",
+    "license": "Unknown",
+    "url": "https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-playing-mods.zip",
+    "hash": "554eb6f2d9e6747b632fd362a221fa5432884c315742a7326a970a5e9b6c6e2d",
+    "shortcuts": [
+        [
+            "3DMigoto Loader.exe",
+            "3DMigoto Loader"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v$version/3dmigoto-GIMI-for-playing-mods.zip"
+    }
+}
