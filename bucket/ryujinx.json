@@ -10,6 +10,7 @@
         "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
         "Learn more at https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide"
     ],
+    "depends": "switch-firmware",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Ryujinx/release-channel-master/releases/download/1.1.1154/ryujinx-1.1.1154-win_x64.zip",
