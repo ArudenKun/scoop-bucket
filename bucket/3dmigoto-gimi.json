@@ -11,6 +11,8 @@
             "3DMigoto Loader"
         ]
     ],
+    "extract_dir": "3dmigoto",
+    "persist": "Mods",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v$version/3dmigoto-GIMI-for-playing-mods.zip"
