@@ -1,8 +1,17 @@
+using Octokit;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddLazyCache();
+builder.Services.AddHttpClient();
 builder.Services.AddControllers();
+builder
+    .Services
+    .AddSingleton<IGitHubClient>(
+        new GitHubClient(new ProductHeaderValue("ScoopBucketApi", "0.0.1"))
+    );
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
