@@ -6,6 +6,7 @@
     "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster",
     "hash": "92425a14b0ba6c462e2b9d694d33e7154e87e0299f36b9b225447019ebf58929",
     "bin": "lobster",
+    "post_install": "lobster -u",
     "checkver": {
         "url": "https://raw.githubusercontent.com/justchokingaround/lobster/main/lobster.sh",
         "re": "LOBSTER_VERSION=\"([\\d.]+)\""
