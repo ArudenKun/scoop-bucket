@@ -1,5 +1,5 @@
 {
-    "version": "4.7.6",
+    "version": "4.7.6-20240203-fde547",
     "description": "A cli to browse and watch anime (alone AND with friends). This tool scrapes the site allanime.",
     "homepage": "https://github.com/pystardust/ani-cli",
     "license": "GPL-3.0-or-later",
@@ -14,15 +14,28 @@
             "ffmpeg-shared"
         ]
     },
-    "url": "https://github.com/pystardust/ani-cli/releases/download/v4.7/ani-cli",
-    "hash": "375d65816b68ae6dfec10b2059cf022401c3880e4d8e9d3af587caa721fef143",
+    "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
+    "hash": "04e44fd31d810f5adc71c7afbe8c38036567e857ef500e1da83d2bfbd592c22d",
     "bin": "ani-cli",
-    "post_install": "ani-cli -U",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
-        "re": "version_number=\"([\\d.]+)\""
+        "script": [
+            "try {",
+            "   $url = 'https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli'",
+            "   $cont = Invoke-RestMethod -Uri $url",
+            "   $version = [regex]::Match($cont, 'version_number=\"([^\"]+)\"').Groups[1].Value",
+            "   $url2 = 'https://api.github.com/repos/pystardust/ani-cli/commits?path=ani-cli&per_page=1'",
+            "   $commit_cont = $(Invoke-WebRequest $url2).Content | ConvertFrom-Json",
+            "   if (!($commit_cont.commit.committer.date)) { error \"Commit date not found in '$url2'\"; throw }",
+            "   $update_date = $(Get-Date $commit_cont.commit.committer.date).ToString('yyyyMMdd')",
+            "   if (!($commit_cont.sha)) { error \"Commit hash not found in '$url2'\"; throw }",
+            "   $commit_sha = $($commit_cont.sha).Substring(0, 6)",
+            "   Write-Output \"$version-$update_date-$commit_sha\"",
+            "}",
+            "catch { error $_.Exception.Message; throw }"
+        ],
+        "regex": "([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/pystardust/ani-cli/releases/download/v$majorVersion.$minorVersion/ani-cli"
+        "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli"
     }
 }
