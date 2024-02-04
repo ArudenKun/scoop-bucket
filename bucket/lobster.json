@@ -1,15 +1,29 @@
 {
-    "version": "4.2.1",
+    "version": "4.2.1-20231207-d4efa4",
     "description": "mmm lobster",
     "homepage": "https://github.com/justchokingaround/lobster",
     "license": "GPL-2.0-only",
     "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster",
-    "hash": "92425a14b0ba6c462e2b9d694d33e7154e87e0299f36b9b225447019ebf58929",
+    "hash": "26758d17c89401d59c9d6da47e36b0ce687887b8ab478edd6e70fec68a6afe03",
     "bin": "lobster",
     "post_install": "lobster -u",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/justchokingaround/lobster/main/lobster.sh",
-        "re": "LOBSTER_VERSION=\"([\\d.]+)\""
+        "script": [
+            "try {",
+            "   $url = 'https://raw.githubusercontent.com/justchokingaround/lobster/main/lobster.sh'",
+            "   $lobster_content = Invoke-RestMethod -Uri $url",
+            "   $version = [regex]::Match($lobster_content, 'LOBSTER_VERSION=\"([^\"]+)\"').Groups[1].Value",
+            "   $url2 = 'https://api.github.com/repos/justchokingaround/lobster/commits?path=lobster.sh&per_page=1'",
+            "   $commit_content = $(Invoke-WebRequest $url2).Content | ConvertFrom-Json",
+            "   if (!($commit_content.commit.committer.date)) { error \"Commit date not found in '$url2'\"; throw }",
+            "   $update_date = $(Get-Date $commit_content.commit.committer.date).ToString('yyyyMMdd')",
+            "   if (!($commit_content.sha)) { error \"Commit hash not found in '$url2'\"; throw }",
+            "   $commit_sha = $($commit_content.sha).Substring(0, 6)",
+            "   Write-Output \"$version-$update_date-$commit_sha\"",
+            "}",
+            "catch { error $_.Exception.Message; throw }"
+        ],
+        "regex": "([\\w.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster"
