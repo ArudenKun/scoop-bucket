@@ -1,5 +1,5 @@
 {
-    "version": "4.7.4",
+    "version": "4.7.6",
     "description": "A cli to browse and watch anime (alone AND with friends). This tool scrapes the site allanime.",
     "homepage": "https://github.com/pystardust/ani-cli",
     "license": "GPL-3.0-or-later",
