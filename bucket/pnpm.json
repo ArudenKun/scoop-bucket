@@ -14,7 +14,7 @@
     "env_add_path": "data",
     "env_set": {
         "PNPM_HOME": "$dir\\data",
-        "PNPM_CONFIG_HOME": "$dir\\data\\rc"
+        "XDG_CONFIG_HOME": "$dir\\data\\rc"
     },
     "post_install": [
         "pnpm config set state-dir \"$dir\\data\"",
