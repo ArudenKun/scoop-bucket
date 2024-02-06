@@ -17,12 +17,9 @@
         "PNPM_CACHE_HOME": "$dir\\data\\cache",
         "PNPM_STATE_HOME": "$dir\\data\\state"
     },
-    "##": [
-        "pnpm config set store-dir \"$dir\\data\\store\"",
+    "post_install": [
         "pnpm config set state-dir \"$dir\\data\\state\"",
-        "pnpm config set cache-dir \"$dir\\data\\cache\"",
-        "pnpm config set global-dir \"$dir\\data\\global\"",
-        "pnpm config set global-bin-dir \"$dir\\data\\bin\""
+        "pnpm config set cache-dir \"$dir\\data\\cache\""
     ],
     "persist": "data",
     "checkver": {
