@@ -13,7 +13,9 @@
     "bin": "pnpm.exe",
     "env_add_path": "data",
     "env_set": {
-        "PNPM_HOME": "$dir\\data"
+        "PNPM_HOME": "$dir\\data",
+        "PNPM_CACHE_HOME": "$dir\\data\\cache",
+        "PNPM_STATE_HOME": "$dir\\data\\state"
     },
     "##": [
         "pnpm config set store-dir \"$dir\\data\\store\"",
