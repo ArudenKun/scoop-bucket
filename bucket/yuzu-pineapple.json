@@ -1,5 +1,5 @@
 {
-    "version": "EA-4116",
+    "version": "EA-4117",
     "description": "A Yuzu Early Access fork with Linux-specific patches",
     "homepage": "https://github.com/pineappleEA/pineapple-src",
     "license": {
@@ -10,11 +10,11 @@
         "64bit": {
             "url": [
                 "https://file2-aruden.azurewebsites.net/d/Public/Games/Switch/Keys/Keys%2017.0.1.7z",
-                "https://github.com/pineappleEA/pineapple-src/releases/download/EA-4116/Windows-Yuzu-EA-4116.zip"
+                "https://github.com/pineappleEA/pineapple-src/releases/download/EA-4117/Windows-Yuzu-EA-4117.zip"
             ],
             "hash": [
                 "23ea161a7c49660b24cb51aacee9e634611598e24550997b94715d3f476b0814",
-                "672c3f1023ad7fa11c26d3af47dd39ea42d9659a8a2a76a573ecdbcdb55b2441"
+                "e00af714e0913908bde14a50bb9de0b1c3e89961a45fc691830884456d6ce068"
             ]
         }
     },
