@@ -3,9 +3,21 @@
     "description": "碧蓝航线脚本 Azur Lane automation bot (CN/EN/JP/TW) | 无缝委托科研，全自动大世界",
     "homepage": "https://github.com/LmeSzinc/AzurLaneAutoScript",
     "license": "GPL-3.0 License",
-    "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases/latest/download/AlasApp_0.4.5_full.7z",
+    "url": "https://raw.githubusercontent.com/LmeSzinc/AzurLaneAutoScript/master/requirements.txt",
     "hash": "af1b94774b911a0dbeaec06ecf83f6803e6e5f993cde139b4e9eca168dfe0908",
-    "extract_dir": "AzurLaneAutoScript",
+    "installer": {
+        "script": [
+            "try {",
+            "   $url = 'https://api.github.com/repos/LmeSzinc/AzurLaneAutoScript/releases/latest'",
+            "   $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
+            "   $link = $release_cont.assets[0].browser_download_url",
+            "   $asset_name = $release_cont.assets[0].name",
+            "   aria2c $link -d $dir",
+            "   Expand-7zipArchive -Path \"$dir\\$asset_name\" -ExtractDir \"AzurLaneAutoScript\" -Removal",
+            "}",
+            "catch { error $_.Exception.Message; throw }"
+        ]
+    },
     "shortcuts": [
         [
             "Alas.exe",
@@ -13,6 +25,7 @@
         ]
     ],
     "persist": "config",
+    "post_install": "Remove-Item $dir\\requirements.txt",
     "checkver": {
         "url": "https://github.com/LmeSzinc/AzurLaneAutoScript/releases",
         "regex": "Easy Install \\(v([\\d.]+)\\)"
