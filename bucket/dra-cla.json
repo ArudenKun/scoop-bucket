@@ -1,21 +1,29 @@
 {
-    "version": "3.0.0",
+    "version": "3.0.0-20240206-cf8a90",
     "description": "A cli tool to browse and play korean drama, chinese drama",
     "homepage": "https://github.com/CoolnsX/dra-cla",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/CoolnsX/dra-cla/raw/main/dra-cla",
     "hash": "ff5730246d9183f74545aa95019f5f463c4063fddfce124be4404e9377b6a4c9",
-    "depends": "aria2",
-    "suggest": {
-        "mpv": [
-            "mpv",
-            "mpv-git"
-        ]
-    },
+    "depends": "fzf",
     "bin": "dra-cla",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/CoolnsX/dra-cla/main/dra-cla",
-        "re": "VERSION=\"([\\d.]+)\""
+        "script": [
+            "try {",
+            "   $url = 'https://github.com/CoolnsX/dra-cla/raw/main/dra-cla'",
+            "   $cont = Invoke-RestMethod -Uri $url",
+            "   $version = [regex]::Match($cont, 'VERSION=\"([^\"]+)\"').Groups[1].Value",
+            "   $url2 = 'https://api.github.com/repos/CoolnsX/dra-cla/commits?path=dra-cla&per_page=1'",
+            "   $commit_cont = $(Invoke-WebRequest $url2).Content | ConvertFrom-Json",
+            "   if (!($commit_cont.commit.committer.date)) { error \"Commit date not found in '$url2'\"; throw }",
+            "   $update_date = $(Get-Date $commit_cont.commit.committer.date).ToString('yyyyMMdd')",
+            "   if (!($commit_cont.sha)) { error \"Commit hash not found in '$url2'\"; throw }",
+            "   $commit_sha = $($commit_cont.sha).Substring(0, 6)",
+            "   Write-Output \"$version-$update_date-$commit_sha\"",
+            "}",
+            "catch { error $_.Exception.Message; throw }"
+        ],
+        "regex": "([\\w.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/CoolnsX/dra-cla/raw/main/dra-cla"
