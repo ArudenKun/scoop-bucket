@@ -2,6 +2,7 @@
     "version": "nightly",
     "homepage": "https://github.com/neon-nyan/Collapse",
     "license": "MIT",
+    "url": "https://raw.githubusercontent.com/CollapseLauncher/Collapse/main/CollapseLauncher/icon.ico",
     "installer": {
         "script": [
             "try {",
