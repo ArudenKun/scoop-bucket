@@ -10,7 +10,7 @@
             "   $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
             "   $link = $release_cont.assets[1].browser_download_url",
             "   $asset_name = $release_cont.assets[1].name",
-            "   aria2c $link",
+            "   aria2c $link -d $dir",
             "   Expand-7zipArchive \"$dir\\$asset_name\" -Removal",
             "}",
             "catch { error $_.Exception.Message; throw }"
