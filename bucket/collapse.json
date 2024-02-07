@@ -2,12 +2,27 @@
     "version": "nightly",
     "homepage": "https://github.com/neon-nyan/Collapse",
     "license": "MIT",
-    "url": "https://github.com/neon-nyan/Collapse/releases/download/CL-v1.70.14/CL-1.70.14_Portable.7z",
+    "installer": {
+        "script": [
+            "try {",
+            "   $url = 'https://api.github.com/repos/CollapseLauncher/Collapse/releases/latest'",
+            "   $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
+            "   $link = $release_cont.assets[1].browser_download_url",
+            "   $asset_name = $release_cont.assets[1].name",
+            "   aria2c $link",
+            "   Expand-7zipArchive \"$dir\\$asset_name\" -Removal",
+            "}",
+            "catch { error $_.Exception.Message; throw }"
+        ]
+    },
     "shortcuts": [
         [
             "CollapseLauncher.exe",
             "Collapse"
         ]
+    ],
+    "##": [
+        "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v1.70.14/CL-1.70.14_Portable.7z"
     ],
     "notes": [
         "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v$version/CL-$version_Portable.7z",
