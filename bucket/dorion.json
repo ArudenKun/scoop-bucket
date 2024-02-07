@@ -12,6 +12,12 @@
             "hash": "cd1263913fd3bfda2685d7b7d4c4e7775febad8c183b9d7ec620d0114aab8f9a"
         }
     },
+    "shortcuts": [
+        [
+            "Dorion.exe",
+            "Dorion"
+        ]
+    ],
     "post_install": [
         "$sourceFolders, $foldersToMove = @(\"~\\dorion\", \"$env:APPDATA\\dorion\"), @(\"plugins\", \"themes\", \"profiles\")",
         "$canMoveFolders = $false",
@@ -52,11 +58,5 @@
                 "url": "https://github.com/SpikeHD/Dorion/releases/download/v$version/Dorion_$version_win64_portable.zip"
             }
         }
-    },
-    "shortcuts": [
-        [
-            "Dorion.exe",
-            "Dorion"
-        ]
-    ]
+    }
 }
