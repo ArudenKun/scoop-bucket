@@ -17,6 +17,10 @@
     "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
     "hash": "4a21690493b4aee4165f1881b19d9d696c9f56c5687940e587c542c6caa7c6fe",
     "bin": "ani-cli",
+    "env_set": {
+        "ANI_CLI_HIST_DIR": "$dir\\data"
+    },
+    "persist": "data",
     "checkver": {
         "script": [
             "try {",
