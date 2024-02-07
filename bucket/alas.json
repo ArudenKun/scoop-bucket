@@ -13,6 +13,7 @@
             "   $link = $release_cont.assets[0].browser_download_url",
             "   $asset_name = $release_cont.assets[0].name",
             "   aria2c $link -d $dir",
+            "   info \"Extracting $asset_name\"",
             "   Expand-7zipArchive -Path \"$dir\\$asset_name\" -ExtractDir \"AzurLaneAutoScript\" -Removal",
             "}",
             "catch { error $_.Exception.Message; throw }"
