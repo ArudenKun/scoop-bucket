@@ -22,10 +22,9 @@
             "Collapse"
         ]
     ],
+    "post_install": "Remove-Item $dir\\icon.ico",
     "##": [
-        "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v1.70.14/CL-1.70.14_Portable.7z"
-    ],
-    "notes": [
+        "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v1.70.14/CL-1.70.14_Portable.7z",
         "url: https://github.com/neon-nyan/Collapse/releases/download/CL-v$version/CL-$version_Portable.7z",
         "url: https://github.com/neon-nyan/Collapse/tags",
         "regex: /archive/refs/tags/CL-v([\\d.]+).zip"
