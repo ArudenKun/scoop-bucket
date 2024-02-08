@@ -13,8 +13,7 @@
     "autoupdate": {
         "url": "https://github.com/pocketbase/pocketbase/releases/download/v$version/pocketbase_$version_windows_amd64.zip",
         "hash": {
-            "url": "https://github.com/pocketbase/pocketbase/releases/tag/v$version",
-            "regex": "<code>$sha256</code>"
+            "url": "https://github.com/pocketbase/pocketbase/releases/download/v$version/checksums.txt"
         },
         "extract_dir": "pocketbase_$version_windows_amd64"
     }
