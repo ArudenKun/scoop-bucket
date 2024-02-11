@@ -1,10 +1,10 @@
 {
-    "version": "0.21.2",
+    "version": "0.21.3",
     "description": "Open Source backend for your next SaaS and Mobile app in 1 file",
     "homepage": "https://pocketbase.io/",
     "license": "MIT",
-    "url": "https://github.com/pocketbase/pocketbase/releases/download/v0.21.2/pocketbase_0.21.2_windows_amd64.zip",
-    "hash": "f9bac906381f4264c3ee7bc95f32d5b66420751adc1d2ca3c46b6d2098829550",
+    "url": "https://github.com/pocketbase/pocketbase/releases/download/v0.21.3/pocketbase_0.21.3_windows_amd64.zip",
+    "hash": "09f21f024d91f72ffa359300d5b1764033759024117be4c5af3e3b6f10e6a508",
     "bin": "pocketbase.exe",
     "persist": "pb_data",
     "checkver": {
