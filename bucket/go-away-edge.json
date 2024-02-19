@@ -1,0 +1,30 @@
+{
+    "version": "1.3.0",
+    "description": "Don't like Microsoft Edge? Me neither. Redirect all Edge calls to your favorite browser!",
+    "homepage": "https://github.com/valnoxy/GoAwayEdge",
+    "license": "MIT",
+    "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v1.3.0/GoAwayEdge.exe",
+    "hash": "2df35cf5c8b11bf4fd4e28f45ee315db19d39ffc89688f8221fa1a0abd669c1d",
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error 'This package requires admin rights to install'; break }",
+            "Start-Process -Wait \"$dir\\GoAwayEdge.exe\" -ArgumentList @('-s') -Verb RunAs"
+        ]
+    },
+    "shortcuts": [
+        [
+            "GoAwayEdge.exe",
+            "GoAwayEdge"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error 'This package requires admin rights to uninstall'; break }",
+            "Start-Process -Wait \"$dir\\GoAwayEdge.exe\" -ArgumentList @('-u') -Verb RunAs"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v$version/GoAwayEdge.exe"
+    }
+}
