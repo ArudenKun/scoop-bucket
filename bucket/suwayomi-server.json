@@ -1,17 +1,17 @@
 {
     "version": "1.0.0",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
-    "homepage": "https://github.com/Suwayomi/Suwayomi-Server-preview",
+    "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
     "license": {
         "identifier": "MPL-2.0",
         "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
     },
     "url": [
-        "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v1.0.0-r1498/Suwayomi-Server-v1.0.0-r1498.jar#/Suwayomi-Server.jar",
+        "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v1.0.0/Suwayomi-Server-v1.0.0-r1498.jar#/Suwayomi-Server.jar",
         "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
     ],
     "hash": [
-        "85166a1757960c4aa029c648b91ed0849b8f764fd78f2652e8175258b1bb8307",
+        "0ac91561cf9bc9f9f798dcdb397d5f0973e98e286d5a9a11181a570d8dfbf1cd",
         "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
     ],
     "pre_install": [
@@ -21,7 +21,7 @@
     "shortcuts": [
         [
             "suwayomi-server-console.bat",
-            "Suwayomi Server Preview",
+            "Suwayomi Server",
             "",
             "faviconlogo.ico"
         ]
@@ -30,7 +30,7 @@
     "checkver": {
         "script": [
             "try {",
-            "   $url = 'https://github.com/Suwayomi/Suwayomi-Server-preview/releases'",
+            "   $url = 'https://github.com/Suwayomi/Suwayomi-Server/releases'",
             "   $cont = Invoke-RestMethod -Uri $url",
             "   $match = [regex]::Match($cont, 'v(?<ver>([\\d.]+)-r(?<build>[\\d]+))').Groups[0].Value",
             "   Write-Output \"$match\"",
@@ -41,7 +41,7 @@
     },
     "autoupdate": {
         "url": [
-            "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version-r$matchReleasenumber/Suwayomi-Server-v$version-r$matchReleasenumber.jar#/Suwayomi-Server.jar",
+            "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-r$matchReleasenumber.jar#/Suwayomi-Server.jar",
             "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
         ]
     }
