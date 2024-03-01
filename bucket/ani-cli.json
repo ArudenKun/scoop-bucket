@@ -1,5 +1,5 @@
 {
-    "version": "4.8.0-20240207-d0fb54",
+    "version": "4.8.1-20240301-721bf6",
     "description": "A cli to browse and watch anime (alone AND with friends). This tool scrapes the site allanime.",
     "homepage": "https://github.com/pystardust/ani-cli",
     "license": "GPL-3.0-or-later",
@@ -15,7 +15,7 @@
         ]
     },
     "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
-    "hash": "4a21690493b4aee4165f1881b19d9d696c9f56c5687940e587c542c6caa7c6fe",
+    "hash": "d2085ee78d555e348b50718505aa9ee5ceaa6665cbfc6af463db50f8dfc280a5",
     "bin": "ani-cli",
     "env_set": {
         "ANI_CLI_HIST_DIR": "$dir\\data"
