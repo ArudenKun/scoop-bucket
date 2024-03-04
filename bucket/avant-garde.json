@@ -1,10 +1,10 @@
 {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "Avalonia XAML Preview for Linux and Windows",
     "homepage": "https://github.com/kuiperzone/AvantGarde",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/kuiperzone/AvantGarde/releases/download/v1.4.0/AvantGarde.x64.exe",
-    "hash": "0d6dd243f057b9d92499400e2c97889f96e786f671d2c33773b74ab5ee31eac0",
+    "url": "https://github.com/kuiperzone/AvantGarde/releases/download/v1.5.0/AvantGarde.x64.exe",
+    "hash": "7c5e1bc544cb52280dd63ce988e56b94cd0dbe0068bbf40be4be7254db560ae0",
     "innosetup": true,
     "bin": [
         [
