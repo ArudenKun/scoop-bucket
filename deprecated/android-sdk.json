@@ -1,5 +1,5 @@
 {
-    "version": "9477386",
+    "version": "11076708",
     "description": "The official Android command line tools",
     "homepage": "https://developer.android.com/studio#command-tools",
     "license": {
@@ -10,8 +10,8 @@
         "adb",
         "java/temurin8-jdk"
     ],
-    "url": "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip",
-    "hash": "696431978daadd33a28841320659835ba8db8080a535b8f35e9e60701ab8b491",
+    "url": "https://dl.google.com/android/repository/commandlinetools-win-11076708_latest.zip",
+    "hash": "4d6931209eebb1bfb7c7e8b240a6a3cb3ab24479ea294f3539429574b1eec862",
     "extract_to": "cmdline-tools",
     "installer": {
         "script": [
@@ -25,19 +25,6 @@
     "env_set": {
         "ANDROID_HOME": "$dir"
     },
-    "persist": [
-        ".knownPackages",
-        "build-tools",
-        "emulator",
-        "extras",
-        "licenses",
-        "ndk",
-        "patcher",
-        "platforms",
-        "skiaparser",
-        "sources",
-        "system-images"
-    ],
     "post_install": [
         "if (Test-Path \"$(appdir adb $global)\") {",
         "    New-Item \"$dir\\platform-tools\" -ItemType Junction -Target \"$(appdir adb $global)\\current\\platform-tools\" | Out-Null",
@@ -51,17 +38,7 @@
         "   New-Item \"$dir\\licenses\\intel-android-extra-license\" -Value \"`nd975f751698a77b662f1254ddbeed3901e976f5a\" | Out-Null",
         "   New-Item \"$dir\\licenses\\mips-android-sysimage-license\" -Value \"`ne9acab5b5fbb560a72cfaecce8946896ff6aab9d\" | Out-Null",
         "}",
-        "Info 'Searching for latest build-tools version'",
-        "$build_tools_url = 'https://developer.android.com/studio/releases/build-tools'",
-        "$build_tools_content = $(Invoke-WebRequest $build_tools_url).Content",
-        "$build_tools_match = (Select-String 'Build Tools, Revision ([A-Za-z0-9]+(\\.[A-Za-z0-9]+)+)' -InputObject $build_tools_content).Matches.Groups[1].Value",
-        "Info \"Downloading build-tools $build_tools_match\"",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"build-tools;$build_tools_match\"",
-        "Info 'Searching for latest platforms version'",
-        "$platforms_url = 'https://apilevels.com/'",
-        "$platforms_content = $(Invoke-WebRequest $platforms_url).Content",
-        "$platforms_match = (Select-String 'Level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
-        "Info \"Downloading platforms $platforms_match\""
+        "& \"$bucketsdir\\custom\\scripts\\google\\android\\android-sdk-setup.ps1\""
     ],
     "##": [
         "Info 'Searching for latest build-tools version'",
@@ -75,7 +52,20 @@
         "$platforms_content = $(Invoke-WebRequest $platforms_url).Content",
         "$platforms_match = (Select-String 'Level ([0-9]+)' -InputObject $platforms_content).Matches.Groups[1].Value",
         "Info \"Downloading platforms $platforms_match\"",
-        "&\"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
+        "& \"$dir\\cmdline-tools\\latest\\bin\\sdkmanager.bat\" \"platforms;android-$platforms_match\""
+    ],
+    "persist": [
+        ".knownPackages",
+        "build-tools",
+        "emulator",
+        "extras",
+        "licenses",
+        "ndk",
+        "patcher",
+        "platforms",
+        "skiaparser",
+        "sources",
+        "system-images"
     ],
     "checkver": "commandlinetools-win-(\\d+)",
     "autoupdate": {
