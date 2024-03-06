@@ -35,8 +35,7 @@
         "platform-tools"
     ],
     "env_set": {
-        "ANDROID_HOME": "$dir",
-        "ANDROID_SDK_ROOT": "$dir"
+        "ANDROID_HOME": "$dir"
     },
     "persist": [
         "add-ons",
