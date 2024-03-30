@@ -1,10 +1,10 @@
 {
-    "version": "3.1.0.3",
+    "version": "3.1.0.5",
     "description": "Steamless is a DRM remover of the various SteamStub variants applied to applications and games released on Steam via the DRM tool in the Steamworks SDK.",
     "homepage": "https://github.com/atom0s/Steamless",
     "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License",
-    "url": "https://github.com/atom0s/Steamless/releases/download/v3.1.0.3/Steamless.v3.1.0.3.-.by.atom0s.zip",
-    "hash": "47e0f09235db0f34bff963c6b103012aea4c0b685a5a595c938fa8920962ed82",
+    "url": "https://github.com/atom0s/Steamless/releases/download/v3.1.0.5/Steamless.v3.1.0.5.-.by.atom0s.zip",
+    "hash": "e3e2d22e098ff3fb359b2876aa2bed9596f0501e6ff588cbffae90a76d2dc4f5",
     "bin": [
         [
             "Steamless.CLI.exe",
