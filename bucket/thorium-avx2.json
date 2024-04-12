@@ -25,9 +25,6 @@
         "    Copy-Item \"$env:LocalAppData\\Thorium\\User Data\\*\" \"$dir\\USER_DATA\" -Recurse",
         "}"
     ],
-    "env_set": {
-        "CHROME_EXECUTABLE": "$dir\\thorium.exe"
-    },
     "persist": "USER_DATA",
     "checkver": {
         "github": "https://github.com/Alex313031/Thorium-Win",
