@@ -14,10 +14,9 @@
     },
     "shortcuts": [
         [
-            "THORIUM.BAT",
+            "bin\\thorium.exe",
             "Thorium",
-            "",
-            "BIN\\thorium.exe"
+            "--user-data-dir=\"$dir\\USER_DATA\""
         ]
     ],
     "post_install": [
@@ -26,6 +25,9 @@
         "    Copy-Item \"$env:LocalAppData\\Thorium\\User Data\\*\" \"$dir\\USER_DATA\" -Recurse",
         "}"
     ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\thorium.exe"
+    },
     "persist": "USER_DATA",
     "checkver": {
         "github": "https://github.com/Alex313031/Thorium-Win",
