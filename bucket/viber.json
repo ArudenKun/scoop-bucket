@@ -17,7 +17,6 @@
         "Expand-MsiArchive \"$dir\\extract_folder\\AttachedContainer\\ViberSetup.msi\" \"$dir\\extract_folder\\AttachedContainer\" -Removal",
         "Move-Item \"$dir\\extract_folder\\AttachedContainer\\Viber\\*\" \"$dir\"; Remove-Item \"$dir\\extract_folder\" -Recurse | Out-Null"
     ],
-    "bin": "Viber.exe",
     "shortcuts": [
         [
             "Viber.exe",
