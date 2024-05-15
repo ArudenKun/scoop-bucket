@@ -1,9 +1,9 @@
 {
-    "version": "0.2.4",
+    "version": "0.2.5",
     "homepage": "https://github.com/eumario/godot-manager",
     "license": "MIT",
-    "url": "https://github.com/eumario/godot-manager/releases/download/v0.2.4/godotmanager-windows-v0.2.4.zip",
-    "hash": "7dce1361ce17b867a3d7348d85e64f01fe837318afa9083ece1792d8e0150874",
+    "url": "https://github.com/eumario/godot-manager/releases/download/v0.2.5/godotmanager-windows-v0.2.5.zip",
+    "hash": "36421936e6a588d19b3845ead7f4e6588e8f4b15774d6d62702fe06463a90c4f",
     "pre_install": "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
     "shortcuts": [
         [
