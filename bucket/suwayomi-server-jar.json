@@ -18,6 +18,10 @@
         "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii",
         "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii"
     ],
+    "bin": [
+        "suwayomi-server-console.bat",
+        "suwayomi-server.bat"
+    ],
     "shortcuts": [
         [
             "suwayomi-server-console.bat",
