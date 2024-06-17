@@ -1,10 +1,10 @@
 {
-    "version": "18.0.0",
+    "version": "18.1.0",
     "homepage": "https://darthsternie.net/switch-firmwares/",
     "description": "released Global (Non-China) Firmware for the Nintendo Switch",
     "license": "Unlicense",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2018.0.0.zip",
-    "hash": "md5:8dbacdbaa4e90be98ed0706f7e90a241",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2018.1.0.zip",
+    "hash": "md5:dfd91e2bc34ebf81897a2c65723ee396",
     "extract_to": "Firmware",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
