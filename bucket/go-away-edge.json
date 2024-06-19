@@ -1,10 +1,10 @@
 {
-    "version": "1.3.2",
+    "version": "1.3.3",
     "description": "Don't like Microsoft Edge? Me neither. Redirect all Edge calls to your favorite browser!",
     "homepage": "https://github.com/valnoxy/GoAwayEdge",
     "license": "MIT",
-    "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v1.3.2/GoAwayEdge.exe",
-    "hash": "058b9e67319ef94c25cfac5f06e31791ed080712e03a636a3897983ac827dfe0",
+    "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v1.3.3/GoAwayEdge.exe",
+    "hash": "fccd9e032aa08f9f61d61b987d1ee7692eb12901c785e17424e076155de900ee",
     "installer": {
         "script": [
             "if (!(is_admin)) { error 'This package requires admin rights to install'; break }",
