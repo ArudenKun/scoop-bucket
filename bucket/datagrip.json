@@ -1,5 +1,5 @@
 {
-    "version": "2024.1.5-241.19072.24",
+    "version": "2024.2-242.20224.353",
     "description": "Cross-Platform IDE for Databases & SQL by JetBrains.",
     "homepage": "https://www.jetbrains.com/datagrip/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "depends": "custom/ja-netfilter",
     "notes": "Activate Here: 'https://jetbrains.sussy.tech'",
-    "url": "https://download.jetbrains.com/datagrip/datagrip-2024.1.5.win.zip",
-    "hash": "c9b1a3f0e3a7bf99e4fe613393184bef9b94e165d3a826d64ea5d171b4631e83",
+    "url": "https://download.jetbrains.com/datagrip/datagrip-2024.2.win.zip",
+    "hash": "2030a7ed06c7fd2c3f530eac1136a8cdec35f6d493dd397619580d8290ccbffa",
     "installer": {
         "script": [
             "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
