@@ -6,11 +6,13 @@
     "suggest": {
         "Cygwin": "main/cygwin"
     },
+    "depends": "main/wget",
     "url": "https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-x86_64-windows.exe#/opam.exe",
     "hash": "db8401b2190df94920494972d9336ab6ecc906e4720a527eb0e97f814b0ea813",
     "bin": "opam.exe",
     "env_set": {
-        "OPAMROOT": "$dir\\data"
+        "OPAMROOT": "$dir\\data",
+        "OPAMFETCH": "wget"
     },
     "persist": "data",
     "checkver": {
