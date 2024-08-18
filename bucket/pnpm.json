@@ -15,10 +15,6 @@
     "env_set": {
         "PNPM_HOME": "$dir\\data"
     },
-    "post_install": [
-        "pnpm config set state-dir \"$dir\\data\"",
-        "pnpm config set cache-dir \"$dir\\data\""
-    ],
     "persist": "data",
     "checkver": {
         "script": [
