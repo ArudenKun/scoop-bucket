@@ -10,15 +10,12 @@
         }
     },
     "bin": "deno.exe",
-    "env_add_path": "scripts\\bin",
+    "env_add_path": "data\\scripts\\bin",
     "env_set": {
-        "DENO_DIR": "$dir\\cache",
-        "DENO_INSTALL_ROOT": "$dir\\scripts"
+        "DENO_DIR": "$dir\\data\\cache",
+        "DENO_INSTALL_ROOT": "$dir\\data\\scripts"
     },
-    "persist": [
-        "cache",
-        "scripts"
-    ],
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/denoland/deno"
     },
