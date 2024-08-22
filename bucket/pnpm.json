@@ -11,7 +11,7 @@
     },
     "depends": "nodejs-lts",
     "bin": "pnpm.exe",
-    "env_add_path": "data",
+    "env_add_path": "data\\bin",
     "env_set": {
         "PNPM_HOME": "$dir\\data"
     },
