@@ -17,7 +17,6 @@
     },
     "pre_install": [
         "Remove-Item \"$dir\\Godot_*_console.*\"",
-        "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot-mono.exe'"
     ],
     "env_set": {
@@ -30,7 +29,6 @@
             "Godot Engine (Mono)"
         ]
     ],
-    "persist": "editor_data",
     "checkver": {
         "github": "https://github.com/godotengine/godot"
     },
