@@ -20,6 +20,9 @@
         "New-Item -Force -Path \"$dir\" -Name '_sc_' -Value '{}' | Out-Null",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot-mono.exe'"
     ],
+    "env_set": {
+        "GODOT": "$dir"
+    },
     "bin": "godot-mono.exe",
     "shortcuts": [
         [
