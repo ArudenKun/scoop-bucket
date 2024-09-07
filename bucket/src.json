@@ -12,10 +12,11 @@
             "   $asset = $release_cont.assets | Where-Object { $_.name -match 'StarRailCopilot_\\d+\\.\\d+\\.\\d+_full\\.7z' }",
             "   if ($null -eq $asset) { throw 'No matching asset found' }",
             "   $link = $asset.browser_download_url",
-            "   info \"Downloading $asset.name\"",
+            "   $asset_name = $asset.name",
+            "   info \"Downloading $asset_name\"",
             "   aria2c $link -d $dir",
-            "   info \"Extracting $asset.name\"",
-            "   Expand-7zipArchive -Path \"$dir\\$asset.name\" -ExtractDir \"StarRailCopilot\" -Removal",
+            "   info \"Extracting $asset_name\"",
+            "   Expand-7zipArchive -Path \"$dir\\$asset_name\" -ExtractDir \"StarRailCopilot\" -Removal",
             "}",
             "catch { error $_.Exception.Message; throw }"
         ]
