@@ -4,7 +4,6 @@
     "homepage": "https://github.com/LmeSzinc/StarRailCopilot",
     "license": "GPL-3.0 License",
     "url": "https://raw.githubusercontent.com/LmeSzinc/StarRailCopilot/master/requirements.txt",
-    "hash": "af1b94774b911a0dbeaec06ecf83f6803e6e5f993cde139b4e9eca168dfe0908",
     "installer": {
         "script": [
             "try {",
