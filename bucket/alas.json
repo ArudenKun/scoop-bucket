@@ -7,17 +7,15 @@
     "installer": {
         "script": [
             "try {",
-            "    $url = 'https://api.github.com/repos/LmeSzinc/AzurLaneAutoScript/releases/latest'",
-            "    $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
-            "    $asset = $release_cont.assets | Where-Object { $_.name -match 'AzurLaneAutoScript\\d+\\.\\d+\\.\\d+_full\\.7z' }",
-            "    if ($null -eq $asset) { throw 'No matching asset found' }",
-            "    $link = $asset.browser_download_url",
-            "    $asset_name = $asset.name",
-            "    $output_path = \"$dir\\$asset_name\"",
-            "    # Download the file using curl",
-            "    curl -L $link -o $output_path",
-            "    info \"Extracting $asset_name\"",
-            "    Expand-7zipArchive -Path $output_path -ExtractDir \"AzurLaneAutoScript\" -Removal",
+            "   $url = 'https://api.github.com/repos/LmeSzinc/AzurLaneAutoScript/releases/latest'",
+            "   $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
+            "   $asset = $release_cont.assets | Where-Object { $_.name -match 'AlasApp_\\d+\\.\\d+\\.\\d+_full\\.7z' }",
+            "   if ($null -eq $asset) { throw 'No matching asset found' }",
+            "   $link = $asset.browser_download_url",
+            "   info \"Downloading $asset.name\"",
+            "   aria2c $link -d $dir",
+            "   info \"Extracting $asset.name\"",
+            "   Expand-7zipArchive -Path \"$dir\\$asset.name\" -ExtractDir \"AzurLaneAutoScript\" -Removal",
             "}",
             "catch { error $_.Exception.Message; throw }"
         ]
