@@ -1,16 +1,16 @@
 {
     "version": "nightly",
-    "description": "碧蓝航线脚本 Azur Lane automation bot (CN/EN/JP/TW) | 无缝委托科研，全自动大世界",
-    "homepage": "https://github.com/LmeSzinc/AzurLaneAutoScript",
+    "description": "崩坏：星穹铁道脚本 | Honkai: Star Rail auto bot (简体中文/繁體中文/English/Español)",
+    "homepage": "https://github.com/LmeSzinc/StarRailCopilot",
     "license": "GPL-3.0 License",
-    "url": "https://raw.githubusercontent.com/LmeSzinc/AzurLaneAutoScript/master/requirements.txt",
+    "url": "https://raw.githubusercontent.com/LmeSzinc/StarRailCopilot/master/requirements.txt",
     "hash": "af1b94774b911a0dbeaec06ecf83f6803e6e5f993cde139b4e9eca168dfe0908",
     "installer": {
         "script": [
             "try {",
             "    $url = 'https://api.github.com/repos/LmeSzinc/StarRail_Copilot/releases/latest'",
             "    $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
-            "    $asset = $release_cont.assets | Where-Object { $_.name -match 'AzurLaneAutoScript\\d+\\.\\d+\\.\\d+_full\\.7z' }",
+            "    $asset = $release_cont.assets | Where-Object { $_.name -match 'StarRailCopilot_\\d+\\.\\d+\\.\\d+_full\\.7z' }",
             "    if ($null -eq $asset) { throw 'No matching asset found' }",
             "    $link = $asset.browser_download_url",
             "    $asset_name = $asset.name",
@@ -18,15 +18,15 @@
             "    # Download the file using curl",
             "    curl -L $link -o $output_path",
             "    info \"Extracting $asset_name\"",
-            "    Expand-7zipArchive -Path $output_path -ExtractDir \"AzurLaneAutoScript\" -Removal",
+            "    Expand-7zipArchive -Path $output_path -ExtractDir \"StarRailCopilot\" -Removal",
             "}",
             "catch { error $_.Exception.Message; throw }"
         ]
     },
     "shortcuts": [
         [
-            "Alas.exe",
-            "AzurLane Auto Script"
+            "src.exe",
+            "Star Rail Copilot"
         ]
     ],
     "persist": "config",
