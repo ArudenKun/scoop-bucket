@@ -7,7 +7,7 @@
     "installer": {
         "script": [
             "try {",
-            "    $url = 'https://api.github.com/repos/LmeSzinc/StarRail_Copilot/releases/latest'",
+            "    $url = 'https://api.github.com/repos/LmeSzinc/StarRailCopilot/releases/latest'",
             "    $release_cont = $(Invoke-WebRequest $url).Content | ConvertFrom-Json",
             "    $asset = $release_cont.assets | Where-Object { $_.name -match 'StarRailCopilot_\\d+\\.\\d+\\.\\d+_full\\.7z' }",
             "    if ($null -eq $asset) { throw 'No matching asset found' }",
