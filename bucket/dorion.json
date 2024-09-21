@@ -12,6 +12,16 @@
             "hash": "e09c77abf7f6199dd9f7d84ec6169dc578a22327aefbe305304a548112dd5a64"
         }
     },
+    "pre_install": [
+        "if (Test-Path -Path $persist_dir) {",
+        "   if (-not (Test-Path -Path (Join-Path $persist_dir 'config.json'))) {",
+        "       New-Item -Path (Join-Path $persist_dir 'config.json')",
+        "   }",
+        "} else {",
+        "   New-Item -Path $persist_dir -ItemType Directory",
+        "   New-Item -Path (Join-Path $persist_dir 'config.json')",
+        "}"
+    ],
     "shortcuts": [
         [
             "Dorion.exe",
