@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "depends": "custom/ja-netfilter",
+    "depends": "alden/ja-netfilter",
     "notes": "Activate Here: 'https://jetbrains.sussy.tech'",
     "url": "https://download.jetbrains.com/datagrip/datagrip-2024.2.2.win.zip",
     "hash": "be799bb01be205d1587b57af03266582af3fb060e9f69235f785380410fde63a",

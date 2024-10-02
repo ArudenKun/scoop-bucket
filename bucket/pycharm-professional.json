@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "depends": "custom/jetcrack",
+    "depends": "alden/jetcrack",
     "url": "https://download.jetbrains.com/python/pycharm-professional-2024.2.3.exe#/dl.7z",
     "hash": "79b4eeee43f04e4b23f4637a2fd18a77dc1802221960a1180d024753cfec32d1",
     "extract_to": "IDE",

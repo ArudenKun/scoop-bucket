@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "depends": "custom/jetcrack",
+    "depends": "alden/jetcrack",
     "url": "https://download.jetbrains.com/webstorm/WebStorm-2024.2.3.win.zip",
     "hash": "74f63cbe7bd5b596cb090532a9e3a81561dddc15720b042bcd687dfd3d5b8a32",
     "installer": {

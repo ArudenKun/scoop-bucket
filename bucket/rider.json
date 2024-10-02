@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "depends": "custom/jetcrack",
+    "depends": "alden/jetcrack",
     "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2024.2.5.win.zip",
     "hash": "5e00d4b6b68cc2331f8aae9ff09190bb0bb5092bbf1cab731b32f8f604c3c991",
     "installer": {

@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "depends": "custom/jetcrack",
+    "depends": "alden/jetcrack",
     "url": "https://download.jetbrains.com/idea/ideaIU-2024.2.3.win.zip",
     "hash": "96b004519b8315c78b981f5f0a109fc66f1743147a6f8828780bea87e8ac9024",
     "installer": {
