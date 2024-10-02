@@ -6,10 +6,13 @@
     "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v1.3.4/GoAwayEdge.exe",
     "hash": "00294265dad2b59a622414e5067b79b8e116e9c82106399490bd79c678562f34",
     "installer": {
-        "script": [
-            "if (!(is_admin)) { error 'This package requires admin rights to install'; break }",
-            "Start-Process -Wait \"$dir\\GoAwayEdge.exe\" -ArgumentList @('-s') -Verb RunAs"
-        ]
+        "file": "GoAwayEdge.exe",
+        "args": "-s",
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "GoAwayEdge.exe",
+        "args": "-u"
     },
     "shortcuts": [
         [
@@ -17,12 +20,6 @@
             "GoAwayEdge"
         ]
     ],
-    "uninstaller": {
-        "script": [
-            "if (!(is_admin)) { error 'This package requires admin rights to uninstall'; break }",
-            "Start-Process -Wait \"$dir\\GoAwayEdge.exe\" -ArgumentList @('-u') -Verb RunAs"
-        ]
-    },
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v$version/GoAwayEdge.exe"
