@@ -5,7 +5,11 @@
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/CoolnsX/dra-cla/raw/main/dra-cla",
     "hash": "32407da96cb10e525ec113e2a004f72260c0df465b87d4b530213aa2b5c8b847",
-    "depends": "fzf",
+    "depends": [
+        "git",
+        "fzf",
+        "mpv"
+    ],
     "bin": "dra-cla",
     "checkver": {
         "script": [

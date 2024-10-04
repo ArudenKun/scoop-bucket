@@ -4,15 +4,17 @@
     "homepage": "https://github.com/pystardust/ani-cli",
     "license": "GPL-3.0-or-later",
     "suggest": {
-        "git": "git",
         "aria2": "aria2",
-        "mpv": "extras/mpv",
         "ffmpeg": [
             "ffmpeg",
             "ffmpeg-shared"
         ]
     },
-    "depends": "fzf",
+    "depends": [
+        "git",
+        "fzf",
+        "mpv"
+    ],
     "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
     "hash": "55c3d811ce9c640216ec9cb1777b2199764d5ac4e72272f9c35d7984bab57e65",
     "bin": "ani-cli",
