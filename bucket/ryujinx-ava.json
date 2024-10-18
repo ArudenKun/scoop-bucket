@@ -27,17 +27,15 @@
         "   }",
         "}"
     ],
-    "bin": "Ryujinx.Ava.exe",
     "shortcuts": [
         [
-            "Ryujinx.Ava.exe",
+            "Ryujinx.exe",
             "Ryujinx"
         ]
     ],
     "persist": "portable",
     "checkver": {
-        "url": "https://api.github.com/repos/ryujinx-mirror/ryujinx/releases/latest",
-        "jsonpath": "$.tag_name"
+        "github": "https://github.com/ryujinx-mirror/ryujinx"
     },
     "autoupdate": {
         "architecture": {
