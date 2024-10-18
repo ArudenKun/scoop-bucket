@@ -5,6 +5,7 @@
     "license": "Unlicense",
     "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2019.0.0.zip",
     "hash": "md5:2ce401a4cdee011824c2487e0f1446a9",
+    "extract_to": "Firmware",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
     },
