@@ -17,7 +17,6 @@
             "hash": "36262a7f76e3cad63e90d564f53dfcb32efce79d928a12e053488a8923aa8108"
         }
     },
-    "extract_dir": "publish",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
