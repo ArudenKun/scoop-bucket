@@ -1,0 +1,45 @@
+{
+    "version": "1.2.43",
+    "description": "A simple, experimental Nintendo Switch emulator",
+    "homepage": "https://ryujinx.org/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/GreemDev/Ryujinx/blob/master/LICENSE.txt"
+    },
+    "depends": "switch-firmware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GreemDev/Ryujinx/releases/download/1.2.43/ryujinx-1.2.43-win_x64.zip",
+            "hash": "21a6b0806acbb55e5883b8fe47f70dde86a0747d481b51b00c3daeb1c0c8ce8e"
+        }
+    },
+    "extract_dir": "publish",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\Ryujinx\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\Ryujinx\\*\" -Destination \"$persist_dir\\portable\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\Ryujinx\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": "Ryujinx.exe",
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": {
+        "github": "https://github.com/GreemDev/Ryujinx"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GreemDev/Ryujinx/releases/download/$version/ryujinx-$version-win_x64.zip"
+            }
+        }
+    }
+}
