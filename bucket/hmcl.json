@@ -25,9 +25,9 @@
         "}"
     ],
     "checkver": {
-        "github": "https://github.com/huanghongxun/HMCL"
+        "github": "https://github.com/HMCL-dev/HMCL"
     },
     "autoupdate": {
-        "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe"
+        "url": "https://github.com/HMCL-dev/HMCL/releases/download/v$version/HMCL-$version.exe"
     }
 }
