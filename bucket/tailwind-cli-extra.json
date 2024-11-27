@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v1.7.21/tailwindcss-extra-windows-x64.exe",
+            "url": "https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v1.7.21/tailwindcss-extra-windows-x64.exe#/tailwindcss-extra.exe",
             "hash": "f963246e64356219aea88c156f160cd60e69a2fa9f81fb04c9f85c2e50d32b72"
         }
     },
-    "bin": "tailwindcss.exe",
+    "bin": "tailwindcss-extra.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
