@@ -9,7 +9,7 @@
             "hash": "sha512:93b5f2a2cd6596e069ee4516e2caeb1d455c5bfebc30c2995094b2b3b147c034e50f720d3606c895be12480ca0b2a94d5adc2958a09e2734f2504223af9c4df0",
             "installer": {
                 "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\\app\"",
                     "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
                 ]
             }
@@ -17,10 +17,12 @@
     },
     "shortcuts": [
         [
-            "Vortex.exe",
-            "Vortex"
+            "app\\Vortex.exe",
+            "Vortex",
+            "--user-data-dir=\"$persist_dir\\data\""
         ]
     ],
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/Nexus-Mods/Vortex"
     },
