@@ -19,7 +19,7 @@
         [
             "app\\Vortex.exe",
             "Vortex",
-            "--user-data-dir=\"$dir\\data\""
+            "--user-data-dir=\"$persist_dir\\data\""
         ]
     ],
     "persist": "data",
