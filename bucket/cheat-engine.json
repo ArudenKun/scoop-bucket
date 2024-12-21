@@ -7,6 +7,7 @@
         "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
     "url": "https://file-aruden.koyeb.app/d/Public/Programs/PC/Cheat%20Engine/CheatEngine752P.exe",
+    "hash": "1e372c12d62449af6755aaa1303d0d41722c99124a2d4911e3ba22f8c512393b",
     "innosetup": true,
     "architecture": {
         "64bit": {
@@ -41,5 +42,11 @@
                 ]
             ]
         }
-    }
+    },
+    "post_install": [
+        "INFO Deleting soundextension.lua",
+        "Remove-Item \"$dir\\autorun\\soundextension.lua\" -Force -ErrorAction SilentlyContinue",
+        "INFO Deleting eatme.lua",
+        "Remove-Item \"$dir\\autorun\\eatme.lua\" -Force -ErrorAction SilentlyContinue"
+    ]
 }
