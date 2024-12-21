@@ -44,6 +44,7 @@
         }
     },
     "post_install": [
+        "INFO Cleaning Cheat Engine Install",
         "INFO Deleting soundextension.lua",
         "Remove-Item \"$dir\\autorun\\soundextension.lua\" -Force -ErrorAction SilentlyContinue",
         "INFO Deleting eatme.lua",
