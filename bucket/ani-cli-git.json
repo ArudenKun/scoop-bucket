@@ -17,6 +17,9 @@
     ],
     "url": "https://raw.githubusercontent.com/pystardust/ani-cli/master/ani-cli",
     "hash": "84913c692a9d036fdb8e667246ebb443cd721daca4a4ceb9b5a52f4215a3434c",
+    "pre_install": [
+        "Set-Content -Path '$dir\\ani-cli.cmd' -Value 'bash $dir'"
+    ],
     "bin": "ani-cli",
     "env_set": {
         "ANI_CLI_HIST_DIR": "$dir\\data"
