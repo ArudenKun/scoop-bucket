@@ -1,12 +1,12 @@
 {
-    "version": "0.42.5",
+    "version": "0.44.11",
     "description": "An AI code editor",
     "homepage": "https://www.cursor.com/",
     "license": "freeware",
     "architecture": {
         "64bit": {
             "url": "https://downloader.cursor.sh/windows/nsis/x64",
-            "hash": "c61f911dcb7d6edc8dfccadba9e38b89f48342fa0c9c71c9496d05cfdf3ee45d"
+            "hash": "54fba80fe9ef52ccfe6d89511fa4ad84be93ca8e7c9236c86516f11ad6da0a6f"
         }
     },
     "installer": {
