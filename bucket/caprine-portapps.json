@@ -1,0 +1,45 @@
+{
+    "version": "2.60.1-40",
+    "description": "Caprine™ portable app made with Portapps. An elegant Facebook Messenger desktop app.",
+    "homepage": "https://github.com/portapps/caprine-portable",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/portapps/caprine-portable/releases/download/2.60.1-40/caprine-portable-win64-2.60.1-40.7z",
+            "hash": "e0c557094107bee9b2d080de11d1846f46393624fff2e27d9289e23c2834a0c4"
+        }
+    },
+    "pre_install": "if(!(Test-Path \"$persist_dir\\caprine-portable.yml\")) { New-Item \"$dir\\caprine-portable.yml\" | Out-Null }",
+    "bin": [
+        [
+            "caprine-portable.exe",
+            "Caprine"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "caprine-portable.exe",
+            "Caprine"
+        ]
+    ],
+    "persist": [
+        "data",
+        "log",
+        "caprine-portable.yml"
+    ],
+    "checkver": {
+        "url": "https://github.com/portapps/caprine-portable/releases/latest",
+        "regex": "releases/tag/([\\d.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/portapps/caprine-portable/releases/download/$version/caprine-portable-win64-$version.7z",
+                "hash": {
+                    "url": "$baseurl/checksums.txt",
+                    "regex": "$sha256\\s+$basename"
+                }
+            }
+        }
+    }
+}
