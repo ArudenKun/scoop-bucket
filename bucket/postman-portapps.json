@@ -1,0 +1,39 @@
+{
+    "version": "11.19.0-61",
+    "description": "Postman™ portable app made with Portapps. A complete toolchain for API developers.",
+    "homepage": "https://github.com/portapps/postman-portable",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/portapps/postman-portable/releases/download/11.19.0-61/postman-portable-win64-11.19.0-61.7z",
+            "hash": "0675ca63f0f30e1979605a11bea29d60640243057fe648f47f9a5190e03d8723"
+        }
+    },
+    "pre_install": "if(!(Test-Path \"$persist_dir\\postman-portable.yml\")) { Set-Content -Path \"$persist_dir\\postman-portable.yml\" -Value @\"app:\n  cleanup: true\n\"@ -Encoding UTF8 }",
+    "shortcuts": [
+        [
+            "postman-portable.exe",
+            "Postman"
+        ]
+    ],
+    "persist": [
+        "data",
+        "log",
+        "postman-portable.yml"
+    ],
+    "checkver": {
+        "url": "https://github.com/portapps/postman-portable/releases/latest",
+        "regex": "releases/tag/([\\d.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/portapps/postman-portable/releases/download/$version/postman-portable-win64-$version.7z",
+                "hash": {
+                    "url": "$baseurl/checksums.txt",
+                    "regex": "$sha256\\s+$basename"
+                }
+            }
+        }
+    }
+}
