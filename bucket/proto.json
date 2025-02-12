@@ -11,9 +11,13 @@
     },
     "pre_install": "if(!(Test-Path \"$persist_dir\\.prototools\")) { New-Item \"$dir\\.prototools\"  -ItemType File}",
     "bin": "proto.exe",
-    "persist": [
-        ".prototools"
+    "env_set": {
+        "PROTO_HOME": "$dir\\data"
+    },
+    "env_add_path":[
+        "$dir\\data\\shims"
     ],
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/moonrepo/proto"
     },
