@@ -1,0 +1,14 @@
+{
+    "version": "2024.10.8",
+    "description": "The QuestPDF Companion application is a tool designed to simplify and speed up your development lifecycle. First, it shows a preview of your document. But the real magic starts with the hot-reload capability! It observes your code and updates the preview every time you change the implementation. Get real-time results without the need of code recompilation. Save time and enjoy the task!",
+    "homepage": "https://www.questpdf.com/license/guide.html",
+    "license": "Community MIT",
+    "url": "https://github.com/QuestPDF/QuestPDF.Companion/releases/download/2024.10.8/QuestPDF.Companion.2024.10.8.exe",
+    "hash": "0ac4c929469e36bb61a4f215468c616ce89a43001b6d9d2089be4c24eccbd4b8",
+    "checkver": {
+        "github": "https://github.com/QuestPDF/QuestPDF.Companion"
+    },
+    "autoupdate": {
+        "url": "https://github.com/QuestPDF/QuestPDF.Companion/releases/download/$version/QuestPDF.Companion.$version.exe"
+    }
+}
