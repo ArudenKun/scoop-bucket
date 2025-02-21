@@ -9,7 +9,7 @@
             "hash": "sha512:f1a3141d2dd93e505a3a765bd94f92e295fa0c68e6f14bd77af551613e8d55d83d08a1194c7a95edd711636414aa06e4d9236fe5428d91d024faac2dccca3291",
             "pre_install": [
                 "Remove-Item \"$dir\\*.dll\"; Expand-7ZipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse"
+                "Remove-Item \"$dir\\Uninstall*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse"
             ]
         }
     },
