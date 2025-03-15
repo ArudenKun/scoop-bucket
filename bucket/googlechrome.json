@@ -40,7 +40,7 @@
         "}"
     ],
     "env_set": {
-        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
+        "CHROME_EXECUTABLE": "$scoopdir\\shims\\chrome.exe"
     },
     "persist": "User Data",
     "checkver": {
