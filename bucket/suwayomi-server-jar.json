@@ -1,5 +1,5 @@
 {
-    "version": "1.1.1",
+    "version": "2.0.1727",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
     "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
     "license": {
@@ -11,7 +11,7 @@
         "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
     ],
     "hash": [
-        "98fcd112e1fcf511a164b2bee5a20fbaad6098d19cf4c186d30878655e5d2d38",
+        "",
         "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
     ],
     "pre_install": [
@@ -32,21 +32,22 @@
     ],
     "persist": "data",
     "checkver": {
-        "script": [
-            "try {",
-            "   $url = 'https://github.com/Suwayomi/Suwayomi-Server/releases'",
-            "   $cont = Invoke-RestMethod -Uri $url",
-            "   $match = [regex]::Match($cont, 'v(?<ver>([\\d.]+)-r(?<build>[\\d]+))').Groups[0].Value",
-            "   Write-Output \"$match\"",
-            "}",
-            "catch { error $_.Exception.Message; throw }"
-        ],
-        "regex": "v([\\d.]+)-r(?<releasenumber>[\\d]+)"
+        "url": "https://api.github.com/repos/Suwayomi/Suwayomi-Server/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
     },
     "autoupdate": {
-        "url": [
-            "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-r$matchReleasenumber.jar#/Suwayomi-Server.jar",
-            "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
-        ]
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                    "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
+                ],
+                "extract_dir": "Suwayomi-Server-v$version-windows-x64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/Checksums.sha256"
+        }
     }
 }

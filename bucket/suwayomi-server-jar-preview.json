@@ -1,48 +1,53 @@
 {
-    "version": "1.1.1",
+    "version": "2.0.1761",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
-    "homepage": "https://github.com/Suwayomi/Suwayomi-Server-preview",
+    "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
     "license": {
         "identifier": "MPL-2.0",
         "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
     },
     "url": [
-        "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v1.1.1-r1535/Suwayomi-Server-v1.1.1-r1535.jar#/Suwayomi-Server.jar",
+        "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v1.1.1/Suwayomi-Server-v1.1.1-r1535.jar#/Suwayomi-Server.jar",
         "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
     ],
     "hash": [
-        "638b0e4da87d1dd8ecb7d28818983705f6c5042ae1d71c6a507064c9118e742d",
+        "",
         "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
     ],
     "pre_install": [
         "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii",
         "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii"
     ],
+    "bin": [
+        "suwayomi-server-console.bat",
+        "suwayomi-server.bat"
+    ],
     "shortcuts": [
         [
             "suwayomi-server-console.bat",
-            "Suwayomi Server Preview",
+            "Suwayomi Server",
             "",
             "faviconlogo.ico"
         ]
     ],
     "persist": "data",
     "checkver": {
-        "script": [
-            "try {",
-            "   $url = 'https://github.com/Suwayomi/Suwayomi-Server-preview/releases'",
-            "   $cont = Invoke-RestMethod -Uri $url",
-            "   $match = [regex]::Match($cont, 'v(?<ver>([\\d.]+)-r(?<build>[\\d]+))').Groups[0].Value",
-            "   Write-Output \"$match\"",
-            "}",
-            "catch { error $_.Exception.Message; throw }"
-        ],
-        "regex": "v([\\d.]+)-r(?<releasenumber>[\\d]+)"
+        "url": "https://api.github.com/repos/Suwayomi/Suwayomi-Server-preview/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
     },
     "autoupdate": {
-        "url": [
-            "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version-r$matchReleasenumber/Suwayomi-Server-v$version-r$matchReleasenumber.jar#/Suwayomi-Server.jar",
-            "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
-        ]
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                    "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
+                ],
+                "extract_dir": "Suwayomi-Server-v$version-windows-x64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/Checksums.sha256"
+        }
     }
 }
