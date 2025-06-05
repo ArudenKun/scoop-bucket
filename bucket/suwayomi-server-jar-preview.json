@@ -23,12 +23,12 @@
         "Set-Content -Path \"$dir\\suwayomi-server.ps1\" -Value 'Start-Process -WindowStyle Hidden -FilePath \"javaw\" -ArgumentList \"-Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\"\", \"-jar\", \"$dir\\Suwayomi-Server-v$version.jar\"' -Encoding Ascii"
     ],
     "bin": [
-        "suwayomi-server-console.bat",
-        "suwayomi-server.bat"
+        "suwayomi-server-console.ps1",
+        "suwayomi-server.ps1"
     ],
     "shortcuts": [
         [
-            "suwayomi-server-console.bat",
+            "suwayomi-server-console.ps1",
             "Suwayomi Server",
             "",
             "faviconlogo.ico"
