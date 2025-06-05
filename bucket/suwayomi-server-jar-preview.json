@@ -19,8 +19,12 @@
         }
     },
     "pre_install": [
-        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir/data`\" -jar %~dp0Suwayomi-Server-v$version.jar\" -Encoding Ascii",
-        "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir/data`\" -jar %~dp0Suwayomi-Server-v$version.jar\" -Encoding Ascii"
+        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\" -jar %~dp0Suwayomi-Server-v$version.jar\" -Encoding Ascii",
+        "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\" -jar %~dp0Suwayomi-Server-v$version.jar\" -Encoding Ascii"
+    ],
+    "post_install": [
+        "(Get-Content -Path \"$dir\\suwayomi-server-console.bat\") -replace '\\\\', '/' | Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Encoding Ascii",
+        "(Get-Content -Path \"$dir\\suwayomi-server.bat\") -replace '\\\\', '/' | Set-Content -Path \"$dir\\suwayomi-server.bat\" -Encoding Ascii"
     ],
     "bin": [
         "suwayomi-server-console.ps1",
