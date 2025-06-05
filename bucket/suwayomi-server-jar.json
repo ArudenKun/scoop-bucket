@@ -25,7 +25,7 @@
     "bin": [
         "suwayomi-server-console.ps1",
         "suwayomi-server.ps1"
-    ],``
+    ],
     "shortcuts": [
         [
             "suwayomi-server-console.ps1",
