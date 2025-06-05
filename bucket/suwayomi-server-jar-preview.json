@@ -6,14 +6,18 @@
         "identifier": "MPL-2.0",
         "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
     },
-    "url": [
-        "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v1.1.1/Suwayomi-Server-v1.1.1-r1535.jar#/Suwayomi-Server.jar",
-        "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
-    ],
-    "hash": [
-        "",
-        "fdeb95c131ea8041d6704a33e0f6a40fd59f0737be0434d1df1db1ac0e62d750"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.0.1761/Suwayomi-Server-v2.0.1761-windows-x64.zip",
+                "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
+            ],
+            "hash": [
+                "59e240acc7e2b6de0969c1c4e0b62c39ed8b4b4d9539a15dd568eb220dce7b80",
+                "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550"
+            ]
+        }
+    },
     "pre_install": [
         "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value \"@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii",
         "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value \"@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data -jar %~dp0Suwayomi-Server.jar\" -Encoding Ascii"
@@ -40,14 +44,11 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                    "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
                     "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
                 ],
                 "extract_dir": "Suwayomi-Server-v$version-windows-x64"
             }
-        },
-        "hash": {
-            "url": "$baseurl/Checksums.sha256"
         }
     }
 }
