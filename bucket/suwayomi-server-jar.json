@@ -19,8 +19,8 @@
         }
     },
     "pre_install": [
-        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value '@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=`'\"$dir\\data\"`' -jar %~dp0Suwayomi-Server-v$version.jar' -Encoding Ascii",
-        "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value '@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=`'\"$dir\\data\"`' -jar %~dp0Suwayomi-Server-v$version.jar' -Encoding Ascii"
+        "Set-Content -Path \"$dir\\suwayomi-server-console.bat\" -Value '@start /b java -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\" -jar %~dp0Suwayomi-Server-v$version.jar' -Encoding Ascii",
+        "Set-Content -Path \"$dir\\suwayomi-server.bat\" -Value '@start /b javaw -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\" -jar %~dp0Suwayomi-Server-v$version.jar' -Encoding Ascii"
     ],
     "bin": [
         "suwayomi-server-console.bat",
