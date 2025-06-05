@@ -19,8 +19,8 @@
         }
     },
     "pre_install": [
-        "Set-Content -Path \"$dir\\suwayomi-server-console.ps1\" -Value 'Start-Process -NoNewWindow -FilePath \"java\" -ArgumentList \"-Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\"\", \"-jar\", \"$dir\\Suwayomi-Server-v$version.jar\"' -Encoding Ascii",
-        "Set-Content -Path \"$dir\\suwayomi-server.ps1\" -Value 'Start-Process -WindowStyle Hidden -FilePath \"javaw\" -ArgumentList \"-Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\"\", \"-jar\", \"$dir\\Suwayomi-Server-v$version.jar\"' -Encoding Ascii"
+        "Set-Content -Path \"$dir\\suwayomi-server-console.ps1\" -Value 'Start-Process -NoNewWindow -FilePath \"java\" -ArgumentList \"-Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\"\", \"-jar\", \"$dir\\Suwayomi-Server-v$version.jar\"' -Encoding Ascii",
+        "Set-Content -Path \"$dir\\suwayomi-server.ps1\" -Value 'Start-Process -WindowStyle Hidden -FilePath \"javaw\" -ArgumentList \"-Dsuwayomi.tachidesk.config.server.rootDir=\"$dir\\data\"\", \"-jar\", \"$dir\\Suwayomi-Server-v$version.jar\"' -Encoding Ascii"
     ],
     "bin": [
         "suwayomi-server-console.ps1",
