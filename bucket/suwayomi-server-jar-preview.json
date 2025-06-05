@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.0.1761/Suwayomi-Server-v2.0.1761-windows-x64.zip",
+                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.0.1761/Suwayomi-Server-v2.0.1761.jar",
                 "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
             ],
             "hash": [
-                "59e240acc7e2b6de0969c1c4e0b62c39ed8b4b4d9539a15dd568eb220dce7b80",
+                "5ec042de7a3a66dc3f3e9fb4f21f3416b7a26673d224da89fdad84814eaf7da2",
                 "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550"
             ]
         }
@@ -44,7 +44,7 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                    "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version.jar",
                     "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
                 ],
                 "extract_dir": "Suwayomi-Server-v$version-windows-x64"
