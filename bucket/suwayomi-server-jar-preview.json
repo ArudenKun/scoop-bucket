@@ -1,5 +1,5 @@
 {
-    "version": "2.0.1805",
+    "version": "2.0.1809",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
     "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
     "license": {
@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.0.1805/Suwayomi-Server-v2.0.1805.jar",
+                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.0.1809/Suwayomi-Server-v2.0.1809.jar",
                 "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico"
             ],
             "hash": [
-                "87bd6ac7840c3bc97661e00d2c7ac1a5357158e04b82f26994c500dc77855e27",
+                "c0941ec214f513689dbf56c43e6360881ecdea6b5b2b71a62b373e2ed1c383e2",
                 "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550"
             ]
         }
