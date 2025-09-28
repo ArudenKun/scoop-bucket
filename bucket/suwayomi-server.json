@@ -1,0 +1,75 @@
+{
+    "version": "2.1.1867",
+    "description": "A manga reader compatible with Tachiyomi extensions and backups",
+    "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
+    "license": {
+        "identifier": "MPL-2.0",
+        "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v2.1.1867/Suwayomi-Server-v2.1.1867.jar",
+                "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico",
+                "https://github.com/ScoopInstaller/Extras/raw/master/scripts/suwayomi-server/suwayomi.ps1"
+            ],
+            "hash": [
+                "51e307c2581e4e1a002991ab3e3a77503c8b074c42695987a984a7382d0ac5af",
+                "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550",
+                "f7d32050ace8bcb05005a65da1dae174e3eeca86a370e769639f5c0d03e61629"
+            ]
+        }
+    },
+    "pre_install": [
+        "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start javaw -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii"
+    ],
+    "post_install": [
+        "New-Item -Path ~/.zvm -Target \"$dir\\data\" -ItemType Junction | Out-Null",
+        "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
+        "    Copy-Item -Path $env:LOCALAPPDATA\\Tachidesk\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
+        "    Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse",
+        "}",
+        "New-Item -ItemType Junction -Path $env:APPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
+    ],
+    "bin": [
+        [
+            "suwayomi.ps1",
+            "suwayomi-server-launcher"
+        ],
+        [
+            "bin\\Suwayomi-Server.jar",
+            "suwayomi-server"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Suwayomi Launcher.bat",
+            "Suwayomi Server Launcher",
+            "",
+            "faviconlogo.ico"
+        ],
+        [
+            "suwayomi-server.bat",
+            "Suwayomi Server",
+            "",
+            "faviconlogo.ico"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://api.github.com/repositories/323996203/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                "extract_dir": "Suwayomi-Server-v$version-windows-x64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/Checksums.sha256"
+        }
+    }
+}
