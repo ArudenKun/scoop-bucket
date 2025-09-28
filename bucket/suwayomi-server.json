@@ -22,7 +22,6 @@
     },
     "pre_install": "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start javaw -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii",
     "post_install": [
-        "New-Item -Path ~/.zvm -Target \"$dir\\data\" -ItemType Junction | Out-Null",
         "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
         "    Copy-Item -Path $env:LOCALAPPDATA\\Tachidesk\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
         "    Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse",
