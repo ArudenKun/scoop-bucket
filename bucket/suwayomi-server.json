@@ -21,13 +21,13 @@
             "extract_dir": "Suwayomi-Server-v2.1.1867-windows-x64"
         }
     },
-    "pre_install": "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start \"%~dp0jre\\bin\\java.exe\"' -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii",
+    "pre_install": "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start \"%~dp0jre\\bin\\java.exe\" -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii",
     "post_install": [
         "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
         "    Copy-Item -Path $env:LOCALAPPDATA\\Tachidesk\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
         "    Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse",
         "}",
-        "New-Item -ItemType Junction -Path $env:APPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
+        "New-Item -ItemType Junction -Path $env:LOCALAPPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
     ],
     "uninstaller": {
         "script": "Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse"
