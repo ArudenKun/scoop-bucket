@@ -28,6 +28,9 @@
         "}",
         "New-Item -ItemType Junction -Path $env:APPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
     ],
+     "uninstaller": {
+        "script": "Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse"
+    },
     "bin": [
         [
             "suwayomi.ps1",
