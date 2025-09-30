@@ -1,7 +1,7 @@
 {
-    "version": "2.1.1867",
+    "version": "2.1.1947",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
-    "homepage": "https://github.com/Suwayomi/Suwayomi-Server",
+    "homepage": "https://github.com/Suwayomi/Suwayomi-Server-preview",
     "license": {
         "identifier": "MPL-2.0",
         "url": "https://github.com/Suwayomi/Suwayomi-Server/blob/master/LICENSE"
@@ -9,67 +9,65 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v2.1.1867/Suwayomi-Server-v2.1.1867-windows-x64.zip",
+                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.1.1947/Suwayomi-Server-v2.1.1947-windows-x64.zip",
                 "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico",
                 "https://github.com/ScoopInstaller/Extras/raw/master/scripts/suwayomi-server/suwayomi.ps1"
             ],
             "hash": [
-                "ab6687d278e0dd0984f67abbc853511a7e764f84b126a35d09bfd9b0307321ff",
+                "a0b5f515aa6c0a1a37c73daf3618c76847e4a79dc386310751ca4440b94a844c",
                 "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550",
                 "f7d32050ace8bcb05005a65da1dae174e3eeca86a370e769639f5c0d03e61629"
-            ]
+            ],
+            "extract_dir": "Suwayomi-Server-v2.1.1947-windows-x64"
         }
     },
-    "pre_install": "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start \"%~dp0jre\\bin\\java.exe\"' -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii",
+    "pre_install": "Set-Content \"$dir\\suwayomi-server.bat\" -Value '@start \"%~dp0jre\\bin\\java.exe\" -jar \"%~dp0bin\\Suwayomi-Server.jar\"' -Encoding Ascii",
     "post_install": [
         "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
         "    Copy-Item -Path $env:LOCALAPPDATA\\Tachidesk\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
         "    Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse",
         "}",
-        "New-Item -ItemType Junction -Path $env:APPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
+        "New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\\Tachidesk -Target $persist_dir\\data | Out-Null"
     ],
-     "uninstaller": {
+    "uninstaller": {
         "script": "Remove-Item $env:LOCALAPPDATA\\Tachidesk -Force -Recurse"
     },
     "bin": [
         [
             "suwayomi.ps1",
-            "suwayomi-server-launcher"
+            "suwayomi-server-preview-launcher"
         ],
         [
-            "$dir\\bin\\Suwayomi-Server.jar",
-            "suwayomi-server"
+            "bin\\Suwayomi-Server.jar",
+            "suwayomi-server-preview"
         ]
     ],
     "shortcuts": [
         [
             "Suwayomi Launcher.bat",
-            "Suwayomi Server Launcher",
+            "Suwayomi Server Preview Launcher",
             "",
             "faviconlogo.ico"
         ],
         [
             "suwayomi-server.bat",
-            "Suwayomi Server",
+            "Suwayomi Server Preview",
             "",
             "faviconlogo.ico"
         ]
     ],
     "persist": "data",
     "checkver": {
-        "url": "https://api.github.com/repositories/323996203/releases/latest",
+        "url": "https://api.github.com/repositories/368647679/releases/latest",
         "jsonpath": "$..browser_download_url",
         "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
+                "url": "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v$version/Suwayomi-Server-v$version-windows-x64.zip",
                 "extract_dir": "Suwayomi-Server-v$version-windows-x64"
             }
-        },
-        "hash": {
-            "url": "$baseurl/Checksums.sha256"
         }
     }
 }
