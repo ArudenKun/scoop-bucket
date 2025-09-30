@@ -11,7 +11,7 @@
             "url": [
                 "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.1.1947/Suwayomi-Server-v2.1.1947-windows-x64.zip",
                 "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico",
-                "https://github.com/ScoopInstaller/Extras/raw/master/scripts/suwayomi-server/suwayomi.ps1"
+                "https://github.com/ScoopInstaller/Extras/raw/master/scripts/suwayomi-server/suwayomi.ps1#/suwayomi-server-launcher.ps1"
             ],
             "hash": [
                 "a0b5f515aa6c0a1a37c73daf3618c76847e4a79dc386310751ca4440b94a844c",
@@ -22,8 +22,7 @@
         }
     },
     "pre_install": [
-        "Set-Content \"$dir\\suwayomi-server.bat\" \"%~dp0jre\\bin\\javaw -Dsuwayomi.tachidesk.config.server.rootDir=`\"$dir\\data`\" -jar %~dp0bin\\Suwayomi-Server.jar\" -Encoding Ascii",
-        "(Get-Content -Path \"$dir\\suwayomi-server.bat\") -replace '\\\\', '/' | Set-Content -Path \"$dir\\suwayomi-server.bat\" -Encoding Ascii"
+        "Set-Content \"$dir\\suwayomi-server.ps1\" \"& $PSScriptRoot\\jre\\bin\\java\" \"-Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data\" -jar \"$PSScriptRoot\\Suwayomi-Server.jar\" -Encoding Ascii"
     ],
     "post_install": [
         "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
@@ -33,11 +32,11 @@
     ],
     "bin": [
         [
-            "suwayomi.ps1",
+            "suwayomi-server-launcher.ps1",
             "suwayomi-server-preview-launcher"
         ],
         [
-            "suwayomi-server.bat",
+            "suwayomi-server.ps1",
             "suwayomi-server-preview"
         ]
     ],
@@ -49,7 +48,7 @@
             "faviconlogo.ico"
         ],
         [
-            "suwayomi-server.bat",
+            "suwayomi-server.ps1",
             "Suwayomi Server Preview",
             "",
             "faviconlogo.ico"
