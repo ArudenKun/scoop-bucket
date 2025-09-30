@@ -38,7 +38,7 @@
             "suwayomi-server-preview-launcher"
         ],
         [
-            "bin\\Suwayomi-Server.jar",
+            "suwayomi-server.bat",
             "suwayomi-server-preview"
         ]
     ],
