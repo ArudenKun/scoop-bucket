@@ -21,7 +21,7 @@
             "extract_dir": "Suwayomi-Server-v2.1.1947-windows-x64"
         }
     },
-    "pre_install": "Set-Content \"$dir\\suwayomi-server.ps1\" -Value \"& $dir\\jre\\bin\\java \"-Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data\" -jar $dir\\bin\\Suwayomi-Server.jar\" -Encoding Ascii",
+    "pre_install": "Set-Content \"$dir\\suwayomi-server.ps1\" -Value \"& $dir\\jre\\bin\\java '\"-Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data\"' -jar $dir\\bin\\Suwayomi-Server.jar\" -Encoding Ascii",
     "post_install": [
         "if (Test-Path $env:LOCALAPPDATA\\Tachidesk) {",
         "    Copy-Item -Path $env:LOCALAPPDATA\\Tachidesk\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
