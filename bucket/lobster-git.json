@@ -1,10 +1,10 @@
 {
-    "version": "4.5.3-20250901-7a710c",
+    "version": "4.5.4-20251005-0dda04",
     "description": "mmm lobster",
     "homepage": "https://github.com/justchokingaround/lobster",
     "license": "GPL-2.0-only",
     "url": "https://github.com/justchokingaround/lobster/raw/main/lobster.sh#/lobster",
-    "hash": "561e3886be92e850c1b322df9ded580fd499905ae5ddc0822ce5dcb38117697f",
+    "hash": "089b3a702051f742a72f2964b1f938a10ed8b122d1225d4cb70d3e545b240e3f",
     "bin": "lobster",
     "checkver": {
         "script": [
