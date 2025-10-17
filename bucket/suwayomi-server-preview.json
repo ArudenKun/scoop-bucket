@@ -1,5 +1,5 @@
 {
-    "version": "2.1.1967",
+    "version": "2.1.1970",
     "description": "A manga reader compatible with Tachiyomi extensions and backups",
     "homepage": "https://github.com/Suwayomi/Suwayomi-Server-preview",
     "license": {
@@ -9,16 +9,16 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.1.1967/Suwayomi-Server-v2.1.1967-windows-x64.zip",
+                "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/v2.1.1970/Suwayomi-Server-v2.1.1970-windows-x64.zip",
                 "https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.ico",
                 "https://github.com/ScoopInstaller/Extras/raw/master/scripts/suwayomi-server/suwayomi.ps1#/suwayomi-server-launcher.ps1"
             ],
             "hash": [
-                "f2a489eebe6fc1c0dbdc8b787c70a2e4afe7b922af1d936e8390fe93c0f1ab18",
+                "f33d5a6b12df6166cfb0beb586c4b875c919200009463431336cae17964b6e60",
                 "3e5b32450bc8659f41b5da5b85a246d8e500ea5b93c917abb8032e6f80068550",
                 "f7d32050ace8bcb05005a65da1dae174e3eeca86a370e769639f5c0d03e61629"
             ],
-            "extract_dir": "Suwayomi-Server-v2.1.1967-windows-x64"
+            "extract_dir": "Suwayomi-Server-v2.1.1970-windows-x64"
         }
     },
     "pre_install": "Set-Content \"$dir\\suwayomi-server.ps1\" -Value \"& $dir\\jre\\bin\\java `\"-Dsuwayomi.tachidesk.config.server.rootDir=$dir\\data`\" -jar $dir\\bin\\Suwayomi-Server.jar\" -Encoding Ascii",
