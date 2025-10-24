@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   schedule:
     # Run every day at 5 AM Philippine Time (UTC+8) which is 21:00 UTC (previous day)
-    - cron: '0 21 * * *'
+    - cron: '0 21 */2 * *'
     # run every 12 hours (optional - keep if you still want this)
     # - cron: '0 */12 * * *'
 name: Excavator
