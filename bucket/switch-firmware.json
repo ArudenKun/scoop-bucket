@@ -1,10 +1,10 @@
 {
-    "version": "20.1.1",
+    "version": "21.0.0",
     "homepage": "https://darthsternie.net/switch-firmwares/",
     "description": "released Global (Non-China) Firmware for the Nintendo Switch",
     "license": "Unlicense",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2020.1.1.zip",
-    "hash": "md5:1727c9e364ed61e6397564804bce10d5",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2021.0.0.zip",
+    "hash": "md5:b525fe3937ecc6cd2e1646df48993d8e",
     "extract_to": "Firmware",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
