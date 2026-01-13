@@ -10,7 +10,8 @@
     "hash": "8bc3f1313cc740e64fec21ccd806a63b9f5780c48d581a78a6d565c75584dfe0",
     "extract_dir": "javafx-sdk-17.0.17",
     "env_set": {
-        "JAVAFX_PATH": "$dir\\lib"
+        "JAVAFX_PATH": "$dir\\lib",
+        "PATH_TO_FX": "$dir\\lib"
     },
     "checkver": {
         "url": "https://gluonhq.com/wp-content/uploads/custom-css-js/119502.js",
