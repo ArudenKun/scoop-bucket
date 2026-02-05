@@ -1,12 +1,12 @@
 {
-    "version": "2.7.7",
+    "version": "2.7.8",
     "description": "Tailwind CSS standalone CLI bundled with daisyUI",
     "homepage": "https://github.com/dobicinaitis/tailwind-cli-extra",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v2.7.7/tailwindcss-extra-windows-x64.exe#/tailwindcss-extra.exe",
-            "hash": "b1ceebbeb34a0d9ba654c6f62a9d2bcfdd69751f3e3acbd4f940776c62b023f8"
+            "url": "https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v2.7.8/tailwindcss-extra-windows-x64.exe#/tailwindcss-extra.exe",
+            "hash": "179445ce6e528948e9abf1ba37ffaae31a9e9352c33c7b2c256a0dbbdeb1a4f5"
         }
     },
     "bin": "tailwindcss-extra.exe",
