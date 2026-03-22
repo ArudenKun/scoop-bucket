@@ -1,12 +1,12 @@
 {
-    "version": "2.3.5",
+    "version": "2.3.6",
     "homepage": "https://github.com/macarooni-man/auto-mcs",
     "license": "GPL-3.0",
     "description": "Cross-platform Minecraft server manager",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/macarooni-man/auto-mcs/releases/download/v2.3.5/auto-mcs-windows-2.3.5.zip",
-            "hash": "0d063c12b122987f0b0f541342e67792b53d09f32a640564b4705c1458a0482e"
+            "url": "https://github.com/macarooni-man/auto-mcs/releases/download/v2.3.6/auto-mcs-windows-2.3.6.zip",
+            "hash": "3544457855a57503cb578569f12723386fc187284c5a31d35390521b8f95a26d"
         }
     },
     "shortcuts": [
