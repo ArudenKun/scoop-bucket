@@ -1,10 +1,10 @@
 {
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Don't like Microsoft Edge? Me neither. Redirect all Edge calls to your favorite browser!",
     "homepage": "https://github.com/valnoxy/GoAwayEdge",
     "license": "MIT",
-    "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v2.0.1/GoAwayEdge.exe",
-    "hash": "bdce722f61187a07280622894c10583f66c867ef155e263a91c223a3e513568a",
+    "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v2.0.2/GoAwayEdge.exe",
+    "hash": "a9315375f201d4ea4c323f0c623ea61f07b82307f7b1d76abc3eff3eb3d40895",
     "installer": {
         "file": "GoAwayEdge.exe",
         "args": "-s",
