@@ -40,12 +40,6 @@
             "Suwayomi Server Launcher",
             "",
             "faviconlogo.ico"
-        ],
-        [
-            "suwayomi-server.ps1",
-            "Suwayomi Server",
-            "",
-            "faviconlogo.ico"
         ]
     ],
     "checkver": {
