@@ -30,10 +30,6 @@
     ],
     "bin": [
         [
-            "suwayomi-server-launcher.ps1",
-            "suwayomi-server-launcher"
-        ],
-        [
             "suwayomi-server.ps1",
             "suwayomi-server"
         ]
