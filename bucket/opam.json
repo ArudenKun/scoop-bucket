@@ -1,5 +1,5 @@
 {
-    "version": "2.5.1",
+    "version": "2.5.2",
     "description": "opam is a source-based package manager. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow.",
     "homepage": "https://opam.ocaml.org/",
     "license": "LGPL-2.1-only",
@@ -7,8 +7,8 @@
         "Cygwin": "main/cygwin"
     },
     "depends": "main/wget",
-    "url": "https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-x86_64-windows.exe",
-    "hash": "b3e72e15333cbddfce4b70e3b0840c3cf142e6b56bd6f3d6c3cd96f30b7626d7",
+    "url": "https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-x86_64-windows.exe",
+    "hash": "51a530f538e86913489b061ac13c6084276e5dc916f5bd5c450883a826f8864c",
     "bin": "opam.exe",
     "env_set": {
         "OPAMROOT": "$dir\\data",
