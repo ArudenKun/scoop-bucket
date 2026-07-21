@@ -1,5 +1,5 @@
 {
-    "version": "159.6",
+    "version": "159.7",
     "description": "Server-side program for Mindustry, a sandbox tower-defense game",
     "homepage": "https://mindustrygame.github.io/",
     "license": "GPL-3.0-only",
@@ -7,8 +7,8 @@
         "Java Runtime Environment": "java/adoptopenjdk-hotspot-jre",
         "Mindustry": "games/mindustry"
     },
-    "url": "https://github.com/Anuken/Mindustry/releases/download/v159.6/server-release.jar#/Mindustry-Server.jar",
-    "hash": "cb39f1bd31712235dc323c27959fd728cba5f951b60e40459793b66ce6341147",
+    "url": "https://github.com/Anuken/Mindustry/releases/download/v159.7/server-release.jar#/Mindustry-Server.jar",
+    "hash": "e41289c32bcf765eb50fa131e6b515d741e20f7843fb567d3aa949e7461f22ab",
     "pre_install": "Set-Content -Path \"$dir\\mindustry-server.bat\" -Value \"pushd $dir && java -jar Mindustry-Server.jar && popd\"",
     "bin": "mindustry-server.bat",
     "shortcuts": [
