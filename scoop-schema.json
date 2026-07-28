@@ -57,7 +57,8 @@
               "rdf",
               "metalink",
               "fosshub",
-              "sourceforge"
+              "sourceforge",
+              "github"
             ]
           },
           "type": {
