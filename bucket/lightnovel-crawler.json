@@ -1,10 +1,10 @@
 {
-    "version": "4.13.1",
+    "version": "4.14.0",
     "description": "Generate and download e-books from online sources.",
     "homepage": "https://github.com/lncrawl/lightnovel-crawler",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/lncrawl/lightnovel-crawler/releases/download/v4.13.1/lncrawl.exe",
-    "hash": "299625ce91ffbbe44d90ac409ba5df43574cfd5f4b00fc21b4ed3a428ad1a881",
+    "url": "https://github.com/lncrawl/lightnovel-crawler/releases/download/v4.14.0/lncrawl.exe",
+    "hash": "a6bc251c839b664c7829c3a80ab0f2e6603be627483efa79ec1080332d6e1961",
     "innosetup": true,
     "bin": "lncrawl.exe",
     "shortcuts": [
