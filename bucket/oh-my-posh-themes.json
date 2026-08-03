@@ -1,11 +1,11 @@
 {
-    "version": "30.1.1",
+    "version": "30.4.0",
     "description": "All the official themes for Oh-My-Posh",
     "homepage": "https://ohmyposh.dev",
     "license": "MIT",
     "notes": "Refer to 'https://ohmyposh.dev/docs/installation/prompt' for shell specific configurations.",
-    "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.1.1/themes.zip",
-    "hash": "0de76163e1473dd73a9c30e6dc011d875d3b851cc2f2de01ca9afeed5be61804",
+    "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.4.0/themes.zip",
+    "hash": "c3b0b7c436cc373420a9cd9d311b61946700f8d78c3ffc97af98513511ceeeeb",
     "depends": "oh-my-posh",
     "env_set": {
         "POSH_THEMES_PATH": "$dir"
