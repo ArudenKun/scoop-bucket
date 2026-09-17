@@ -1,5 +1,5 @@
 {
-    "version": "2026.2.2-262.10315.144",
+    "version": "2026.2.3-262.10968.77",
     "description": "Cross-Platform IDE for JavaScript by JetBrains.",
     "homepage": "https://www.jetbrains.com/webstorm/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "depends": "alden/jetcrack",
-    "url": "https://download.jetbrains.com/webstorm/WebStorm-2026.2.2.win.zip",
-    "hash": "48f54904e8cc85001e5db7aa124ac31155bda3161754ee1256d79dcbc50f2766",
+    "url": "https://download.jetbrains.com/webstorm/WebStorm-2026.2.3.win.zip",
+    "hash": "07fe98cc359f558f93aff6d1c5cfaaa2fc19e193447ce36ba6d00cc78ca38e35",
     "installer": {
         "script": [
             "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
