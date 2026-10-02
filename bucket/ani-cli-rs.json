@@ -18,7 +18,7 @@
     "bin": "ani-cli-rs.exe",
     "env_set": {
         "ANI_CLI_HIST_DIR": "$dir\\data",
-        "ANI_CLI_ALLOW_ADULT": "1"  
+        "ANI_CLI_ALLOW_ADULT": 1
     },
     "persist": "data",
     "checkver": {
