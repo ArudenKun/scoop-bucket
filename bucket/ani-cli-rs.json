@@ -16,6 +16,11 @@
     "url": "https://github.com/vorlie/ani-cli-rs/releases/download/0.11.0/ani-cli-rs-0.11.0-x86_64-pc-windows-msvc.zip",
     "hash": "12f7dd62335ddaa59672c025d430e303c5b80bba3a1ed7909a7876fb9026a289",
     "bin": "ani-cli-rs.exe",
+    "env_set": {
+        "ANI_CLI_HIST_DIR": "$dir\\data",
+        "ANI_CLI_ALLOW_ADULT": "1"  
+    },
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/vorlie/ani-cli-rs"
     },
