@@ -1,10 +1,10 @@
 {
-    "version": "22.1.0",
+    "version": "23.0.1",
     "homepage": "https://darthsternie.net/switch-firmwares/",
     "description": "released Global (Non-China) Firmware for the Nintendo Switch",
     "license": "Unlicense",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2022.1.0.zip",
-    "hash": "md5:0bb4ae3b0a332ab5a4dabc9ad3786958",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2023.0.1.zip",
+    "hash": "md5:910bd0b523553c2a97254b654392976d",
     "extract_to": "Firmware",
     "checkver": {
         "regex": "Firmware ([\\d.]+)</td>"
