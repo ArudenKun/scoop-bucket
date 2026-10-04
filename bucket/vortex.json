@@ -1,28 +1,26 @@
 {
     "version": "2.7.2",
     "description": "Open-source mod manager from Nexus Mods",
-    "homepage": "https://www.nexusmods.com/about/vortex/",
-    "license": "GPL-3.0-or-later",
+    "homepage": "https://nexusmods.com/about/vortex",
+    "license": "GPL-3.0",
+    "suggest": {
+        "vcredist": "extras/vcredist2022",
+        "windowsdesktop-runtime": "versions/windowsdesktop-runtime-6.0"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Nexus-Mods/Vortex/releases/download/v2.7.2/vortex-setup-2.7.2.exe#/dl.7z",
-            "hash": "sha512:012c89665e6d517ba88574c3e885c9593f24a9f258c82cd70e8c853003e2f3776ee356630ecaa6ab116312b4b797cab88c65f2da6edaa071e4e785c334c8ade9",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\\app\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
-                ]
-            }
+            "hash": "sha512:012c89665e6d517ba88574c3e885c9593f24a9f258c82cd70e8c853003e2f3776ee356630ecaa6ab116312b4b797cab88c65f2da6edaa071e4e785c334c8ade9"
         }
     },
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\`$TEMP\" -Recurse -Force",
     "shortcuts": [
         [
-            "app\\Vortex.exe",
-            "Vortex",
-            "--user-data-dir=\"$persist_dir\\data\""
+            "Vortex.exe",
+            "Vortex"
         ]
     ],
-    "persist": "data",
     "checkver": {
         "github": "https://github.com/Nexus-Mods/Vortex"
     },
