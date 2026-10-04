@@ -1,9 +1,9 @@
 {
-    "version": "4.23.0.0",
+    "version": "4.24.0.0",
     "homepage": "https://github.com/x360ce/x360ce",
     "license": "Unknown",
-    "url": "https://github.com/x360ce/x360ce/releases/download/4.23.0.0/x360ce.zip",
-    "hash": "008fadd239e09139d2739f79cef4e2a21583de3bc622f4289f352375c9428b35",
+    "url": "https://github.com/x360ce/x360ce/releases/download/4.24.0.0/x360ce.zip",
+    "hash": "3f263cd5e7465131dacad704fd03672bcbd50d412d9ab93c8965455d8d748c34",
     "shortcuts": [
         [
             "x360ce.exe",
