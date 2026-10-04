@@ -11,8 +11,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/x360ce/x360ce/releases",
-        "regex": "/tree/(4[\\d.]+)"
+        "github": "https://github.com/x360ce/x360ce"
     },
     "autoupdate": {
         "url": "https://github.com/x360ce/x360ce/releases/download/$version/x360ce.zip"
