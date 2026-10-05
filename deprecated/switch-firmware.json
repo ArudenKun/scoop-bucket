@@ -7,6 +7,7 @@
     "hash": "md5:910bd0b523553c2a97254b654392976d",
     "extract_to": "Firmware",
     "checkver": {
+        "url": "https://darthsternie.net/switch-firmwares/",
         "regex": "Firmware ([\\d.]+)</td>"
     },
     "autoupdate": {

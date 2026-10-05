@@ -17,10 +17,12 @@
     "bin": "zoxide.exe",
     "env_set": {
         "_ZO_DATA_DIR": "$dir\\data",
-        "_ZO_RESOLVE_SYMLINKS": "1"
+        "_ZO_RESOLVE_SYMLINKS": 1
     },
     "persist": "data",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/ajeetdsouza/zoxide"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
