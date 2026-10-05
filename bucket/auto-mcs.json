@@ -15,7 +15,9 @@
             "Auto-MCS"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/macarooni-man/auto-mcs"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
