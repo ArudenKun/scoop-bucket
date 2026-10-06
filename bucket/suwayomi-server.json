@@ -42,11 +42,8 @@
             "faviconlogo.ico"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repositories/323996203/releases/latest",
-        "jsonpath": "$..browser_download_url",
-        "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
-    },
+    "persist": "data",
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {

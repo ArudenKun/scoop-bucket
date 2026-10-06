@@ -53,11 +53,7 @@
         ]
     ],
     "persist": "data",
-    "checkver": {
-        "url": "https://api.github.com/repositories/368647679/releases/latest",
-        "jsonpath": "$..browser_download_url",
-        "regex": "Suwayomi-Server-v([\\d.]+)-windows-x64\\.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
