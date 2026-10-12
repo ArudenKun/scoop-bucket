@@ -1,5 +1,5 @@
 {
-    "version": "0.11.0",
+    "version": "0.11.1",
     "description": "A fast, cross-platform anime CLI written in Rust.",
     "homepage": "https://github.com/vorlie/ani-cli-rs",
     "license": "GPL-3.0-only",
@@ -13,8 +13,8 @@
         "yt-dlp": "yt-dlp",
         "syncplay": "syncplay"
     },
-    "url": "https://github.com/vorlie/ani-cli-rs/releases/download/0.11.0/ani-cli-rs-0.11.0-x86_64-pc-windows-msvc.zip",
-    "hash": "12f7dd62335ddaa59672c025d430e303c5b80bba3a1ed7909a7876fb9026a289",
+    "url": "https://github.com/vorlie/ani-cli-rs/releases/download/0.11.1/ani-cli-rs-0.11.1-x86_64-pc-windows-msvc.zip",
+    "hash": "0e4b44351ed6623470c3ad59bf76f4fd5b104f6f0b229e27cbfb75e518fe4938",
     "bin": "ani-cli-rs.exe",
     "env_set": {
         "ANI_CLI_HIST_DIR": "$dir\\data",
