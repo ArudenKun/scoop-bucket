@@ -1,5 +1,5 @@
 {
-    "version": "2.9.0-beta.2",
+    "version": "2.9.0-beta.3",
     "description": "Open-source mod manager from Nexus Mods",
     "homepage": "https://nexusmods.com/about/vortex",
     "license": "GPL-3.0",
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Nexus-Mods/Vortex/releases/download/v2.9.0-beta.2/vortex-setup-2.9.0-beta.2.exe#/dl.7z",
-            "hash": "sha512:3bdfaaea90f6fa4f52055cff07b97f67de8c8233772de632c3810fbea233360576acc8109d807410758e639e56473fce0da144870f024b7c892d50cdfbe6e3fc"
+            "url": "https://github.com/Nexus-Mods/Vortex/releases/download/v2.9.0-beta.3/vortex-setup-2.9.0-beta.3.exe#/dl.7z",
+            "hash": "sha512:3fd905f508002004d9838a7420d8160b728ae63ca8c01c35681e804c7f4eb489b779d68f471c1f98db9b52232e21ee8c72c09ce01904054a68e8cdd0d8f4bb9e"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
