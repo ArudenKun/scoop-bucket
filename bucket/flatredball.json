@@ -1,17 +1,31 @@
 {
-    "version": "nightly",
+    "version": "2026-08-10",
     "homepage": "https://flatredball.com/",
     "license": "MIT",
-    "url": "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
-    "installer": {
-        "script": "Copy-Item \"$bucketsdir\\custom\\images\\flatredball\\icon.ico\" $dir"
-    },
+    "url": [
+        "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
+        "https://raw.githubusercontent.com/vchelaru/FlatRedBall/refs/heads/NetStandard/Content/Icon.png"
+    ],
+    "hash": [
+        "307b5a2e99866d0e2f96901a349bfdf5c667488ee139c524ac0ed3bac808c726",
+        "a5c4167256884399f64fdbc057ee1f612e902ee524af1b679c2dbc9c3a57451e"
+    ],
     "shortcuts": [
         [
-            "Xna 4 Tools\\GlueFormsCore.exe",
+            "start,bat",
             "FlatRedBall",
             "",
             "icon.ico"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/",
+        "regex": "href=\"FRBDK?\\.zip\">[^<]+</a>\\s+(?<version>\\d{4}-\\d{2}-\\d{2})"
+    },
+    "autoupdate": {
+        "url": [
+            "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
+            "https://raw.githubusercontent.com/vchelaru/FlatRedBall/refs/heads/NetStandard/Content/Icon.png"
+        ]
+    }
 }
