@@ -4,18 +4,18 @@
     "license": "MIT",
     "url": [
         "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
-        "https://raw.githubusercontent.com/vchelaru/FlatRedBall/refs/heads/NetStandard/Content/Icon.png"
+        "https://github.com/vchelaru/FlatRedBall/blob/NetStandard/FRBDK/Glue/Glue/Frb.ico"
     ],
     "hash": [
         "307b5a2e99866d0e2f96901a349bfdf5c667488ee139c524ac0ed3bac808c726",
-        "a5c4167256884399f64fdbc057ee1f612e902ee524af1b679c2dbc9c3a57451e"
+        "7499baca92e31aa9c481395c1892667cbd81880688d836da82d4e91ed32d594c"
     ],
     "shortcuts": [
         [
             "Run FlatRedBall.bat",
             "FlatRedBall",
             "",
-            "Icon.png"
+            "Frb.ico"
         ]
     ],
     "checkver": {
@@ -25,7 +25,7 @@
     "autoupdate": {
         "url": [
             "https://files.flatredball.com/content/FrbXnaTemplates/DailyBuild/FRBDK.zip",
-            "https://raw.githubusercontent.com/vchelaru/FlatRedBall/refs/heads/NetStandard/Content/Icon.png"
+            "https://github.com/vchelaru/FlatRedBall/blob/NetStandard/FRBDK/Glue/Glue/Frb.ico"
         ]
     }
 }
