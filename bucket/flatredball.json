@@ -12,7 +12,7 @@
     ],
     "shortcuts": [
         [
-            "start,bat",
+            "start.bat",
             "FlatRedBall",
             "",
             "icon.ico"
