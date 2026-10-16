@@ -10,12 +10,15 @@
         "307b5a2e99866d0e2f96901a349bfdf5c667488ee139c524ac0ed3bac808c726",
         "7499baca92e31aa9c481395c1892667cbd81880688d836da82d4e91ed32d594c"
     ],
+    "installer": {
+        "script": "Copy-Item \"$bucketsdir\\custom\\images\\flatredball\\icon.ico\" $dir"
+    },
     "shortcuts": [
         [
             "Run FlatRedBall.bat",
             "FlatRedBall",
             "",
-            "Frb.ico"
+            "icon.ico"
         ]
     ],
     "checkver": {
