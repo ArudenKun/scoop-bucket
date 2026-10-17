@@ -16,7 +16,7 @@
         }
     },
     "pre_install": [
-        "Get-Item \"$dir\\Godot_*_console.exe\" | Rename-Item -NewName 'godot3.console.exe'",
+        "Get-Item \"$dir\\Godot_*_console.cmd\" | Rename-Item -NewName 'godot3.console.cmd'",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot3-mono.exe'",
         "if (!(Test-Path \"$persist_dir\\editor_data\") -and (Test-Path \"$env:AppData\\Godot\")) {",
         "    info '[Portable Mode]: Copying user data from \"$env:AppData\\Godot\"'",
